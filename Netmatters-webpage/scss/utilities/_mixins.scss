@@ -1,0 +1,33 @@
+// MEDIA QUERIES 
+@mixin mq($breakpoint) {
+    @if $breakpoint == "x-small" {
+      @media (min-width: $break--x-sml) and (max-width: $break--sml) {
+        @content;
+      }
+    } @else if $breakpoint == "small" {
+      @media (min-width: #{$break--sml + 1}) {
+        @content;
+      }
+    } @else if $breakpoint == "medium" {
+      @media (min-width: #{$break--med + 1}) {
+        @content;
+      }
+    } @else if $breakpoint == "large" {
+      @media (min-width: #{$break--lrg + 1}) {
+        @content;
+      }
+    } @else if $breakpoint == "x-large" {
+      @media (min-width: #{$break--x-lrg + 1}) {
+        @content;
+      }
+    } @else {
+      @error "#{$breakpoint} isn't a valid media query size!";
+    }
+  }
+
+  And to use media query mixin you just pass this 
+@include mq(medium) {
+  .some-class-here {
+      property: abc;
+    }
+  }
