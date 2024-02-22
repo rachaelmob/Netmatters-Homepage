@@ -1,4 +1,11 @@
-// MEDIA QUERIES 
+//==========================================//
+//                 MIXINS!!!
+//==========================================//
+
+//==========================================//
+//              MEDIA QUERIES
+//==========================================//
+
 @mixin mq($breakpoint) {
     @if $breakpoint == "x-small" {
       @media (min-width: $break--x-sml) and (max-width: $break--sml) {
@@ -25,9 +32,12 @@
     }
   }
 
-  And to use media query mixin you just pass this 
-@include mq(medium) {
+//==========================================//
+//              INCLUDE MIXIN
+//==========================================//
+ /*And to use media query mixin you just pass this 
+ @include mq(medium) {
   .some-class-here {
       property: abc;
     }
-  }
+  } */
