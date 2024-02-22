@@ -1,0 +1,28 @@
+//==========================================//
+//               FOOTER
+//==========================================//
+
+.foot-section {
+    background-color: $dark-bg;
+
+    h4 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
+
+    
+    .footer-row-list {  
+
+        li {
+            list-style: none;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 13px;
+            }
+            
+        }
+    }
+}
