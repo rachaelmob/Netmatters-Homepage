@@ -1,3 +1,10 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 *,
 *::before,
 *::after {
@@ -20,31 +27,48 @@ body {
   background-color: #fff;
 }
 
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
 /*And to use media query mixin you just pass this 
 @include mq(medium) {
  .some-class-here {
      property: abc;
    }
  } */
-.foot-section {
+.foot-section footer {
   background-color: #323544;
+  padding: 27px 0 0;
+  position: relative;
 }
-.foot-section h4 {
+.foot-section footer .net-logo-footer {
+  width: 250px;
+}
+.foot-section footer .net-logo-footer img {
+  width: 100%;
+}
+.foot-section footer .footer-social-logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.foot-section footer .footer-social-logos a {
+  background-color: #212330;
+  text-align: center;
+  text-decoration: none;
+  font-size: 26px;
+  line-height: 26px;
+  padding: 12px 22px 16px;
+  margin-right: 7px;
+  color: #fff;
+}
+.foot-section footer h4 {
   color: #fff;
   text-transform: uppercase;
   font-size: 1rem;
 }
-.foot-section .footer-row-list li {
+.foot-section footer .footer-row-list li {
   list-style: none;
 }
-.foot-section .footer-row-list li a {
+.foot-section footer .footer-row-list li a {
   color: #fff;
   text-decoration: none;
   font-size: 13px;

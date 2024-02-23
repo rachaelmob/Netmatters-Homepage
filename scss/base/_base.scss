@@ -1,7 +1,23 @@
 //==========================================//
-//              BASE STYLES 
+//                  BASE  
 //==========================================//
 
+//==========================================//
+//         REUSABLE CONTAINER CLASS
+//==========================================//
+
+.container {
+  margin-right:  auto;
+  margin-left:   auto;
+  padding-right: 15px;
+  padding-left:  15px;
+}
+
+
+
+//==========================================//
+//              BASE STYLES 
+//==========================================//
 *,
 *::before,
 *::after {
@@ -24,13 +40,3 @@ body {
 
 
 
-//==========================================//
-//         REUSABLE CONTAINER CLASS
-//==========================================//
-
-.container {
-    margin-right:  auto;
-    margin-left:   auto;
-    padding-right: 15px;
-    padding-left:  15px;
-}

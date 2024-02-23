@@ -1,28 +1,63 @@
 //==========================================//
-//               FOOTER
+//                  FOOTER
 //==========================================//
 
 .foot-section {
+
+    footer {
     background-color: $dark-bg;
+    padding: 27px 0 0;
+    position: relative;
 
-    h4 {
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1rem;
-    }
+        .net-logo-footer {
+            width: 250px;
 
-    
-    .footer-row-list {  
+            img { 
+                width: 100%
+            }   
+        }
 
-        li {
-            list-style: none;
+        .footer-social-logos {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
 
             a {
-                color: #fff;
+                background-color: $social-drk;
+                text-align: center;
                 text-decoration: none;
-                font-size: 13px;
+                font-size: 26px;
+                line-height: 26px;
+                padding: 12px 22px 16px;
+                margin-right: 7px;
+                color: #fff;
+
+                .btn-primary {
+                    
+                }
             }
-            
+        }
+
+        h4 {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        
+        .footer-row-list {  
+
+            li {
+                list-style: none;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 13px;
+                }
+                
+            }
         }
     }
 }
