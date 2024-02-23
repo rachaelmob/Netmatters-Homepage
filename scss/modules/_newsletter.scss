@@ -3,10 +3,22 @@
 //==========================================//
 
 .newsl-section {
-    background-color: $med-bg;
+
+    .newsletter-full-width {
+    background-color: $light-bg;
     color: $dark-txt;
+    }
 
-    
+    .signup-inputs-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 
-
+    .signup-input {
+        flex: 1 1 450px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

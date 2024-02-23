@@ -67,20 +67,21 @@
     <!-- /////////////////////////////////// NEWSLETTER FORM \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\  -->
 <section class="newsl-section">
 <div class="newsletter-full-width"> 
-    <div class="container"> <!--Container 4 newsletter -->
+    <!-- ::before what? -->
+    <div class="container">
         <form action="#" method="POST" accept-charset="UTF-8" id="sign-up" class="sign-up">
         <input type="hidden">
         <input type="hidden">
         <h2>Email Newsletter Sign-Up</h2>
         <!-- NEWSLETTER MAIN DIV PARENT: SIGN-INPUT-WRAPPER -->
-        <div class="signup-input-wrapper">
+        <div class="signup-inputs-wrapper">
             <div class="signup-input"> <!-- SIGN-up-INPUT name -->
                 <div class="form-group"> 
                     <label for="newsletter-name" class="required">Your Name</label>
                     <input type="text" id="newsletter-name" class="form-control" name="name"  value="">
                 </div>
             </div>
-            <div class="sign-up-input"> <!-- SIGN-up-INPUT email -->
+            <div class="signup-input"> <!-- SIGN-up-INPUT email -->
                 <div class="form-group"> 
                     <label for="newsletter-email" class="required">Your Email</label>
                     <input type="email" class="form-control" id="newsletter-email" name="email">
@@ -94,13 +95,14 @@
                     <span class="media-left checkbox-left"> <!-- NEWS-CHECKBOX -->
                         <span class="button"> 
                             <span class="mdi-action-done"></span>
-                            <input type="checkbox" name="marketing-preference" value=""> <!-- value meaning?-->
+                            <input type="checkbox" name="marketing-preference" value=""> <!-- value?-->
                         </span>
                     </span> 
                     <span class="media-body"> <!-- NEWS-CHECKBOX TEXT-->
-                        "Please tick this box if you wish to receive marketing information from us. Please see our"
+                        Please tick this box if you wish to receive marketing information from us. 
+                        Please see our
                         <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                        " for more information on how we keep your data safe."
+                        for more information on how we keep your data safe.
                     </span> 
                 </span>
             </label>
@@ -110,6 +112,7 @@
         <!-- SUBMIT BUTTON -->
         <button name="submit" class="btn btn-primary"> Subscribe </button> 
         </form> 
+        <!-- ::after what? -->
     </div>
 </div> <!-- newsletter container closing div-->
 </section>
@@ -123,8 +126,9 @@
 <section class="foot-section">
 <footer>
 <div class="container"> <!-- Container -> whole footer content -->
-    <div class="footer-row">  <!-- Flexbox -> Footer content -->
-        <div class="footer-company-info"> <!-- Flexbox -> logo, follow, socials -->
+    <!-- ::before - Meaning? -->
+    <div class="footer-content">  <!-- Flexbox why? -> Footer content --> 
+        <div class="footer-social-sec"> <!-- Flexbox -> logo, follow, socials -->
             <div class="footer-info footer-social-menu"> <!-- logo, follow, socials -->
                 <div class="net-logo-footer"> <!-- Netmatters logo -->
                     <picture>
@@ -151,7 +155,7 @@
         </div>
 
         <div class="row"> <!-- Flexbox -> About. Services. Industries. locations.-->
-            <div class="footer-row-list">
+            <div class="footer-list col-xs-12 col-sm-6 col-md-3 ">
                 <h4>About Netmatters</h4>
                 <ul> 
                     <li><a href="#">News</a></li>
@@ -168,7 +172,7 @@
             </div>
             
 
-            <div class="footer-row-list">
+            <div class="footer-list col-xs-12 col-sm-6 col-md-3 ">
                 <h4>Our Services</h4>
                 <ul>
                     <li><a href="#">Bespoke Software</a></li>
@@ -181,7 +185,7 @@
                 </ul>
            </div>
 
-            <div class="footer-row-list">
+            <div class="footer-list col-xs-12 col-sm-6 col-md-3 ">
                 <h4>Our Industries</h4>
                 <ul>
                     <li><a href="#">Financial Services</a></li>
@@ -195,7 +199,7 @@
                 </ul>
            </div>
 
-            <div class="footer-row-list">
+            <div class="footer-list col-xs-12 col-sm-6 col-md-3 ">
                 <h4>Locations</h4>
                 <ul>
                     <li><a href="#">London Office</a></li>

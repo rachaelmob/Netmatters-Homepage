@@ -9,6 +9,28 @@
     padding: 27px 0 0;
     position: relative;
 
+        .footer-content {
+            // display: flex;
+            justify-content: space-between;
+            // flex-wrap: wrap;
+
+            .footer-social-logos {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-bottom: 30px;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+
+                .footer-list {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
         .net-logo-footer {
             width: 250px;
 
@@ -18,10 +40,10 @@
         }
 
         .footer-social-logos {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
+            // display: flex;
+            // flex-direction: row;
+            // flex-wrap: wrap;
+            // margin-bottom: 30px;
 
             a {
                 background-color: $social-drk;
@@ -46,7 +68,7 @@
         }
 
         
-        .footer-row-list {  
+        .footer-list {  
 
             li {
                 list-style: none;

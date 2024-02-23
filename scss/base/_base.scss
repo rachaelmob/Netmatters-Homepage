@@ -2,22 +2,6 @@
 //                  BASE  
 //==========================================//
 
-//==========================================//
-//         REUSABLE CONTAINER CLASS
-//==========================================//
-
-.container {
-  margin-right:  auto;
-  margin-left:   auto;
-  padding-right: 15px;
-  padding-left:  15px;
-}
-
-
-
-//==========================================//
-//              BASE STYLES 
-//==========================================//
 *,
 *::before,
 *::after {
@@ -34,8 +18,50 @@ html {
 }
 body {
   font-family: Poppins, sans-serif;
+  fontsize: 1rem;
   letter-spacing: 0.4px;
   background-color: #fff;
+}
+
+// DIV DISPLAY
+div {
+  display: block;
+}
+
+// LABELS
+label {
+  font-weight: 600; //$font-bold 
+  color: #333645; // $dark-txt; variables are not working here
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  // font-weight: 700;
+}
+
+
+
+//==========================================//
+//           REUSABLE CLASSES
+//==========================================//
+.container {
+  margin-right:  auto;
+  margin-left:   auto;
+  padding-right: 15px;
+  padding-left:  15px;
+}
+
+
+// ROW
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+//FORM GROUP
+.form-group {
+  margin-bottom: 15px;
 }
 
 

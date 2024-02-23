@@ -4,7 +4,7 @@
 
 $dark-bg: #323544;
 $vdark-bg: #22242e;
-$med-bg: #ddd;
+$light-bg: #ddd;
 $dark-txt: #333645;
 $consent-btn: #75788a;
 $hover-drk: #121419;
@@ -71,15 +71,15 @@ $tw-icon-hov: #00aced;
 $font-light: 400;
 $font-med: 500;
 $font-bold: 600;
-$font-bolder: 700;
+$font-xbold: 700;
 
 
 //==========================================//
 //          MEDIA QUERY BREAKPOINTS 
 //==========================================//
 
-$break--x-sml: 1px;
+$break--xs: 1px;
 $break--sml: 460px;
 $break--med: 766px;
-$break--lrg: 991px;
-$break--x-lrg: 1200px;
+$break--l: 991px;
+$break--xl: 1200px;
