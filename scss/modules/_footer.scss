@@ -11,17 +11,26 @@
     
 
         .footer-content {
-            // display: flex;
+            display: flex;
             justify-content: space-between;
-            // flex-wrap: wrap;
-
-            .footer-social-logos {
+            flex-wrap: wrap;
+        
+            .footer-social-icons {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 margin-bottom: 30px;
+    
+                a {
+                    background-color: $social-drk;
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 26px;
+                    line-height: 26px;
+                    padding: 12px 22px 16px;
+                    margin-right: 7px;
+                }
             }
-
             .row {
                 display: flex;
                 flex-wrap: wrap;
@@ -32,6 +41,12 @@
             }
         }
 
+        .footer-company-info{
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+        }
+
         .net-logo-footer {
             width: 250px;
 
@@ -40,27 +55,6 @@
             }   
         }
 
-        .footer-social-logos {
-            // display: flex;
-            // flex-direction: row;
-            // flex-wrap: wrap;
-            // margin-bottom: 30px;
-
-            a {
-                background-color: $social-drk;
-                text-align: center;
-                text-decoration: none;
-                font-size: 26px;
-                line-height: 26px;
-                padding: 12px 22px 16px;
-                margin-right: 7px;
-                color: #fff;
-
-                .btn-primary {
-                    
-                }
-            }
-        }
 
         h4 {
             color: #fff;
@@ -91,4 +85,6 @@
 }
 
 
-
+footer .footer-company-info .footer-social-menu {
+    width: auto;
+}
