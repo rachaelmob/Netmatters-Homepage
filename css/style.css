@@ -107,6 +107,7 @@ label {
 .foot-section footer .footer-content .row {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
 }
 .foot-section footer .footer-content .row .footer-list {
   margin-bottom: 30px;
