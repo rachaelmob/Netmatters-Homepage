@@ -103,6 +103,7 @@ label {
   line-height: 26px;
   padding: 12px 22px 16px;
   margin-right: 7px;
+  margin-bottom: 7px;
 }
 .foot-section footer .footer-content .row-flex-list {
   display: flex;
@@ -111,6 +112,9 @@ label {
 }
 .foot-section footer .footer-content .row-flex-list .footer-list {
   margin-bottom: 30px;
+}
+.foot-section footer .footer-content .row-flex-list .footer-list .footer-ul {
+  margin-left: -15px;
 }
 .foot-section footer .footer-company-info {
   display: flex;
