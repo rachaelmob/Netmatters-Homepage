@@ -1,0 +1,25 @@
+//==========================================//
+//           CLIENT SLIDE SECTION
+//==========================================//
+
+.clients-section {
+
+    .clients-outer {
+        padding:  50px 0 ;
+        
+
+        .clients-row-flex {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+
+            .client-logo {
+                flex-grow: 1;
+                padding: 0 40px;
+                position: relative;
+                top: 30px;
+                // vertical-align: middle; not working
+            }
+        }
+    }
+}

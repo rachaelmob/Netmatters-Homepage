@@ -79,6 +79,78 @@ label {
   border-radius: 2px;
 }
 
+.clients-section .clients-outer {
+  padding: 50px 0;
+}
+.clients-section .clients-outer .clients-row-flex {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.clients-section .clients-outer .clients-row-flex .client-logo {
+  flex-grow: 1;
+  padding: 0 40px;
+  position: relative;
+  top: 30px;
+}
+
+.newsl-section .newsletter-full-width {
+  background-color: #ddd;
+  color: #333645;
+}
+.newsl-section .newsletter-full-width form {
+  margin: 0;
+}
+.newsl-section .newsletter-full-width h2 {
+  font-weight: 400;
+  margin: 0 0 15px;
+  font-size: 2rem;
+}
+.newsl-section .signup-inputs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.newsl-section .signup-input {
+  flex: 1 1 450px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.newsl-section label.pretty-checkbox {
+  line-height: 32px;
+  cursor: pointer;
+}
+.newsl-section labela {
+  color: #333645;
+  text-decoration: underline;
+}
+.newsl-section .btn {
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+}
+
+.sign-up {
+  padding: 50px 0;
+}
+
+.form-control {
+  width: 100%;
+  height: 45px;
+  padding: 6px 12px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
 .foot-section footer {
   background-color: #323544;
   padding: 27px 0 0;
@@ -147,63 +219,6 @@ label {
 
 footer .footer-company-info .footer-social-menu {
   width: auto;
-}
-
-.newsl-section .newsletter-full-width {
-  background-color: #ddd;
-  color: #333645;
-}
-.newsl-section .newsletter-full-width form {
-  margin: 0;
-}
-.newsl-section .newsletter-full-width h2 {
-  font-weight: 400;
-  margin: 0 0 15px;
-  font-size: 2rem;
-}
-.newsl-section .signup-inputs-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.newsl-section .signup-input {
-  flex: 1 1 450px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.newsl-section label.pretty-checkbox {
-  line-height: 32px;
-  cursor: pointer;
-}
-.newsl-section labela {
-  color: #333645;
-  text-decoration: underline;
-}
-.newsl-section .btn {
-  height: auto;
-  line-height: 35px;
-  padding: 5px 15px;
-  text-transform: uppercase;
-  font-size: 1.063rem;
-  border-radius: 3px;
-  white-space: normal;
-}
-
-.sign-up {
-  padding: 50px 0;
-}
-
-.form-control {
-  width: 100%;
-  height: 45px;
-  padding: 6px 12px;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #e5e5e5;
-  border-radius: 2px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
