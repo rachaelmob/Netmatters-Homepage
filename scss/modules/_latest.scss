@@ -1,0 +1,112 @@
+/*==========================================//
+               LATEST NEWS 
+//==========================================*/
+
+.latest-section {
+
+    .latest-header{
+        padding-top: 50px;
+
+        h2 {
+            color: $dark-txt;
+            font-size: 2.25rem;
+            margin: 0 0 28px;
+            font-weight: $font-bold;
+        }
+    }
+
+    .latest-articles {
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            
+            .article1-header {
+                color: $nav-telecom;
+               }   
+
+            .article2-header {
+                color: $nav-software;
+               } 
+               
+            .article3-header {
+                color: $nav-digital;
+               }  
+
+            .article-desc {
+                line-height: 1.375rem;
+                font-size: .8125rem;
+                color: rgba(51, 54, 69, .7);
+            }
+        }
+        .article-img {
+            display: block;
+            // position: relative;
+            border-radius: 3px 3px 0 0;
+
+            img {
+                width: 100%;
+                // height: auto;
+            }
+
+        }
+    }
+
+    .article-container {
+        border: 1px solid #ccc;
+        box-shadow: 0 3px 35px rgba(0,0,0,.1);
+        margin: 40px 0;
+        position: relative;
+        border-radius: 3px;
+        top: 0;
+
+        .article-content {
+            padding: 30px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: $font-bold;
+
+            .read-time {
+                color: rgba(51, 54, 69, .5);
+                font-size: .85rem;
+                font-weight: $font-light;
+                text-transform: uppercase;
+            }
+
+        }
+        
+    }
+
+    .btn {
+        color: fff;
+        height: auto;
+        line-height: 35px;
+        padding: 5px 15px;
+        text-transform: uppercase;
+        font-size: 1.063rem;
+        border-radius: 3px;
+        white-space: normal;
+    }
+}
+
+
+    // ARTICLE BUTTONS
+
+    .btn-art1 {
+        background-color: $nav-telecom;
+        border: $nav-telecom;
+    }
+
+    .btn-art2 {
+        background-color: $nav-software;
+        border: $nav-software;
+    }
+
+    .btn-art3 {
+        background-color: $nav-digital;
+        border: $nav-digital;
+    }
+

@@ -41,6 +41,9 @@ label {
   margin-bottom: 5px;
 }
 
+/*==========================================//
+               REUSABLE CLASSES
+//==========================================*/
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -77,6 +80,91 @@ label {
   font-size: 14px;
   line-height: 1.42857143;
   border-radius: 2px;
+}
+
+/*==========================================//
+               LATEST NEWS 
+//==========================================*/
+.latest-section .latest-header {
+  padding-top: 50px;
+}
+.latest-section .latest-header h2 {
+  color: #333645;
+  font-size: 2.25rem;
+  margin: 0 0 28px;
+  font-weight: 600;
+}
+.latest-section .latest-articles a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.latest-section .latest-articles a .article1-header {
+  color: #d64541;
+}
+.latest-section .latest-articles a .article2-header {
+  color: #67809f;
+}
+.latest-section .latest-articles a .article3-header {
+  color: #2ecc71;
+}
+.latest-section .latest-articles a .article-desc {
+  line-height: 1.375rem;
+  font-size: 0.8125rem;
+  color: rgba(51, 54, 69, 0.7);
+}
+.latest-section .latest-articles .article-img {
+  display: block;
+  border-radius: 3px 3px 0 0;
+}
+.latest-section .latest-articles .article-img img {
+  width: 100%;
+}
+.latest-section .article-container {
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+  position: relative;
+  border-radius: 3px;
+  top: 0;
+}
+.latest-section .article-container .article-content {
+  padding: 30px;
+}
+.latest-section .article-container h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+.latest-section .article-container h3 .read-time {
+  color: rgba(51, 54, 69, 0.5);
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.latest-section .btn {
+  color: fff;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+}
+
+.btn-art1 {
+  background-color: #d64541;
+  border: #d64541;
+}
+
+.btn-art2 {
+  background-color: #67809f;
+  border: #67809f;
+}
+
+.btn-art3 {
+  background-color: #2ecc71;
+  border: #2ecc71;
 }
 
 .clients-section .clients-outer {
