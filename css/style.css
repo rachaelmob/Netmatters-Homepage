@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: Poppins, sans-serif;
-  fontsize: 1rem;
+  font-size: 1rem;
   letter-spacing: 0.4px;
   background-color: #fff;
 }
@@ -49,6 +49,10 @@ label {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.section {
+  padding: 50px 0;
 }
 
 .row {
@@ -82,13 +86,60 @@ label {
   border-radius: 2px;
 }
 
-/*==========================================//
-               LATEST NEWS 
-//==========================================*/
-.latest-section .latest-header {
+.partners-section .slide-outer, .clients-section .slide-outer {
+  padding: 50px 0;
+}
+.partners-section .slide-outer .clients-row-flex, .clients-section .slide-outer .clients-row-flex {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.partners-section .slide-outer .clients-row-flex .client-logo, .clients-section .slide-outer .clients-row-flex .client-logo {
+  flex-grow: 1;
+  padding: 0 40px;
+  position: relative;
+  top: 30px;
+}
+
+.partners-section .client-logo {
+  padding: 0 20px;
+  position: relative;
+}
+
+.reviews-section {
+  color: #fff;
+  margin-top: 30px;
+  background-color: #333645;
+}
+.reviews-section a {
+  color: #fff;
+  text-decoration: none;
+}
+.reviews-section h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+.reviews-section .welcome-head {
+  margin-top: 0px;
+}
+.reviews-section p {
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+
+.star-inline {
+  display: inline-flex;
+}
+.star-inline .stars {
+  color: orange;
+  margin-bottom: 25px;
+  font-size: 45px;
+}
+
+.latest-section .latest-heading {
   padding-top: 50px;
 }
-.latest-section .latest-header h2 {
+.latest-section .latest-heading h2 {
   color: #333645;
   font-size: 2.25rem;
   margin: 0 0 28px;
@@ -165,21 +216,6 @@ label {
 .btn-art3 {
   background-color: #2ecc71;
   border: #2ecc71;
-}
-
-.clients-section .clients-outer {
-  padding: 50px 0;
-}
-.clients-section .clients-outer .clients-row-flex {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
-.clients-section .clients-outer .clients-row-flex .client-logo {
-  flex-grow: 1;
-  padding: 0 40px;
-  position: relative;
-  top: 30px;
 }
 
 .newsl-section .newsletter-full-width {

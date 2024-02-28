@@ -18,7 +18,7 @@ html {
 }
 body {
   font-family: Poppins, sans-serif;
-  fontsize: 1rem;
+  font-size: 1rem;
   letter-spacing: 0.4px;
   background-color: #fff;
 }
@@ -28,7 +28,7 @@ div {
   display: block;
 }
 
-// LABELS
+// ===== LABELS =====//
 label {
   font-weight: $font-bold;
   color: $dark-txt; 
@@ -52,26 +52,43 @@ label {
   padding-right: 15px;
 }
 
+// ===== SECTION =====//
 
-// ROW
+.section  {
+  padding: 50px 0;
+}
+
+
+
+// ===== ROW =====//
+
 .row {
   margin-left: -15px;
   margin-right: -15px;
 }
 
-//FORM GROUP
+
+
+//===== FORM GROUP =====//
+
 .form-group {
   margin-bottom: 15px;
 }
 
+
+
 // ===== NAVY BUTTON =====//
+
 .btn-primary {
   color: #fff;
   background-color: $dark-txt;
   border-color: $dark-txt;
 }
 
-// BOTTON CLASS UNIVERSAL?
+
+
+// ===== BOTTON CLASS UNIVERSAL? =====//
+
 .btn {
   display: inline-block;
   margin-bottom: 0;
@@ -86,4 +103,30 @@ label {
   font-size: 14px;
   line-height: 1.42857143;
   border-radius: 2px;
+}
+
+//==========================================//
+//       CLIENT/PARTNERS SLIDE SECTION
+//==========================================//
+
+.partners-section, .clients-section {
+
+  .slide-outer {
+      padding:  50px 0 ;
+      
+
+      .clients-row-flex {
+          display: flex;
+          flex-direction: row;
+          text-align: center;
+
+          .client-logo {
+              flex-grow: 1;
+              padding: 0 40px;
+              position: relative;
+              top: 30px;
+              // vertical-align: middle; not working
+          }
+      }
+  }
 }

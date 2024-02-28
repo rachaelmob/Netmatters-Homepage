@@ -1,0 +1,38 @@
+//==========================================//
+//              CLIENT REVIEWS 
+//==========================================//
+
+.reviews-section {
+    color: #fff;
+    margin-top: 30px;
+    background-color: $dark-txt;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        font-weight: $font-bold;
+    }
+
+    .welcome-head {
+        margin-top: 0px;
+    }
+
+    p {
+        line-height: 1.875rem;
+        margin-bottom: 25px;
+    }
+}
+
+.star-inline {
+    display: inline-flex;
+
+    .stars {
+        color: orange;
+        margin-bottom: 25px;
+        font-size: 45px;
+    }
+}
