@@ -1,3 +1,97 @@
 //==========================================//
 //               OUR SERVICES  
 //==========================================//
+ .our-services {
+
+    a {
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+
+        icon {
+
+        }
+    }
+
+    .services-heading {
+        position: relative;
+        padding: 0 15px;
+
+        h2 { //use mixin for latest and service section
+        color: $dark-txt;
+        font-size: 2.7rem;
+        margin: 0 0 20px; 
+        font-weight: $font-bold;
+        }
+    }
+
+    .services-all  {
+            position: relative;
+            padding: 0 15px;
+
+        .service-container {
+        border: 1px solid #ccc; //latest tab
+        box-shadow: 0 3px 35px rgba(0,0,0,.1); //latest tab
+        margin: 30px 0;
+        padding: 30px 0;
+        position: relative; //latest tab
+        border-radius: 15px;
+        top: 0; //latest tab
+        background-color: #fff;
+        }
+
+        .icon {
+            font-size: 1.7rem;
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: $font-light;
+            color: $dark-txt;
+        }
+
+        p {
+            line-height: 1.375rem;
+            font-size: .8125rem;
+            color: $dark-txt;
+        }
+    }
+
+ }
+
+ .services-all {
+ 
+    & .icon-colr1 {
+    background-color: $nav-software;
+ }
+
+    & .icon-colr2 {
+        background-color: $nav-it;
+    }
+
+    & .icon-colr3 {
+        background-color: $nav-digital;
+     }
+
+    & .icon-colr4 {
+        background-color: $nav-telecom;
+     }
+
+    & .icon-colr5 {
+        background-color: $nav-webdesign;
+     }
+
+    & .icon-colr6 {
+        background-color: $nav-cyber;
+     }
+    
+    & .icon-colr7 {
+        background-color: $nav-developer;
+     }
+
+
+}

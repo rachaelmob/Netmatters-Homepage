@@ -53,15 +53,15 @@
     }
 
     .article-container {
-        border: 1px solid #ccc;
-        box-shadow: 0 3px 35px rgba(0,0,0,.1);
+        border: 1px solid #ccc; //services tab
+        box-shadow: 0 3px 35px rgba(0,0,0,.1); //services tab
         margin: 40px 0;
-        position: relative;
+        position: relative; //services tab
         border-radius: 3px;
-        top: 0;
+        top: 0; //services tab
 
         .article-content {
-            padding: 30px;
+            padding: 30px; // services tab
         }
 
         h3 {

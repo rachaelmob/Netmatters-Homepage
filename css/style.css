@@ -101,6 +101,74 @@ label {
   top: 30px;
 }
 
+.our-services a {
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.our-services .services-heading {
+  position: relative;
+  padding: 0 15px;
+}
+.our-services .services-heading h2 {
+  color: #333645;
+  font-size: 2.7rem;
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+.our-services .services-all {
+  position: relative;
+  padding: 0 15px;
+}
+.our-services .services-all .service-container {
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+  padding: 30px 0;
+  position: relative;
+  border-radius: 15px;
+  top: 0;
+  background-color: #fff;
+}
+.our-services .services-all .icon {
+  font-size: 1.7rem;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+}
+.our-services .services-all h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #333645;
+}
+.our-services .services-all p {
+  line-height: 1.375rem;
+  font-size: 0.8125rem;
+  color: #333645;
+}
+
+.services-all .icon-colr1 {
+  background-color: #67809f;
+}
+.services-all .icon-colr2 {
+  background-color: #4183d7;
+}
+.services-all .icon-colr3 {
+  background-color: #2ecc71;
+}
+.services-all .icon-colr4 {
+  background-color: #d64541;
+}
+.services-all .icon-colr5 {
+  background-color: #926fb1;
+}
+.services-all .icon-colr6 {
+  background-color: #f62459;
+}
+.services-all .icon-colr7 {
+  background-color: #ce4125;
+}
+
 .partners-section .client-logo {
   padding: 0 20px;
   position: relative;
