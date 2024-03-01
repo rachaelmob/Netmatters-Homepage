@@ -30,21 +30,7 @@
                     padding: 12px 22px 16px;
                     margin-right: 7px;
                     margin-bottom: 7px;
-                }
-            }
-            .row-flex-list {
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0;
-                
-
-                .footer-list {
-                    margin-bottom: 30px;
-
-                    .footer-ul {
-                        // padding: 0;
-                        margin-left: -15px;
-                    }
+                 }
                 }
             }
         }
@@ -73,7 +59,21 @@
 
         
         .footer-list {  
+         margin-bottom: 30px;
 
+         .row-flex-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            flex-direction: column;
+
+            .footer-ul {
+                    padding-left: 0;
+                }
+
+                
+            }
+  
             li {
                 list-style: none;
 
@@ -90,7 +90,7 @@
             }
         }
     }
-}
+
 
 
 footer .footer-company-info .footer-social-menu {
