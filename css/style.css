@@ -1,9 +1,18 @@
-/*And to use media query mixin you just pass this 
-@include mq(medium) {
- .some-class-here {
-     property: abc;
-   }
- } */
+@media (min-width: 767px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1201px) {
+  .container {
+    width: 1170px;
+  }
+}
 *,
 *::before,
 *::after {
@@ -276,6 +285,28 @@ header .btn {
   font-weight: 400;
   text-transform: uppercase;
 }
+.latest-section .article-container .author {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+}
+.latest-section .article-container .author .author-pic {
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.latest-section .article-container .author .posted-info {
+  font-size: 0.875rem;
+  line-height: 1.35rem;
+}
+.latest-section .article-container .author .posted-info .posted-by {
+  font-weight: 600;
+  color: #333645;
+}
+.latest-section .article-container .author .posted-info .posted-date {
+  color: #666;
+}
 .latest-section .btn {
   color: fff;
   height: auto;
@@ -402,32 +433,49 @@ header .btn {
   font-size: 1rem;
   font-weight: 400;
 }
-.foot-section .footer-list {
-  margin-bottom: 30px;
-}
-.foot-section .footer-list .row-flex-list {
+.foot-section .row-flex-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   flex-direction: column;
 }
-.foot-section .footer-list .row-flex-list .footer-ul {
+.foot-section .row-flex-list .footer-list {
+  margin-bottom: 30px;
+}
+.foot-section .row-flex-list .footer-list .footer-ul {
   padding-left: 0;
 }
-.foot-section .footer-list li {
+.foot-section .row-flex-list .footer-list li {
   list-style: none;
 }
-.foot-section .footer-list li a {
+.foot-section .row-flex-list .footer-list li a {
   color: #fff;
   text-decoration: none;
   font-size: 13px;
 }
-.foot-section .footer-list li a:hover {
+.foot-section .row-flex-list .footer-list li a:hover {
   text-decoration: underline;
 }
-
-footer .footer-company-info .footer-social-menu {
+.foot-section footer .footer-company-info .footer-social-menu {
   width: auto;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 0.82rem;
+  line-height: 1.42;
+  background-color: #212330;
+}
+.footer-bottom .license, .footer-bottom a {
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+}
+.footer-bottom .license span, .footer-bottom a span {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

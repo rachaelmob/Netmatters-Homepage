@@ -77,7 +77,33 @@
             }
 
         }
-        
+      
+        .author {
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #ccc;
+
+            .author-pic {
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+            .posted-info  {
+                font-size: 0.875rem;
+                line-height: 1.35rem;
+
+                & .posted-by {
+                    font-weight: $font-bold;
+                    color: $dark-txt;
+                }
+
+                & .posted-date {
+                    color: #666;
+                }
+             
+            }
+        }
     }
 
     .btn {
