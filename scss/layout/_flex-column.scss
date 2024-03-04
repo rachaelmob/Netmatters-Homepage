@@ -1,0 +1,15 @@
+//==========================================//
+//               FLEX COLUMN
+//==========================================//
+
+
+//=========== FOOTER LIST COLUMNS ===========//
+@include mq(medium) {
+    footer .footer-content .row-flex-list {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+

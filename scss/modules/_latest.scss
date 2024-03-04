@@ -136,3 +136,30 @@
         border: $nav-digital;
     }
 
+
+
+    // VIEW ALL
+    .latest-section .view-all {
+        display: block;
+        color: $dark-txt;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.625rem;
+        font-weight: $font-bold;
+        margin: 10px 10px;
+
+    }
+
+        // ARTICLE CARDS 767PX
+
+    @include mq(medium) {
+        .latest-section .latest-articles {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 30px;
+
+            & .display-none {
+                display: none;
+            }
+        }
+    }

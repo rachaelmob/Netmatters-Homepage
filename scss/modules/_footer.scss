@@ -2,7 +2,7 @@
 //                  FOOTER
 //==========================================//
 
-.foot-section {
+
 
     footer {
     background-color: $dark-bg;
@@ -59,6 +59,7 @@
         }
 
     .row-flex-list {
+
         display: flex;
         flex-wrap: wrap;
         margin: 0;
@@ -66,7 +67,6 @@
 
         .footer-list {  
          margin-bottom: 30px;
-
 
 
             .footer-ul {
@@ -99,7 +99,7 @@
         width: auto;
     }
 
-}
+
 
 
 //==========================================//
