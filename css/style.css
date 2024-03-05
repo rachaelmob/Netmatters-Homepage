@@ -135,10 +135,12 @@ header .header-container .header-row {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-bottom: 15px;
 }
 header .header-container .header-row img {
-  max-width: 100%;
+  max-width: 90%;
+}
+header .header-container .header-row .phone {
+  padding-right: 25px;
 }
 header .header-container .header-row .phone a {
   text-decoration: none;
@@ -146,7 +148,7 @@ header .header-container .header-row .phone a {
   font-size: 1rem;
 }
 header .header-container .header-row .phone a span {
-  font-size: 27px;
+  font-size: 25px;
 }
 header .header-container .header-row button {
   width: 96px;
@@ -158,6 +160,29 @@ header .header-container .header-row button span {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+header .header-container .search-mobile {
+  margin-top: 15px;
+}
+header .header-container .search-mobile form {
+  position: relative;
+  margin-bottom: 0;
+}
+header .header-container .search-mobile form input {
+  width: 100%;
+  height: 45px;
+  padding: 5px 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+header .header-container .search-mobile form button {
+  color: #333645;
+  position: absolute;
+  border: none;
+  font-size: 19px;
+  right: 5px;
+  top: 16px;
+  text-align: center;
+  background: none;
 }
 
 .slide-banner .banner img {
@@ -191,26 +216,40 @@ header .header-container .header-row button span {
 .our-services .services-all {
   position: relative;
   padding: 0 15px;
+  display: grid;
+  grid-gap: 30px;
 }
-@media (min-width: 767px) {
-  .our-services .services-all {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    grid-template-areas: "software software" "support support" "digital digital" "telecoms design" "cyber developer";
-  }
+.our-services .services-all .icon-colr1 {
+  background-color: #67809f;
 }
-.our-services .services-all .service-container {
+.our-services .services-all .icon-colr2 {
+  background-color: #4183d7;
+}
+.our-services .services-all .icon-colr3 {
+  background-color: #2ecc71;
+}
+.our-services .services-all .icon-colr4 {
+  background-color: #d64541;
+}
+.our-services .services-all .icon-colr5 {
+  background-color: #926fb1;
+}
+.our-services .services-all .icon-colr6 {
+  background-color: #f62459;
+}
+.our-services .services-all .icon-colr7 {
+  background-color: #ce4125;
+}
+.our-services .services-all .service-container1, .our-services .services-all .service-container2, .our-services .services-all .service-container3, .our-services .services-all .service-container4, .our-services .services-all .service-container5, .our-services .services-all .service-container6, .our-services .services-all .service-container7 {
   border: 1px solid #ccc;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  margin: 30px 0;
   padding: 30px 0;
   position: relative;
   border-radius: 15px;
   top: 0;
   background-color: #fff;
 }
-.our-services .services-all .service-container a {
+.our-services .services-all .service-container1 a, .our-services .services-all .service-container2 a, .our-services .services-all .service-container3 a, .our-services .services-all .service-container4 a, .our-services .services-all .service-container5 a, .our-services .services-all .service-container6 a, .our-services .services-all .service-container7 a {
   display: grid;
   justify-items: center;
   align-items: center;
@@ -218,48 +257,62 @@ header .header-container .header-row button span {
   text-decoration: none;
   color: #fff;
 }
-.our-services .services-all .service-container a .icon {
+.our-services .services-all .service-container1 a .icon, .our-services .services-all .service-container2 a .icon, .our-services .services-all .service-container3 a .icon, .our-services .services-all .service-container4 a .icon, .our-services .services-all .service-container5 a .icon, .our-services .services-all .service-container6 a .icon, .our-services .services-all .service-container7 a .icon {
   font-size: 1.7rem;
   border-radius: 50%;
   width: 65px;
   height: 65px;
 }
-.our-services .services-all .service-container a .icon, .our-services .services-all .service-container a .icon .btn {
+.our-services .services-all .service-container1 a .icon, .our-services .services-all .service-container1 a .icon .btn, .our-services .services-all .service-container2 a .icon, .our-services .services-all .service-container2 a .icon .btn, .our-services .services-all .service-container3 a .icon, .our-services .services-all .service-container3 a .icon .btn, .our-services .services-all .service-container4 a .icon, .our-services .services-all .service-container4 a .icon .btn, .our-services .services-all .service-container5 a .icon, .our-services .services-all .service-container5 a .icon .btn, .our-services .services-all .service-container6 a .icon, .our-services .services-all .service-container6 a .icon .btn, .our-services .services-all .service-container7 a .icon, .our-services .services-all .service-container7 a .icon .btn {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.our-services .services-all .service-container a h3 {
+.our-services .services-all .service-container1 a h3, .our-services .services-all .service-container2 a h3, .our-services .services-all .service-container3 a h3, .our-services .services-all .service-container4 a h3, .our-services .services-all .service-container5 a h3, .our-services .services-all .service-container6 a h3, .our-services .services-all .service-container7 a h3 {
   font-size: 1.3rem;
   font-weight: 400;
   color: #333645;
 }
-.our-services .services-all .service-container a p {
+.our-services .services-all .service-container1 a p, .our-services .services-all .service-container2 a p, .our-services .services-all .service-container3 a p, .our-services .services-all .service-container4 a p, .our-services .services-all .service-container5 a p, .our-services .services-all .service-container6 a p, .our-services .services-all .service-container7 a p {
   line-height: 1.375rem;
   font-size: 0.8125rem;
   color: #333645;
 }
 
-.services-all .icon-colr1 {
-  background-color: #67809f;
+@media (min-width: 767px) {
+  .services-all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    grid-template-areas: "software software" "support support" "digital digital" "telecoms design" "cyber developer";
+  }
+  .services-all .service-container1 {
+    grid-area: software;
+  }
+  .services-all .service-container2 {
+    grid-area: support;
+  }
+  .services-all .service-container3 {
+    grid-area: digital;
+  }
+  .services-all .service-container4 {
+    grid-area: telecoms;
+  }
+  .services-all .service-container5 {
+    grid-area: design;
+  }
+  .services-all .service-container6 {
+    grid-area: cyber;
+  }
+  .services-all .service-container7 {
+    grid-area: developer;
+  }
 }
-.services-all .icon-colr2 {
-  background-color: #4183d7;
-}
-.services-all .icon-colr3 {
-  background-color: #2ecc71;
-}
-.services-all .icon-colr4 {
-  background-color: #d64541;
-}
-.services-all .icon-colr5 {
-  background-color: #926fb1;
-}
-.services-all .icon-colr6 {
-  background-color: #f62459;
-}
-.services-all .icon-colr7 {
-  background-color: #ce4125;
+@media (min-width: 992px) {
+  .services-all {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "software software software" "support support support" "digital digital telecoms" "design cyber developer";
+  }
 }
 
 .partners-section .client-logo {
@@ -273,8 +326,35 @@ header .header-container .header-row button span {
   background-color: #333645;
 }
 .reviews-section a {
+  width: 100%;
   color: #fff;
   text-decoration: none;
+}
+.reviews-section .double-btn {
+  display: flex;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+.reviews-section .btn-base {
+  font-size: 1.25rem;
+  padding: 15px 30px;
+  border-radius: 6px;
+  background-color: #272936;
+}
+.reviews-section .btn-base:hover {
+  background-color: #121318;
+}
+.reviews-section .google {
+  background-color: #4387f6;
+}
+.reviews-section .google:hover {
+  background-color: #166af4;
+}
+.reviews-section .trustpilot {
+  background-color: #00b67b;
+}
+.reviews-section .trustpilot:hover {
+  background-color: #009b69;
 }
 .reviews-section h2 {
   font-size: 2.25rem;
@@ -287,14 +367,26 @@ header .header-container .header-row button span {
   line-height: 1.875rem;
   margin-bottom: 25px;
 }
-
-.star-inline {
+.reviews-section .star-inline {
   display: inline-flex;
 }
-.star-inline .stars {
+.reviews-section .star-inline .stars {
   color: orange;
   margin-bottom: 25px;
   font-size: 45px;
+}
+.reviews-section .client-quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.reviews-section .client-quote-author {
+  font-weight: 600;
+  color: #a3a8ac;
+  font-size: 1.1rem;
+}
+.reviews-section .client-quote-author a {
+  color: #fff;
 }
 
 .latest-section .latest-heading {

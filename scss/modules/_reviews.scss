@@ -8,8 +8,42 @@
     background-color: $dark-txt;
 
     a {
+        width: 100%;
         color: #fff;
         text-decoration: none;
+    }
+
+    .double-btn {
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+    }
+
+    .btn-base {
+        font-size: 1.25rem;
+        padding: 15px 30px;
+        border-radius: 6px;
+        background-color: $btn-drk;
+
+        &:hover {
+            background-color: $btn-drk-hover;
+        }
+    }
+
+    .google{
+        background-color: $btn-google;
+
+        &:hover {
+            background-color: $google-hover;
+        }
+    }
+
+    .trustpilot {
+        background-color: $btn-trustpilot;
+
+        &:hover {
+            background-color: $trustpilot-hover;
+        }
     }
 
     h2 {
@@ -25,14 +59,32 @@
         line-height: 1.875rem;
         margin-bottom: 25px;
     }
-}
 
-.star-inline {
-    display: inline-flex;
+    .star-inline {
+        display: inline-flex;
 
-    .stars {
-        color: orange;
-        margin-bottom: 25px;
-        font-size: 45px;
+        .stars {
+            color: orange;
+            margin-bottom: 25px;
+            font-size: 45px;
+        }
     }
+
+    
+    .client-quote {
+        font-style: italic;
+        font-size: 1.3rem;
+        font-weight: $font-bold;
+    }
+
+    .client-quote-author {
+        font-weight: $font-bold;
+        color: #a3a8ac;
+        font-size: 1.1rem;
+
+        & a {
+            color: #fff;
+        }
+    }
+
 }
