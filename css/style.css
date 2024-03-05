@@ -311,7 +311,7 @@ header .header-container .search-mobile form button {
 @media (min-width: 992px) {
   .services-all {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "software software software" "support support support" "digital digital telecoms" "design cyber developer";
+    grid-template-areas: "software software support" "digital digital telecoms" "design cyber developer";
   }
 }
 

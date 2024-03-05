@@ -156,8 +156,7 @@
     @include mq(large) {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
-        "software software software"
-        "support support support"
+        "software software support"
         "digital digital telecoms"
         "design cyber developer";
     }
