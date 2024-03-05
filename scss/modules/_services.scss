@@ -21,6 +21,20 @@
             position: relative;
             padding: 0 15px;
 
+            @include mq(medium) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            grid-template-areas: 
+            "software software"
+            "support support"
+            "digital digital"
+            "telecoms design"
+            "cyber developer";
+
+            }
+
+
         .service-container {
             border: 1px solid #ccc; //latest tab
             box-shadow: 0 3px 35px rgba(0,0,0,.1); //latest tab
@@ -32,6 +46,9 @@
             background-color: #fff;
 
             a {
+                display: grid;
+                justify-items: center;
+                align-items: center;
                 text-align: center;
                 text-decoration: none;
                 color: #fff;
@@ -44,6 +61,7 @@
                     
                     &, .btn {
                         display: flex;
+                        justify-content: center;
                         align-items: center;
                     }
         
