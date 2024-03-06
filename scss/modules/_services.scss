@@ -23,7 +23,7 @@
             display: grid;
             grid-gap: 30px;
 
-                & .icon-colr1 {
+                & .service-container1:hover, & .icon-colr1 { //testing
                 background-color: $nav-software;
                 }
             
@@ -71,6 +71,7 @@
                 text-align: center;
                 text-decoration: none;
                 color: #fff;
+
         
                 .icon {
                     font-size: 1.7rem;
@@ -154,7 +155,7 @@
     }
 
     @include mq(large) {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-areas: 
         "software software support"
         "digital digital telecoms"

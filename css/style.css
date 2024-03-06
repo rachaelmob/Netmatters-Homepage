@@ -95,7 +95,7 @@ label {
   top: 30px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .container {
     width: 750px;
   }
@@ -110,7 +110,7 @@ label {
     width: 1170px;
   }
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   footer .footer-content .row-flex-list {
     width: 45%;
     flex-direction: row;
@@ -150,12 +150,35 @@ header .header-container .header-row .phone a {
 header .header-container .header-row .phone a span {
   font-size: 25px;
 }
-header .header-container .header-row button {
+header .header-container .header-row .search-bar form {
+  margin-bottom: 0;
+}
+header .header-container .header-row .search-bar input {
+  width: 176px;
+  height: 55px;
+  font-size: 13px;
+  padding: 10px 15px;
+}
+header .header-container .header-row .search-bar button {
+  border: none;
+  height: 55px;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  left: -7px;
+  margin-right: 20px;
+  vertical-align: bottom;
+  padding: 5px 20px 3px;
+  border-radius: 0 5% 5% 0;
+  background-color: #999aa2;
+}
+header .header-container .header-row .hamburger {
   width: 96px;
   height: 53px;
   border-radius: 3px;
 }
-header .header-container .header-row button span {
+header .header-container .header-row .hamburger span {
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -185,6 +208,54 @@ header .header-container .search-mobile form button {
   background: none;
 }
 
+header .nav-bar {
+  background-color: #333645;
+  padding: 20px 0;
+}
+header .nav-bar ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+header .nav-bar ul li {
+  list-style: none;
+}
+header .nav-bar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  header .search-mobile, header .phone {
+    display: none;
+  }
+  header .header-container .header-row .hamburger {
+    width: 56px;
+  }
+  header .header-container {
+    padding: 20px 0px 20px 30px;
+  }
+  header .header-container .header-row {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  header .search-bar input {
+    display: none;
+  }
+  header .search-bar button {
+    border-radius: 3px;
+  }
+}
+@media (min-width: 1px) and (max-width: 460px) {
+  header .nav-bar, header .search-bar {
+    display: none;
+  }
+}
+@media (min-width: 461px) {
+  header .nav-bar, header .search-bar {
+    display: none;
+  }
+}
 .slide-banner .banner img {
   width: 100%;
   height: 100%;
@@ -219,7 +290,7 @@ header .header-container .search-mobile form button {
   display: grid;
   grid-gap: 30px;
 }
-.our-services .services-all .icon-colr1 {
+.our-services .services-all .service-container1:hover, .our-services .services-all .icon-colr1 {
   background-color: #67809f;
 }
 .our-services .services-all .icon-colr2 {
@@ -279,7 +350,7 @@ header .header-container .search-mobile form button {
   color: #333645;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .services-all {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -310,7 +381,7 @@ header .header-container .search-mobile form button {
 }
 @media (min-width: 992px) {
   .services-all {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "software software support" "digital digital telecoms" "design cyber developer";
   }
 }
@@ -503,7 +574,7 @@ header .header-container .search-mobile form button {
   margin: 10px 10px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .latest-section .latest-articles {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -662,7 +733,7 @@ footer .footer-company-info .footer-social-menu {
 .footer-bottom .license span, .footer-bottom a span {
   display: block;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .footer-bottom .license span, .footer-bottom a span {
     display: inline;
   }

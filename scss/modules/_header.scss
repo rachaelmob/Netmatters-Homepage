@@ -33,8 +33,40 @@
                 }
             }
         
+            //search bar
+            .search-bar {
 
-            button {
+                form {
+                    margin-bottom: 0;
+                }
+
+                input {
+                    width: 176px;
+                    height: 55px;
+                    font-size: 13px;
+                    padding: 10px 15px;
+
+                }
+
+                button {
+                    border: none;
+                    height: 55px;
+                    font-size: 1.3rem;
+                    color: white;
+                    cursor: pointer;
+                    position: relative;
+                    left: -7px;
+                    margin-right: 20px;
+                    vertical-align: bottom;
+                    padding: 5px 20px 3px;
+                    border-radius: 0 5% 5% 0;
+                    background-color: $btn-contact;
+
+
+                }
+            }
+
+            .hamburger {
                 width: 96px;
                 height: 53px;
                 border-radius: 3px;
@@ -49,7 +81,7 @@
         
          }
 
-      //search bar
+      //search mobile
       .search-mobile {
         margin-top: 15px;
 
@@ -83,4 +115,105 @@
 
      }
     
+}
+
+
+
+//==========================================//
+//                   NAV BAR 
+//==========================================//
+
+header {
+ .nav-bar {
+    background-color: $dark-txt;
+    padding: 20px 0;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        li {
+            list-style: none;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+
+
+
+
+ }
+}
+
+
+
+
+
+//==========================================//
+//              MEDIA QUERIES 
+//==========================================//
+
+
+
+@include mq(medium) {
+   header {
+    & .search-mobile, & .phone {
+    display: none;
+    }
+
+    & .header-container .header-row .hamburger {
+        width: 56px;
+     }
+
+    & .header-container {
+        padding: 20px 0px 20px 30px;
+
+        & .header-row {
+         justify-content: flex-start;
+        }
+   }
+
+  }      
+}
+
+@include mq(large) {
+    header {
+
+        .search-bar {  
+      
+        & input {
+            display: none;
+        }
+
+        & button {
+          border-radius: 3px;
+        }
+
+      }
+
+    }
+}
+
+@include mq(x-small){
+    header {
+        
+        & .nav-bar, & .search-bar {
+            display: none;
+        }
+    }
+}
+
+
+@include mq(small){
+    header {
+        
+        & .nav-bar, & .search-bar {
+            display: none;
+        }
+    }
 }
