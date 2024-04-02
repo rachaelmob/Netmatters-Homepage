@@ -227,6 +227,21 @@ header .header-container .header-row .hamburger span {
 header .header-container .search-mobile {
   margin-top: 15px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  header .header-container .search-mobile {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header .header-container .search-mobile {
+    display: none;
+  }
+}
+@media (min-width: 1201px) {
+  header .header-container .search-mobile {
+    display: none;
+  }
+}
 header .header-container .search-mobile form {
   position: relative;
   margin-bottom: 0;
@@ -246,11 +261,6 @@ header .header-container .search-mobile form button {
   top: 30px;
   text-align: center;
   background: none;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  header .header-container .search-mobile form {
-    display: none;
-  }
 }
 
 header .nav-bar {
@@ -274,6 +284,11 @@ header .nav-bar ul li a {
   }
 }
 @media (min-width: 461px) and (max-width: 767px) {
+  header .nav-bar {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
   header .nav-bar {
     display: none;
   }
