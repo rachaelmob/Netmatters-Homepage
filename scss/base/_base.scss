@@ -10,15 +10,11 @@
 
 html,
 body {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
-html {
-  background-color: #fff;
-}
 body {
-  font-family: Poppins, sans-serif;
   font-size: 1rem;
+  font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
   background-color: #fff;
 }
@@ -28,128 +24,9 @@ div {
   display: block;
 }
 
-// ===== LABELS =====//
-label {
-  font-weight: $font-bold;
-  color: $dark-txt; 
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 5px;
-  // font-weight: 700;
-}
 
 
 
-/*==========================================//
-               REUSABLE CLASSES
-//==========================================*/
-.container {
-  margin-right:  auto;
-  margin-left:   auto;
-  padding-left:  15px;
-  padding-right: 15px;
-}
-
-// ===== SECTION =====//
-
-.section  {
-  padding: 50px 0;
-}
 
 
-
-// ===== ROW =====//
-
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-
-
-//===== FORM GROUP =====//
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-
-
-// ===== NAVY BUTTON =====//
-
-.btn-primary {
-  color: #fff;
-  background-color: $dark-txt;
-  border-color: $dark-txt;
-}
-
-
-
-// ===== BOTTON CLASS UNIVERSAL? =====//
-
-.btn {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: 400;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  border-radius: 2px;
-}
-
-//==========================================//
-//       CLIENT/PARTNERS SLIDE SECTION
-//==========================================//
-
-.partners-section, .clients-section {
-
-  .slide-outer {
-      padding:  50px 0 ;
-      
-
-      .clients-row-flex {
-          display: flex;
-          flex-direction: row;
-          text-align: center;
-
-          .client-logo {
-              flex-grow: 1;
-              padding: 0 40px;
-              position: relative;
-              top: 30px;
-              // vertical-align: middle; not working
-          }
-      }
-  }
-}
-
-//==========================================//
-//               MEDIA QUERIES
-//==========================================//
-
-@include mq(medium) {
-  .container {
-    width: 750px;
-  }
-}
-
-@include mq(large) {
-  .container {
-    width: 970px;
-  }
-}
-
-@include mq(x-large) {
-  .container {
-    width: 1170px;
-  }
-}
 

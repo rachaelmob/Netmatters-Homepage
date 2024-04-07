@@ -1,0 +1,37 @@
+//==========================================//
+//  PARTNERS AND ACCREDNTIALS SLIDE SECTION
+//==========================================//
+
+// LOOK IN BASE 
+
+.partners-section .client-logo {
+
+        padding: 0 20px;
+        position: relative;
+} //Over ridden by Client's section Fix it.
+
+//==========================================//
+//       CLIENT/PARTNERS SLIDE SECTION
+//==========================================//
+
+.partners-section, .clients-section {    
+      
+            .badges-row {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+      
+                .badge-logo {
+                    flex-grow: 1;
+                    padding: 0 40px;
+                    position: relative;
+                    top: 30px;
+                    filter: grayscale(100%);
+
+                    &:hover {
+                        filter: grayscale(0) ;
+                    }
+                }
+            }
+      }
+      

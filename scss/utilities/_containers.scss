@@ -1,0 +1,60 @@
+//==========================================//
+//                 CONTAINERS
+//==========================================//
+
+#container{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.container {
+    margin-right:  auto;
+    margin-left:   auto;
+    padding-left:  15px;
+    padding-right: 15px;
+
+
+    @include mq(medium) {
+        width: 750px;
+        }
+  
+    @include mq(large) {
+        width: 970px;
+    }
+    
+    @include mq(x-large) {
+        width: 1200px;
+    }
+  }
+
+  /*==========================================//
+               REUSABLE CLASSES
+//==========================================*/
+
+// ===== SECTION =====//
+
+.section  {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  
+  
+  // ===== ROW =====//
+  
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  
+  
+  //===== FORM GROUP =====//
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  

@@ -100,7 +100,21 @@
     }
 
 
+    footer .footer-content .row-flex-list {
 
+        @include mq(medium) {
+            width: 45%;
+            flex-direction: row;
+      }
+    
+        @include mq(large) {
+            width: 25%;
+        }
+    
+        @include mq(x-large) {
+            min-width: 800px;
+        }
+    }
 
 //==========================================//
 //            FOOTER BOTTOM

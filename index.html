@@ -14,119 +14,132 @@
 
 
 <body> 
-   
 
+<div id="container">
     <!-- ================================ HEADER ================================  -->
 <header>
     <div class="header-container">
-        <div class="header-row">
+        <div class="container">
+            <div class="header-row">
 
-            <div class="logo-head">
-                <a href="#">
-                    <img src="./img/netmatters-logo-header.png">
-                </a>
+                <div class="logo-head">
+                    <a href="#">
+                        <img src="./img/netmatters-logo-header.png" alt="netmatterslogo navy blue">
+                    </a>
+                </div>
+
+                <div class="phone">
+                    <a href="#">
+                        <span><i class="fa-solid fa-phone-volume"></i></span>
+                    </a>
+                </div>
+               <div class="actions">
+                    <a href="#" class="btn">
+                        <span><i class="fa-solid fa-computer-mouse"></i></span>
+                        Support
+                    </a>
+                    <a href="#" class="btn">
+                        <span><i class="fa-regular fa-paper-plane"></i></span>
+                        Contact
+                    </a>
+                    <div class="search-bar">
+                        <form method="GET" action="#" accept-charset="UTF-8">
+                            <label for="search-bar"></label>
+                            <input type="text" id="search-bar" placeholder="Search...">
+                            <button type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <button type="button" class="hamburger btn btn-primary">
+                        <span class="burger"></span>
+                        <span class="burger"></span>
+                        <span class="burger"></span>
+                    </button>
+              </div> 
             </div>
 
-            <div class="phone">
-                <a href="#">
-                    <span><i class="fa-solid fa-phone-volume"></i></span>
-                </a>
-            </div>
-            <div class="search-bar">
+            <div class="search-mobile">
                 <form method="GET" action="#" accept-charset="UTF-8">
-                    <label for="search-bar"></label>
-                    <input type="text" id="search-bar" placeholder="Search...">
+                    <label for="search-mobile"></label>
+                    <input type="text" id="search-mobile" placeholder="Search...">
                     <button type="submit">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
                 </div>
-
-            <button type="button" class="hamburger btn btn-primary">
-                <span><i class="fa-solid fa-bars"></i></span>
-            </button>
         </div>
 
-        <div class="search-mobile">
-        <form method="GET" action="#" accept-charset="UTF-8">
-            <label for="search-mobile"></label>
-            <input type="text" id="search-mobile" placeholder="Search...">
-            <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-        </div>
+
     </div>  
-    
-    
-    <!-- ================================ NAVIGATION BAR ================================  -->
-<div class="nav-bar">
-    <div class="container">
-        <ul>
-            <li class="software">
-                <a>
-                    <i class="fa-solid fa-laptop"></i>
-                    <span>Bespoke</span>
-                    <span>Software</span>   
-                </a>
-            </li>
-
-            <li class="support">
-                <a>
-                    <i class="fa-solid fa-desktop"></i>  
-                    <span>IT</span>
-                    <span>Support</span>   
-                </a>
-            </li>
-
-            <li class="digital">
-                <a>
-                    <i class="fa-solid fa-chart-simple"></i>   
-                    <span>Digital</span>
-                    <span>Marketing</span>   
-                </a>
-            </li>
-
-            <li class="telecoms">
-                <a>
-                    <i class="fa-solid fa-phone-volume"></i>
-                    <span>Telecoms</span>
-                    <span>Services</span>   
-                </a>
-            </li>
-
-            <li class="webdesign">
-                <a>
-                    <i class="fa-solid fa-code"></i>   
-                    <span>Web</span>
-                    <span>Design</span>   
-                </a>
-            </li>
-
-            <li class="cyber">
-                <a>
-                    <i class="fa-solid fa-shield-halved"></i>     
-                    <span>Cyber</span>
-                    <span>Security</span>   
-                </a>
-            </li>
-
-            <li class="developer">
-                <a>
-                    <i class="fa-solid fa-graduation-cap"></i>   
-                    <span>Web</span>
-                    <span>Developer</span>   
-                </a>
-            </li>
-
-        </ul>
-    </div>
-</div>
 
 </header>
 
-
-
+    <!-- ================================ NAVIGATION BAR ================================  -->
+    <div class="nav-bar">
+        <div class="container">
+            <!-- <nav> -->
+            <ul>
+                <li class="software">
+                    <a>
+                        <i class="fa-solid fa-laptop"></i>
+                        <small>Bespoke</small>
+                        Software
+                    </a>
+                </li>
+    
+                <li class="support">
+                    <a>
+                        <i class="fa-solid fa-desktop"></i>  
+                        <small>IT</small>
+                        <span>Support</span>   
+                    </a>
+                </li>
+    
+                <li class="digital">
+                    <a>
+                        <i class="fa-solid fa-chart-simple"></i>   
+                        <small>Digital</small>
+                        Marketing
+                    </a>
+                </li>
+    
+                <li class="telecoms">
+                    <a>
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <small>Telecoms</small>
+                        Services 
+                    </a>
+                </li>
+    
+                <li class="webdesign">
+                    <a>
+                        <i class="fa-solid fa-code"></i>   
+                        <small>Web</small>
+                        Design  
+                    </a>
+                </li>
+    
+                <li class="cyber">
+                    <a>
+                        <i class="fa-solid fa-shield-halved"></i>     
+                        <small>Cyber</small>
+                        Security   
+                    </a>
+                </li>
+    
+                <li class="developer">
+                    <a>
+                        <i class="fa-solid fa-graduation-cap"></i>   
+                        <small>Web</small>
+                        Developer
+                    </a>
+                </li>
+            </ul>
+            <!-- </nav> -->
+        </div>
+    </div>
 
 
 
@@ -138,15 +151,16 @@
     <!-- ================================ BANNERS ================================  -->
 <section class="slide-banner">
     <div class="banner">
-        <img src="./img/banner-lead-tech.png">
-        <div class="banner-content">
+        <img src="./img/banner/banner-lead-tech.png" alt="Netmatters building">
+        <div class="banner-content container">
             <h1>
                 The East Of England's Leading Technology Company
             </h1>
             <p>
-                Performance-driven digital and technology services
+                Performance-driven digital and technology services <br>
+                with complete transparency.
             </p>
-            <a href="#" class="btn">
+            <a href="#" class="btn"> <!--btn-web bnt-lg-->
                 Why Choose Us?
                 <i class="fa-solid fa-arrow-right"></i>                      
             </a> 
@@ -160,7 +174,7 @@
 
 
     <!-- ================================ OUR SERVICES ================================  -->
-    <section class="our-services">
+    <section id="our-services">
         <div class="container section">
             <div class="services-heading">
                 <h2>Our Services</h2>
@@ -293,97 +307,102 @@
 
 
 
-    <!-- ================================ PARTNERS & CREDS SECTION ================================  -->
+    <!-- ================================ ACREDS SECTION ================================  -->
     <section class="partners-section">
-    <div class="slide-outer">
-        <div class="clients-row-flex">
-            <div class="client-logo">
-                <img src="./img/partners&creds/Google-partner.png" alt="Google Partner">
+    <div class="section">
+        <div class="badges-row">
+            <div class="badge-logo">
+                <img src="./img/accreds/Google-partner.png" alt="Google Partner">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/Living-wage-employer.png" alt="Living Wage Employer">
+            <div class="badge-logo">
+                <img src="./img/accreds/Living-wage-employer.png" alt="Living Wage Employer">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/Norfolk-ProHelp.png" alt="Norfolk ProHelp">
+            <div class="badge-logo">
+                <img src="./img/accreds/Norfolk-ProHelp.png" alt="Norfolk ProHelp">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/Investing-in-future-growth.png" alt="Investing In Future Growth">
+            <div class="badge-logo">
+                <img src="./img/accreds/Investing-in-future-growth.png" alt="Investing In Future Growth">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/norfolk-carbon-charter.png" alt="Norfolk Carbon Charter">
+            <div class="badge-logo">
+                <img src="./img/accreds/norfolk-carbon-charter.png" alt="Norfolk Carbon Charter">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/prompt-payment-code.png" alt="Prompt Payment Code">
+            <div class="badge-logo">
+                <img src="./img/accreds/prompt-payment-code.png" alt="Prompt Payment Code">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/princess-royal-training-award-20.png" alt="Princess Royal Training Award">
+            <div class="badge-logo">
+                <img src="./img/accreds/princess-royal-training-award-20.png" alt="Princess Royal Training Award">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/future-50.png" alt="Future 50 member">
+            <div class="badge-logo">
+                <img src="./img/accreds/future-50.png" alt="Future 50 member">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/Citation-ISO-Certification-9001-2015.png" alt="Citation ISO Certification 2015">
+            <div class="badge-logo">
+                <img src="./img/accreds/Citation-ISO-Certification-9001-2015.png" alt="Citation ISO Certification 2015">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/Citation-ISO-Certification-27001-2013.png" alt="Citation ISO Certification 2013">
+            <div class="badge-logo">
+                <img src="./img/accreds/Citation-ISO-Certification-27001-2013.png" alt="Citation ISO Certification 2013">
             </div>
-            <div class="client-logo">
-                <img src="./img/partners&creds/skills-of-tomorrow.png" alt="Skills Of Tomorrow">
+            <div class="badge-logo">
+                <img src="./img/accreds/skills-of-tomorrow.png" alt="Skills Of Tomorrow">
             </div>
-        </div> <!--flex-->
-    </div> <!-- partners-slide-->
+        </div>
+    </div>
     </section>
 
 
 
     <!-- ================================ CLIENT REVIEWS ================================  -->
-    <section class="reviews-section section">
-        <div class="container">
-         <h2 class="welcome-head">Welcome To Netmatters</h2>
-          <p><strong>Netmatters is a leading <a href="#">Bespoke Software</a>, 
-            <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> 
-            company based in the East of England with offices in <a href="#" target="_blank">London</a>,&nbsp;
-            <a href="#">Cambridge</a>, <a href="#">Wymondham</a>, and <a href="#">Great Yarmouth</a>.
-          </strong></p>
-            <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
-            <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
-            <div class="double-btn">
-                <a href="#" target="_blank" class="btn-base"> why choose us? 
-                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                </a>&nbsp;&nbsp;
-                <a href="#" target="_blank" class="btn-base">our culture 
-                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                </a>
-            </div>
-        </div>
-        <div class="container">
-            <h2>What Our Clients Think</h2>
-            <div class="star-inline">
-                <i class="fa fa-star stars"></i>
-                <i class="fa fa-star stars"></i>
-                <i class="fa fa-star stars"></i>
-                <i class="fa fa-star stars"></i>
-                <i class="fa fa-star stars"></i>
-            </div>
-            <p>
-                <span class="client-quote">Netmatters stood out from the start. Great guys and very easy to work with. 
-                Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered
-                a website to our (high!) expectations and went over and above to ensure we were satisfied clients - 
-                and we are!
-                </span>
-            </p>
-            <p>
-                <span class="client-quote-author">Eleanor Bishop, Head of Marketing - 
-                 <a href="#">Ashcroft Partnership LLP</a>
-                </span>
-            </p>
-            <div class="double-btn">
-                <a href="#" target="_blank" class="btn-base google" rel="noopener noreferrer">Google Reviews 
-                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                </a>&nbsp;&nbsp;
-                <a href="#" target="_blank" class="btn-base trustpilot" rel="noopener noreferrer">TrustPilot Reviews
-                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                </a>
+    <section id="about-section">
+        <div class="container section">
+            <div class="about-grid">
+                <div class="about-col">
+                    <h2 class="welcome-head">Welcome To Netmatters</h2>
+                    <p><strong>Netmatters is a leading <a href="#">Bespoke Software</a>, 
+                    <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> 
+                    company based in the East of England with offices in <a href="#" target="_blank">London</a>,&nbsp;
+                    <a href="#">Cambridge</a>, <a href="#">Wymondham</a>, and <a href="#">Great Yarmouth</a>.
+                    </strong></p>
+                    <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>
+                    <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
+                    <div class="double-btn">
+                        <a href="#" target="_blank" class="btn-base"> why choose us? 
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>&nbsp;&nbsp;
+                        <a href="#" target="_blank" class="btn-base">our culture 
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="review-col">
+                    <h2>What Our Clients Think</h2>
+                    <div class="star-inline">
+                        <i class="fa fa-star stars"></i>
+                        <i class="fa fa-star stars"></i>
+                        <i class="fa fa-star stars"></i>
+                        <i class="fa fa-star stars"></i>
+                        <i class="fa fa-star stars"></i>
+                    </div>
+                    <p>
+                        <span class="client-quote">Netmatters stood out from the start. Great guys and very easy to work with. 
+                        Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered
+                        a website to our (high!) expectations and went over and above to ensure we were satisfied clients - 
+                        and we are!
+                        </span>
+                    </p>
+                    <p>
+                        <span class="client-quote-author">Eleanor Bishop, Head of Marketing - 
+                        <a href="#">Ashcroft Partnership LLP</a>
+                        </span>
+                    </p>
+                    <div class="double-btn">
+                        <a href="#" target="_blank" class="btn-base google" rel="noopener noreferrer">Google Reviews 
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>&nbsp;&nbsp;
+                        <a href="#" target="_blank" class="btn-base trustpilot" rel="noopener noreferrer">TrustPilot Reviews
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -397,11 +416,10 @@
                 <h2>Latest News</h2>
             </div>
             <div class="latest-articles">
-
                 <div class="article-container">
                     <a href="#">
                         <div class="article-img">
-                            <img src="./img/Latest-news-east-anglian-air-ambulance.jpg" 
+                            <img src="./img/latest-news/Latest-news-east-anglian-air-ambulance.jpg" 
                              alt="A yellow air ambulance with text 'saving lives 24/7 implementing a 3cx call flow',beneath the East Anglian Air Ambulance logo.">
                         </div>
                         <div class="article-content">
@@ -413,10 +431,10 @@
                                 The Client Championing ‘Your Local Life-Saving Charity’ 
                                 the East Anglian Air Ambulance (EAAA) is a r...
                             </p>
-                            <a class="btn btn-art1" href="#" >READ MORE</a>
+                            <a class="btn btn-art1" href="#">READ MORE</a>
                             <div class="author">
                                 <div class="author-pic">
-                                    <img src="./img/Latest-news-netmatters-pfp.png">
+                                    <img src="./img/latest-news/Latest-news-netmatters-pfp.png">
                                 </div>
                                 <div class="posted-info">
                                     <span class="posted-by">Posted by <br> Netmatters</span> <br>
@@ -430,7 +448,7 @@
                 <div class="article-container">
                     <a href="#">
                         <div class="article-img">
-                            <img src="./img/Latest-news-bizzsoft.jpg" 
+                            <img src="./img/latest-news/Latest-news-bizzsoft.jpg" 
                              alt="">
                         </div>
                         <div class="article-content">
@@ -444,7 +462,7 @@
                             <a class="btn btn-art2" href="#" >READ MORE</a>
                             <div class="author">
                                 <div class="author-pic">
-                                    <img src="./img/Latest-news-netmatters-pfp.png">
+                                    <img src="./img/latest-news/Latest-news-netmatters-pfp.png">
                                 </div>
                                 <div class="posted-info">
                                     <span class="posted-by">Posted by <br> Netmatters</span> <br>
@@ -459,7 +477,7 @@
              <div class="article-container display-none">
                     <a href="#">
                         <div class="article-img">
-                            <img src="./img/Latest-news-bizzdev.jpg" 
+                            <img src="./img/latest-news/Latest-news-bizzdev.jpg" 
                              alt="">
                         </div>
                         <div class="article-content">
@@ -473,7 +491,7 @@
                             <a class="btn btn-art3" href="#" >READ MORE</a>
                             <div class="author">
                                 <div class="author-pic">
-                                    <img src="./img/Latest-news-Rebecca-Moore.png">
+                                    <img src="./img/latest-news/Latest-news-Rebecca-Moore.png">
                                 </div>
                                 <div class="posted-info">
                                     <span class="posted-by">Posted by Rebecca <br> Moore</span> <br>
@@ -498,46 +516,46 @@
 
     <!-- ================================ CLIENTS SLIDE ================================  -->
     <section class="clients-section">
-    <div class="slide-outer">
-        <div class="clients-row-flex">
-            <div class="client-logo">
-                <img src="./img/clients.img/ashcroft.png" alt="Ashcroft Logo">
+    <div class="section">
+        <div class="badges-row">
+            <div class="badge-logo">
+                <img src="./img/clients/ashcroft.png" alt="Ashcroft Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/one-traveller.png" alt="One traveller Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/one-traveller.png" alt="One traveller Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/searles.png" alt="Searles Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/searles.png" alt="Searles Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/busseys.png" alt="Busseys Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/busseys.png" alt="Busseys Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/crane.png" alt="Crane Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/crane.png" alt="Crane Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/black-swan.png" alt="Black Swan Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/black-swan.png" alt="Black Swan Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/xupes.png" alt="Xupes Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/xupes.png" alt="Xupes Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/beat.png" alt="Beat Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/beat.png" alt="Beat Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/survey-solutions.png" alt="Survey Solutions Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/survey-solutions.png" alt="Survey Solutions Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/girlguiding-anglia.png" alt="Girlguiding Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/girlguiding-anglia.png" alt="Girlguiding Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/sweetzy.png" alt="Sweetzy Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/sweetzy.png" alt="Sweetzy Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/howes-percival.png" alt="Howes Percival Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/howes-percival.png" alt="Howes Percival Logo">
             </div>
-            <div class="client-logo">
-                <img src="./img/clients.img/girls-day-school-trust.png" alt="Girls Day School Trust Logo">
+            <div class="badge-logo">
+                <img src="./img/clients/girls-day-school-trust.png" alt="Girls Day School Trust Logo">
             </div>
         </div> <!--flex-->
     </div> 
@@ -550,14 +568,12 @@
 
     <!-- ================================ NEWSLETTER FORM ================================  -->
     <section class="newsl-section">
-    <div class="newsletter-full-width"> 
-        <!-- ::before what? -->
         <div class="container">
             <form action="#" method="POST" accept-charset="UTF-8" id="sign-up" class="sign-up">
             <input type="hidden">
             <input type="hidden">
             <h2>Email Newsletter Sign-Up</h2>
-            <!-- NEWSLETTER MAIN DIV PARENT: SIGN-INPUT-WRAPPER -->
+
             <div class="signup-inputs-wrapper">
                 <div class="signup-input"> <!-- SIGN-up-INPUT name -->
                     <div class="form-group"> 
@@ -572,7 +588,7 @@
                     </div> 
                 </div>     
             </div>
-            <!-- NEWSLETTER MAIN DIV PARENT: FORM-GROUP (CHECKBOX pref) -->
+
             <div class="form-group">
                 <label class="pretty-checkbox"> <!-- CHECK BOX LABEL -->
                     <span class="media">
@@ -592,110 +608,108 @@
                     </span>
                 </label>
             </div>
-            <!-- NEWSLETTER MAIN DIV PARENT: MY_NAME-WRAP -->
+
             <div class="my_name_wrap"></div>
-            <!-- SUBMIT BUTTON -->
             <button name="submit" class="btn btn-primary"> Subscribe </button> 
             </form> 
-            <!-- ::after what? -->
         </div>
-    </div> <!-- newsletter container closing div-->
+ 
     </section>
-</div>
+
+</div> <!--middle-->
 
 
 
 
     <!-- ================================ FOOTER ================================  -->
 <footer>
-<div class="container">
-    <!-- :before does not work -->
-    <div class="footer-content"> 
-        <div class="footer-company-info"> 
-            <div class="footer-info footer-social-menu"> 
-                <div class="net-logo-footer"> 
-                    <picture>
-                        <img src="./img/netmatters-logo-footer.png" alt="Netmatters Logo">
-                    </picture>
-                </div> 
-                <h4>Follow us on:</h4>
-                <div class="footer-social-icons"> 
-                    <a class="facebook btn-primary" href="#">
-                        <span><i class="fa-brands fa-facebook-f"></i></span>
-                    </a>  
-                    <a class="linkedin btn-primary" href="#">
-                        <span><i class="fa-brands fa-linkedin-in"></i></span>
-                    </a >
-                    <a class="twitter btn-primary" href="#">
-                        <span><i class="fa-brands fa-twitter"></i></span>
-                    </a> 
-                    <a class="insta btn-primary" href="#">
-                        <span><i class="fa-brands fa-instagram"></i></span>
-                    </a> 
-                </div> 
+    <div class="container">
+        <div class="footer-content"> 
+            <div class="footer-company-info"> 
+                <div class="footer-info footer-social-menu"> 
+                    <div class="net-logo-footer"> 
+                        <picture>
+                            <img src="./img/netmatters-logo-footer.png" alt="Netmatters Logo">
+                        </picture>
+                    </div> 
+                    <h4>Follow us on:</h4>
+                    <div class="footer-social-icons"> 
+                        <a class="facebook btn-primary" href="#">
+                            <span><i class="fa-brands fa-facebook-f"></i></span>
+                        </a>  
+                        <a class="linkedin btn-primary" href="#">
+                            <span><i class="fa-brands fa-linkedin-in"></i></span>
+                        </a >
+                        <a class="twitter btn-primary" href="#">
+                            <span><i class="fa-brands fa-twitter"></i></span>
+                        </a> 
+                        <a class="insta btn-primary" href="#">
+                            <span><i class="fa-brands fa-instagram"></i></span>
+                        </a> 
+                    </div> 
+                </div>
+
             </div>
 
-        </div>
+            <div class="row-flex-list"> 
+                <div class="footer-list">
+                    <h4>About Netmatters</h4>
+                    <ul class="footer-ul"> 
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Our Careers</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Data Retention & Disposal Policy</a></li>
+                        <li><a href="#">CCTV Policy</a></li>
+                        <li><a href="#">Environmental Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
 
-        <div class="row-flex-list"> 
-            <div class="footer-list">
-                <h4>About Netmatters</h4>
-                <ul class="footer-ul"> 
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Our Careers</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                    <li><a href="#">Data Retention & Disposal Policy</a></li>
-                    <li><a href="#">CCTV Policy</a></li>
-                    <li><a href="#">Environmental Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
+                <div class="footer-list">
+                    <h4>Our Services</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">Bespoke Software</a></li>
+                        <li><a href="#">IT Support</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Telecoms Services</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Cyber Security</a></li>
+                        <li><a href="#">Developer Training</a></li>
+                    </ul>
             </div>
+
+                <div class="footer-list">
+                    <h4>Our Industries</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">Financial Services</a></li>
+                        <li><a href="#">Construction</a></li>
+                        <li><a href="#">Retail & E-Commerce</a></li>
+                        <li><a href="#">Non-Profits</a></li>
+                        <li><a href="#">SME's</a></li>
+                        <li><a href="#">Healthcare</a></li>
+                        <li><a href="#">Education & Training</a></li>
+                        <li><a href="#">Travel & Leisure</a></li>
+                    </ul>
+            </div>
+
+                <div class="footer-list">
+                    <h4>Locations</h4>
+                    <ul class="footer-ul">
+                        <li><a href="#">London Office</a></li>
+                        <li><a href="#">Cambridge Office</a></li>
+                        <li><a href="#">Wymondham Office</a></li>
+                        <li><a href="#">Great Yarmouth Office</a></li>
+                    </ul>
+                </div>
             
-
-            <div class="footer-list">
-                <h4>Our Services</h4>
-                <ul class="footer-ul">
-                    <li><a href="#">Bespoke Software</a></li>
-                    <li><a href="#">IT Support</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
-                    <li><a href="#">Telecoms Services</a></li>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Cyber Security</a></li>
-                    <li><a href="#">Developer Training</a></li>
-                </ul>
-           </div>
-
-            <div class="footer-list">
-                <h4>Our Industries</h4>
-                <ul class="footer-ul">
-                    <li><a href="#">Financial Services</a></li>
-                    <li><a href="#">Construction</a></li>
-                    <li><a href="#">Retail & E-Commerce</a></li>
-                    <li><a href="#">Non-Profits</a></li>
-                    <li><a href="#">SME's</a></li>
-                    <li><a href="#">Healthcare</a></li>
-                    <li><a href="#">Education & Training</a></li>
-                    <li><a href="#">Travel & Leisure</a></li>
-                </ul>
-           </div>
-
-            <div class="footer-list">
-                <h4>Locations</h4>
-                <ul class="footer-ul">
-                    <li><a href="#">London Office</a></li>
-                    <li><a href="#">Cambridge Office</a></li>
-                    <li><a href="#">Wymondham Office</a></li>
-                    <li><a href="#">Great Yarmouth Office</a></li>
-                </ul>
             </div>
-         
         </div>
-    </div>
-</div> 
-
+    </div> <!--container class-->
+</footer>
     <!-- ================================ FOOTER BOTTOM ================================  -->
 <div class="footer-bottom">
     <div class="license container">
@@ -707,15 +721,13 @@
     </div>
 </div>
 
-</footer>
-
 
 
 
 
 <div class="sidebar"></div>
 
-
+</div> <!-- ID Container -->
 </body>
 
 </html>

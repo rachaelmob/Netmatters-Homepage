@@ -1,14 +1,7 @@
 //==========================================//
-//                 MIXINS!!!
-//==========================================//
-
-
-
-
-
-//==========================================//
 //              MEDIA QUERIES
 //==========================================//
+
 
 @mixin mq($breakpoint) {
     @if $breakpoint == "x-small" {
@@ -16,19 +9,19 @@
         @content;
       }
     } @else if $breakpoint == "small" {
-      @media (min-width: #{$break--sml + 1}) and (max-width: $break--med) {
+      @media (min-width: #{$break--sml}) and (max-width: $break--med) {
         @content;
       }
     } @else if $breakpoint == "medium" {
-      @media (min-width: #{$break--med + 1}) and (max-width: $break--l) {
+      @media (min-width: #{$break--med}) {
         @content;
       }
     } @else if $breakpoint == "large" {
-      @media (min-width: #{$break--l + 1}) and (max-width: $break--xl) {
+      @media (min-width: #{$break--l}) {
         @content;
       }
     } @else if $breakpoint == "x-large" {
-      @media (min-width: #{$break--xl + 1}) {
+      @media (min-width: #{$break--xl}) {
         @content;
       }
     } @else {

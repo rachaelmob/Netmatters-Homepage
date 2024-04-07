@@ -1,0 +1,247 @@
+//==========================================//
+//                 HEADER 
+//==========================================//
+
+
+ header {
+
+    .header-container {
+        padding: 20px 0px;
+
+        @include mq(medium) {
+            padding: 20px 0px 20px 30px;
+        }
+
+        .header-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            @include mq(medium) {
+                justify-content: space-evenly;
+            }
+
+            img {
+                max-width: 90%;
+            } 
+            
+            .phone {
+                padding-right: 25px;
+
+                & a {
+                    text-decoration: none;
+                    color: $dark-txt;
+                    font-size: 1rem;
+
+                    span {
+                        font-size: 25px;
+                    }
+                }
+
+                @include mq(medium) {
+                    display: none;
+                }
+            }
+        
+            .actions{
+                display: flex;
+                
+                &>*+* {
+                @include mq(large){
+                        margin-left: 20px;
+                    }
+                }
+
+                a {
+                    color: #555;
+                    font-size: 1.125rem;
+                    line-height: 46px;
+                    text-decoration: none;
+
+                    @media (max-width: 992px) {
+                        display: none;
+                        
+                    }
+                }
+                .search-bar {
+
+                    @include mq(x-small) {
+                        display: none;
+                    }
+
+                    @include mq(small) {
+                        display: none;
+                    }
+                
+                
+                    form {
+                        margin-bottom: 0;
+                    }
+
+                    input {
+                        width: 176px;
+                        height: 55px;
+                        font-size: 13px;
+                        padding: 10px 15px;
+
+                        @include mq(large) {
+                            display: none;
+                        }
+                        @include mq(x-large){
+                            display: inline-block !important;
+                        }
+
+                    }
+
+                    button {
+                        border: none;
+                        height: 55px;
+                        font-size: 1.3rem;
+                        color: white;
+                        cursor: pointer;
+                        position: relative;
+                        left: -7px;
+                        vertical-align: bottom;
+                        padding: 5px 20px 3px;
+                        border-radius: 0 5% 5% 0;
+                        background-color: $btn-contact;
+
+                        @media (min-width: $break--l) and (max-width: 1259px){
+                            border-radius: 3px;
+                        }
+
+
+                    }
+                }
+
+                .hamburger {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 3px;
+
+                    .burger {
+                        display: block;
+                        width: 30px;
+                        height: 4px;
+                        margin: 6px 0;
+                        background-color: #fff;
+                    }
+
+                    // span {
+                    //     font-size: 2rem;       
+                    //     display: flex;
+                    //     justify-content: center;
+                    //     align-items: center;
+                    // }
+                }
+
+            }
+        
+        }
+
+      .search-mobile {
+
+        @include mq(medium) {
+            display: none;
+        }
+
+        @include mq(large) {
+            display: none;
+        }
+
+        @include mq(x-large) {
+            display: none;
+        }
+
+        & form {
+            position: relative;
+            margin-bottom: 0;
+
+            input {
+                width: 100%;
+                height: 47px;
+                color: #555;
+                font-size: 14px;
+                border-radius: 2px;                
+                padding: 5px 15px;
+                padding-right: 40px;
+                background-color: rgba(0, 0, 0, .1);
+                border: 2px solid rgba(0, 0, 0, .1);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            button {
+                color: $dark-txt;
+                position: absolute;
+                border: none;
+                font-size: 19px;
+                right: 5px;
+                top: 30px;
+                text-align: center;
+                background: none;
+            }
+
+        }
+
+
+      }
+
+     }
+    
+}
+
+
+
+//==========================================//
+//                   NAV BAR 
+//==========================================//
+
+
+ .nav-bar {
+    background-color: $dark-txt;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+
+        li {
+            list-style: none;
+            text-align: center;
+
+            a {
+                display: block;
+                color: #fff;
+                padding: 19px 0 18px;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:not(i, small){
+                    font-size: 1.125rem;
+                }
+
+                i {
+                    display: block;
+                    padding-bottom: 10px;
+                }
+
+                small{
+                    display: block;
+                    font-size: .625rem;
+                    padding-bottom: 1px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $break--l){
+        display: none;
+    }
+ }
+
