@@ -625,11 +625,28 @@ footer .footer-company-info .footer-social-menu {
 }
 .clients-section .badge .tooltip .toolbox {
   color: #fff;
+  padding: 20px;
+  min-width: 280px;
+  max-width: 280px;
   background-color: #333645;
 }
 .clients-section .badge .tooltip .toolbox a {
   color: #fff;
   text-decoration: none;
+}
+.clients-section .badge .tooltip .toolbox .toolarrow {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  margin-left: -36px;
+}
+.clients-section .badge .tooltip .toolbox .toolarrow::after {
+  content: "";
+  margin: auto;
+  display: inline-block;
+  border-style: solid;
+  border-width: 35px 36px 0;
+  border-color: #333645 transparent transparent;
 }
 
 #about-section {
