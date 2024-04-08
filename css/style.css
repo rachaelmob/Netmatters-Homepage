@@ -595,11 +595,6 @@ footer .footer-company-info .footer-social-menu {
   transition: 0.5s ease;
 }
 
-.partners-section .client-logo {
-  padding: 0 20px;
-  position: relative;
-}
-
 .partners-section .badges-row, .clients-section .badges-row {
   display: flex;
   flex-direction: row;
@@ -614,6 +609,27 @@ footer .footer-company-info .footer-social-menu {
 }
 .partners-section .badges-row .badge-logo:hover, .clients-section .badges-row .badge-logo:hover {
   filter: grayscale(0);
+}
+
+.clients-section .badge {
+  vertical-align: middle;
+  position: relative;
+}
+.clients-section .badge:hover .tooltip {
+  display: block;
+}
+.clients-section .badge .tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+}
+.clients-section .badge .tooltip .toolbox {
+  color: #fff;
+  background-color: #333645;
+}
+.clients-section .badge .tooltip .toolbox a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #about-section {

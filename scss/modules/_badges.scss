@@ -2,17 +2,6 @@
 //  PARTNERS AND ACCREDNTIALS SLIDE SECTION
 //==========================================//
 
-// LOOK IN BASE 
-
-.partners-section .client-logo {
-
-        padding: 0 20px;
-        position: relative;
-} //Over ridden by Client's section Fix it.
-
-//==========================================//
-//       CLIENT/PARTNERS SLIDE SECTION
-//==========================================//
 
 .partners-section, .clients-section {    
       
@@ -35,3 +24,38 @@
             }
       }
       
+
+//==========================================//
+//            CLIENT'S TOOLTIP
+//==========================================//
+
+.clients-section{
+
+    .badge {
+        vertical-align: middle;
+        position: relative;
+        // padding: 0 20px;
+
+        &:hover .tooltip {
+            display: block;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+
+            .toolbox{
+                color: #fff;
+                background-color: $dark-txt;
+
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+}
