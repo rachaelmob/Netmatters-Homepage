@@ -32,6 +32,11 @@
     }
 
     label {
+
+        &.required::after {
+            content: " *";
+            color: #d24d57;
+        }
     
         &.pretty-checkbox {
             line-height: 32px;

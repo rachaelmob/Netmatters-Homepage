@@ -77,16 +77,83 @@
 </header>
 
     <!-- ================================ NAVIGATION BAR ================================  -->
-    <div class="nav-bar">
+    <div id="nav-bar">
         <div class="container">
             <!-- <nav> -->
-            <ul>
+            <ul class="main-nav">
                 <li class="software">
                     <a>
                         <i class="fa-solid fa-laptop"></i>
                         <small>Bespoke</small>
                         Software
                     </a>
+                    <div class="drop-menu">
+                        <ul class="container">
+                            <li class="drop-title"></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                                    <span>Bespoke CRM</span>
+                                </a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                                <span>Business Automation</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-solid fa-shuffle" aria-hidden="true"></i>
+                                <span>Software Integrations</span>
+                              </a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+                                <span>Mobile App Development</span>
+                              </a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-folder-open" aria-hidden="true"></i>
+                                <span>Bespoke Databases</span>
+                              </a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-solid fa-right-left" aria-hidden="true"></i>
+                                <span>Sharepoint Development</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-solid fa-download" aria-hidden="true"></i>
+                                <span>Operational Systems</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-solid fa-users" aria-hidden="true"></i>
+                                <span>Business Central Implementation</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-solid fa-laptop" aria-hidden="true"></i>
+                                <span>Internet of Things (IoT) Software</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-solid fa-cloud" aria-hidden="true"></i>
+                                <span>Intranet Development</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-solid fa-cloud-arrow-down" aria-hidden="true"></i>
+                                <span>Customer Portal <br>
+                                  Development</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa-solid fa-earth-europe" aria-hidden="true"></i>
+                                <span>Reporting Hub</span>
+                              </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
     
                 <li class="support">
@@ -410,20 +477,25 @@
 
 
     <!-- ================================ LATEST NEWS ================================  -->
-    <section class="latest-section">
+    <section id="latest-section">
         <div class="container">
             <div class="latest-heading">
                 <h2>Latest News</h2>
+                <a href="#" class="hidden-sm"> 
+                    View All&nbsp;
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
             <div class="latest-articles">
-                <div class="article-container">
+                <div class="article-container1">
                     <a href="#">
                         <div class="article-img">
+                            <a href="#" class="img-tag news">news</a>
                             <img src="./img/latest-news/Latest-news-east-anglian-air-ambulance.jpg" 
                              alt="A yellow air ambulance with text 'saving lives 24/7 implementing a 3cx call flow',beneath the East Anglian Air Ambulance logo.">
                         </div>
                         <div class="article-content">
-                            <h3 class="article1-header">
+                            <h3 class="article-header1">
                             East Anglian Air Ambulance - Introducing a 3C...
                             <span class="read-time"> - 4 minute read</span>
                             </h3>
@@ -445,15 +517,17 @@
                     </a>
                 </div>
 
-                <div class="article-container">
+                <div class="article-container2">
                     <a href="#">
                         <div class="article-img">
+                            <a href="#" class="img-tag insights">Insights</a>
                             <img src="./img/latest-news/Latest-news-bizzsoft.jpg" 
                              alt="">
                         </div>
                         <div class="article-content">
-                            <h3 class="article2-header"> 
+                            <h3 class="article-header2"> 
                             What is business software and how can it help...
+                            <span class="read-time"> - 4 minute read</span>
                             </h3>
                             <p class="article-desc">
                                 What is business software and how can it help your business? 
@@ -474,14 +548,15 @@
                 </div>
 
 
-             <div class="article-container display-none">
+             <div class="article-container3">
                     <a href="#">
                         <div class="article-img">
+                            <a href="#" class="img-tag careers">Careers</a>
                             <img src="./img/latest-news/Latest-news-bizzdev.jpg" 
                              alt="">
                         </div>
                         <div class="article-content">
-                            <h3 class="article3-header" >
+                            <h3 class="article-header3" >
                             Business Development Executive
                             </h3>
                             <p class="article-desc">
@@ -504,10 +579,12 @@
                 </div>
             </div>
 
-            <a href="#" class="view-all"> 
-                View All&nbsp;
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
+            <div class="latestview-all">
+                <a href="#"> 
+                    View All&nbsp;
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
 
         </div> <!-- container -->
     </section>
@@ -764,13 +841,13 @@
                 <div class="signup-input"> <!-- SIGN-up-INPUT name -->
                     <div class="form-group"> 
                         <label for="newsletter-name" class="required">Your Name</label>
-                        <input type="text" class="form-control" id="newsletter-name"  name="name"  required>
+                        <input type="text" class="form-control" id="newsletter-name"  name="name">
                     </div>
                 </div>
                 <div class="signup-input"> <!-- SIGN-up-INPUT email -->
                     <div class="form-group"> 
                         <label for="newsletter-email" class="required">Your Email</label>
-                        <input type="email" class="form-control" id="newsletter-email" name="email" required>
+                        <input type="email" class="form-control" id="newsletter-email" name="email">
                     </div> 
                 </div>     
             </div>

@@ -1,166 +1,211 @@
 //==========================================//
-//                 LATEST NEWS
+//              LATEST NEWS
 //==========================================//
 
-.latest-section {
+#latest-section {
 
     .latest-heading{
         padding-top: 50px;
 
         h2 {
+            margin: 0;
             color: $dark-txt;
             font-size: 2.25rem;
-            margin: 0 0 28px;
+            // margin: 0 0 28px;
             font-weight: $font-bold;
+        }
+
+        a.hidden-sm {
+            display: none;
+        }
+
+        @include mq(medium){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a.hidden-sm {
+                display: flex;
+                @include viewstyle;
+            }
         }
     }
 
     .latest-articles {
-        padding-top: 15px;
+        
+        @media (min-width: $break--med) and (max-width: $break--xl) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 30px;
+
+            & .article-container3 {
+                display: none;
+            }
+        }
+
+        @include mq(x-large){
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 30px;  
+        }
+
+
 
         a {
             text-decoration: none;
             cursor: pointer;
-            
-            .article1-header {
-                color: $nav-telecom;
-               }   
-
-            .article2-header {
-                color: $nav-software;
-               } 
-               
-            .article3-header {
-                color: $nav-digital;
-               }  
-
-            .article-desc {
-                line-height: 1.375rem;
-                font-size: .8125rem;
-                color: rgba(51, 54, 69, .7);
-            }
-        }
-        .article-img {
-            display: block;
-            // position: relative;
-            border-radius: 3px 3px 0 0;
-
-            img {
-                width: 100%;
-                // height: auto;
-            }
-
-        }
-    }
-
-    .article-container {
-        border: 1px solid #ccc; //services tab
-        box-shadow: 0 3px 35px rgba(0,0,0,.1); //services tab
-        margin: 40px 0;
-        position: relative; //services tab
-        border-radius: 3px;
-        top: 0; //services tab
-
-        .article-content {
-            padding: 30px; // services tab
+            color: #fff;
         }
 
-        h3 {
-            font-size: 1rem;
-            line-height: 1.5rem;
-            font-weight: $font-bold;
+        .article-container1,
+        .article-container2, 
+        .article-container3 {
+            border: 1px solid #ccc; 
+            box-shadow: 0 3px 35px rgba(0,0,0,.1); 
+            margin: 40px 0;
+            position: relative; 
+            border-radius: 3px;
 
-            .read-time {
-                color: rgba(51, 54, 69, .5);
-                font-size: .85rem;
-                font-weight: $font-light;
-                text-transform: uppercase;
+            top: 0; 
+            transition: .5s ease;
+
+            &:hover {
+                top: -10px; 
+                transition: .5s ease;
             }
 
-        }
-      
-        .author {
-            display: flex;
-            flex-direction: row;
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 1px solid #ccc;
 
-            .author-pic {
-                border-radius: 50%;
-                margin-right: 15px;
-            }
-            .posted-info  {
-                font-size: 0.875rem;
-                line-height: 1.35rem;
+            .article-img {
+                position: relative;
 
-                & .posted-by {
-                    font-weight: $font-bold;
-                    color: $dark-txt;
+                a.img-tag{ 
+                    position: absolute;
+                    z-index: 2;
+                    right: 0;
+                    top: 10px;
+                    padding: 5px 10px;
+                    font-size: 0.75rem;
+                    text-transform: uppercase;
                 }
 
-                & .posted-date {
-                    color: #666;
+                a.news {background-color: $nav-telecom;}
+                a.insights {background-color: $nav-software;}
+                a.careers {background-color: $nav-digital;}
+
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    position: relative;
+                    border-radius: 3px 3px 0 0;
                 }
-             
+
             }
         }
     }
 
-    .btn {
-        color: fff;
-        height: auto;
-        line-height: 35px;
-        padding: 5px 15px;
-        text-transform: uppercase;
-        font-size: 1.063rem;
-        border-radius: 3px;
-        white-space: normal;
-    }
-}
-
-
-    // ARTICLE BUTTONS
-
-    .btn-art1 {
-        background-color: $nav-telecom;
-        border: $nav-telecom;
-    }
-
-    .btn-art2 {
-        background-color: $nav-software;
-        border: $nav-software;
-    }
-
-    .btn-art3 {
-        background-color: $nav-digital;
-        border: $nav-digital;
-    }
-
-
-
-    // VIEW ALL
-    .latest-section .view-all {
-        display: block;
-        color: $dark-txt;
-        text-decoration: none;
+    .latestview-all{
         text-align: center;
-        font-size: 1.625rem;
-        font-weight: $font-bold;
-        margin: 10px 10px;
 
-    }
+            & a {
+                @include viewstyle;
 
-        // ARTICLE CARDS 767PX
-
-    @include mq(medium) {
-        .latest-section .latest-articles {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 30px;
-
-            & .display-none {
+            @include mq(medium){
                 display: none;
             }
         }
     }
+
+}
+
+
+//=========================//
+//    ARTICLE CONTENT 
+//=========================//
+
+#latest-section .article-content {
+    padding: 30px; 
+
+    h3.article-header {
+        &1, &2, &3 {
+        font-size: 1rem;
+        margin: 0 0 15px;
+        line-height: 1.5rem;
+        font-weight: $font-bold;
+        }
+
+        &3{
+            @include mq(medium){
+                min-height: 3rem;
+            }
+        }
+
+        &1:not(span){color: $nav-telecom;}
+        &2:not(span){color: $nav-software;}
+        &3:not(span){color: $nav-digital;}
+    }
+
+    span.read-time {
+        color: rgba(51, 54, 69, .5);
+        font-size: .85rem;
+        font-weight: $font-light;
+        text-transform: uppercase;
+    }
+
+    p.article-desc {
+        margin: 0 0 25px;
+        line-height: 1.375rem;
+        font-size: .8125rem;
+    }
+
+    & a.btn{
+        padding: 5px 15px;
+        line-height: 35px;
+        border-radius: 3px;
+        font-size: 1.063rem;
+        text-transform: uppercase;
+
+        &.btn-art1{@include btn-style($nav-telecom, $nav-telecom)}
+        &.btn-art2{@include btn-style($nav-software, $nav-software)}
+        &.btn-art3{@include btn-style($nav-digital, $nav-digital)}
+    }
+    
+
+
+    .author {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px solid #ccc;
+
+        .author-pic {
+            display: flex;
+
+        & img {
+            border-radius: 100%;
+        }
+
+        }
+
+        .posted-info  {
+            padding-left: 20px;
+            font-size: 0.875rem;
+            line-height: 1.35rem;
+
+            & .posted-by {
+                font-weight: $font-bold;
+                color: $dark-txt;
+            }
+
+            & .posted-date {
+                color: #666;
+            }
+        
+        }
+    }
+}   
+
+

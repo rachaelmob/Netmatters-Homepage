@@ -2,9 +2,15 @@
 //                  BUTTONS
 //==========================================//
 
+// ===== MIXINS =====//
 
+@mixin btn-style($bgc, $brdcol:null) {
+  color: #fff;
+  background-color: $bgc;
+  border-color: $brdcol;
+}
 
-// ===== NAVY BUTTON =====//
+// ===== NAV BUTTON ===== NEED TO CHANGE TO MIXINS//
 
 .btn-primary {
     color: #fff;
@@ -32,7 +38,7 @@
     border-radius: 2px;
   }
 
-  // ===== LABELS =====//
+// ===== LABELS =====//
 label {
   font-weight: $font-bold;
   color: $dark-txt; 

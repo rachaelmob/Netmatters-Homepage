@@ -64,8 +64,9 @@
 
                 .toolarrow{
                     position: absolute;
+                    top: 98%;
                     left: 50%;
-                    bottom: 10px;
+                    // bottom: 10px;
                     margin-left: -36px;
 
                     &::after{
