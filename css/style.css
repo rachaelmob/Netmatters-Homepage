@@ -962,6 +962,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   display: flex;
   flex-direction: row;
   text-align: center;
+  align-items: center;
 }
 .partners-section .badges-row .badge-logo, .clients-section .badges-row .badge-logo {
   flex-grow: 1;
@@ -977,6 +978,12 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 .clients-section .badge {
   vertical-align: middle;
   position: relative;
+  padding: 0 20px;
+}
+.clients-section .badge .badge-logo > img {
+  max-height: 70px;
+  width: auto !important;
+  max-width: 200px;
 }
 .clients-section .badge:hover .tooltip {
   display: block;

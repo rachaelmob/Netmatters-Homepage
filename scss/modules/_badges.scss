@@ -9,6 +9,7 @@
                 display: flex;
                 flex-direction: row;
                 text-align: center;
+                align-items: center;
       
                 .badge-logo {
                     flex-grow: 1;
@@ -34,7 +35,13 @@
     .badge {
         vertical-align: middle;
         position: relative;
-        // padding: 0 20px;
+        padding: 0 20px;
+
+        & .badge-logo > img{
+            max-height: 70px;
+            width: auto !important;
+            max-width: 200px;
+        }
 
         &:hover .tooltip {
             display: block;
