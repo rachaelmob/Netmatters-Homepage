@@ -20,7 +20,12 @@ body {
   background-color: #fff;
 }
 
-// DIV DISPLAY
+#container{
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 div {
   display: block;
 }

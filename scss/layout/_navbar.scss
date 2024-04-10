@@ -4,7 +4,9 @@
 
 
 #nav-bar {
+    position: relative;
     background-color: $dark-txt;
+    @media (max-width: $break--l){ display: none; }
 
     ul.main-nav {
         margin: 0;
@@ -12,13 +14,15 @@
         display: grid;
         grid-template-columns: repeat(7, 1fr);
 
-        li {
+        & > li {
             list-style: none;
             text-align: center;
 
-            a {
+           & > a {
                 display: block;
                 color: #fff;
+                line-height: 1;
+                // position: relative;
                 padding: 19px 0 18px;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -29,6 +33,7 @@
 
                 i {
                     display: block;
+                    font-size: 1.438rem; //1.2rem;
                     padding-bottom: 10px;
                 }
 
@@ -38,24 +43,157 @@
                     padding-bottom: 1px;
                 }
             }
+
+            // LI ICON COLOURS
+            &.software > a > i {color: $nav-software;}
+            &.support > a > i {color: $nav-it;}
+            &.digital > a > i {color: $nav-digital;}
+            &.telecoms > a > i {color: $nav-telecom;}
+            &.webdesign > a > i {color: $nav-webdesign;}
+            &.cyber > a > i {color: $nav-cyber;}
+            &.developer > a > i {color: $nav-developer;}
+
+            //LI HOVER BG & ICON COLOURS
+            &.software:hover, &.software:hover > a > i {@include btn-style($nav-software);}
+            &.support:hover, &.support:hover > a > i {@include btn-style($nav-it);}
+            &.digital:hover, &.digital:hover > a > i {@include btn-style($nav-digital);}
+            &.telecoms:hover, &.telecoms:hover > a > i {@include btn-style($nav-telecom);}
+            &.webdesign:hover, &.webdesign:hover > a > i {@include btn-style($nav-webdesign);}
+            &.cyber:hover, &.cyber:hover > a > i {@include btn-style($nav-cyber);}
+            &.developer:hover, &.developer:hover > a > i {@include btn-style($nav-developer);}
+
+            // LI HOVER NAV ARROW (REUSABLE PARTIAL FOR MIXINS)
+            &.software:hover > a:before {
+                @media (max-width: 1259px){
+                    @include nav-arrow($brdwidth:$nav-arrow--l, $brdcol:$nav-software);
+                }
+                @include mq(x-large){
+                    @include nav-arrow($brdwidth:$nav-arrow--xl , $brdcol:$nav-software)
+                }}
+            &.support:hover > a:before {
+                @media (max-width: 1259px){
+                    @include nav-arrow($brdwidth:$nav-arrow--l, $brdcol:$nav-it);
+                }
+                @include mq(x-large){
+                    @include nav-arrow($brdwidth:$nav-arrow--xl , $brdcol:$nav-it)
+                }}
+            &.digital:hover > a:before {
+                @media (max-width: 1259px){
+                    @include nav-arrow($brdwidth:$nav-arrow--l, $brdcol:$nav-digital);
+                }
+                @include mq(x-large){
+                    @include nav-arrow($brdwidth:$nav-arrow--xl , $brdcol:$nav-digital)
+                }}
+            &.telecoms:hover > a:before {
+                @media (max-width: 1259px){
+                    @include nav-arrow($brdwidth:$nav-arrow--l, $brdcol:$nav-telecom);
+                }
+                @include mq(x-large){
+                    @include nav-arrow($brdwidth:$nav-arrow--xl , $brdcol:$nav-telecom)
+                }}
+            &.webdesign:hover > a:before {
+                @media (max-width: 1259px){
+                    @include nav-arrow($brdwidth:$nav-arrow--l, $brdcol:$nav-webdesign);
+                }
+                @include mq(x-large){
+                    @include nav-arrow($brdwidth:$nav-arrow--xl , $brdcol:$nav-webdesign)
+                }}
+            &.cyber:hover > a:before {
+                @media (max-width: 1259px){
+                    @include nav-arrow($brdwidth:$nav-arrow--l, $brdcol:$nav-cyber);
+                }
+                @include mq(x-large){
+                    @include nav-arrow($brdwidth:$nav-arrow--xl , $brdcol:$nav-cyber)
+                }}
+            &.developer:hover > a:before {
+                @media (max-width: 1259px){
+                    @include nav-arrow($brdwidth:$nav-arrow--l, $brdcol:$nav-developer);
+                }
+                @include mq(x-large){
+                    @include nav-arrow($brdwidth:$nav-arrow--xl , $brdcol:$nav-developer)
+                }}
+
+
         }
     }
 
-    @media (max-width: $break--l){
-        display: none;
-    }
  }
 
-//==========================================//
-//               DROPDOWN MENU 
-//==========================================//
+    //==========================================//
+    //               DROPDOWN MENU 
+    //==========================================//
 
-#nav-bar{
 
-    .drop-menu{
+#nav-bar ul.main-nav > li {
+
+    //Hidden dropmenu & Styling 
+    & > div.drop-menu{
+        margin: 0;
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 100%;
         z-index: 10;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #1d1f28;
+
+        & > ul.container {
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: -15px;
+            list-style: none;
+            text-align: left;
+
+
+            & > li.drop-title {
+                width: 100%;
+                color: #fff !important;
+                margin-bottom: 10px;
+                margin-top: 15px;
+                font-weight: 500;
+                font-size: 2rem;
+            }
+
+            & > li {
+                width: 33%;
+                margin-top: 15px;
+            
+                & > a {
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    line-height: 1.313rem;
+                    padding: .625rem .938rem .625rem 0;
+        
+                    & > i {
+                        display: flex;
+                        justify-content: left;
+                        align-items: center;
+                        min-width: 25px;
+                    }
+
+                    & > span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
     }
 
+    //Display dropmenu & Unique Colour BG when hovered min-width 992px
+    &.software:hover > div.drop-menu{display: block; background-color: $nav-software-drk;}
+    &.support:hover > div.drop-menu{display: block; background-color: $nav-it-drk;}
+    &.digital:hover > div.drop-menu{display: block; background-color: $nav-digital-drk;}
+    &.telecoms:hover > div.drop-menu{display: block; background-color: $nav-telecom-drk;}
+    &.webdesign:hover > div.drop-menu{display: block; background-color: $nav-webdesign-drk;}
+    &.cyber:hover > div.drop-menu{display: block; background-color: $nav-cyber-drk;}
+    &.developer:hover > div.drop-menu{display: block; background-color: $nav-developer-drk;}
 
 }

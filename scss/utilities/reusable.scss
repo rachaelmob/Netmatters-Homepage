@@ -1,14 +1,11 @@
+//==================================================//
+//           REUSABLE CLASSES AND MIXINS 
+//=================================================//
+
+
 //==========================================//
-//                 CONTAINERS
+//               CONTAINER
 //==========================================//
-
-#container{
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-
 
 .container {
     margin-right:  auto;
@@ -30,11 +27,10 @@
     }
   }
 
+
 //==========================================//
 //          OTHER REUSABLE CLASSES
 //==========================================//
-
-// ===== SECTION =====//
 
 .section  {
     padding-top: 50px;
@@ -42,27 +38,48 @@
   }
   
   
-  
-  // ===== ROW =====//
-  
   .row {
     margin-left: -15px;
     margin-right: -15px;
   }
-  
-  
-  
-  //===== FORM GROUP =====//
+
   
   .form-group {
     margin-bottom: 15px;
   }
   
 
-  //VIEW ALL MIXIN
+//==========================================//
+//                   MIXINS
+//==========================================//
+
+//=========================>>
+//    VIEW ALL STYLING 
+//=========================>>
   @mixin viewstyle {
     color: #333645;
     font-size: 1.625rem;
     font-weight: 600;
     text-decoration: none;
   }
+
+
+//=========================>>
+// NAV ARROW MIXIN (::BEFORE) 
+//=========================>>
+// VARIABLES FOR BORDER WIDTH IN VARIABLES PARTIAL
+//$nav-arrow--xl: 35px 83.5px 0; //for 1260px(min-width)
+//$nav-arrow--l: 35px 68px 0; //for 1259(max-width)
+
+@mixin nav-arrow($brdwidth, $brdcol){
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $brdwidth;
+  border-color: $brdcol transparent transparent;
+}

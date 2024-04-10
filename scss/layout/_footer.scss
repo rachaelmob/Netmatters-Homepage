@@ -3,121 +3,91 @@
 //==========================================//
 
 
-
-    footer {
+footer {
     background-color: $dark-bg;
     padding: 27px 0 0;
     position: relative;
-    
 
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
+    h4 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 100;
+        margin-bottom: 26px;
+    }
+
+    a{text-decoration: none; color: #fff;}
+
         
-            .footer-social-icons {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
+    .footer-all {
 
-                margin-bottom: 30px;
-    
-                a {
-                    background-color: $footer-drk;
-                    text-align: center;
-                    text-decoration: none;
-                    font-size: 26px;
-                    line-height: 26px;
-                    padding: 12px 22px 16px;
-                    margin-right: 7px;
-                    margin-bottom: 7px;
-                 }
-                }
-            }
-        }
 
         .footer-company-info{
-            display: flex;
-            justify-content: space-between;
-            width: 300px;
-        }
-
-        .net-logo-footer {
-            width: 250px;
-
-            img { 
-                width: 100%
-            }   
-        }
-
-
-        h4 {
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: $font-light;
-        }
-
-    .row-flex-list {
-
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0;
-        flex-direction: column;       
-
-        .footer-list {  
-         margin-bottom: 30px;
-
-
-            .footer-ul {
-                    padding-left: 0;
-                }
-
-                
             
-  
-            li {
-                list-style: none;
-
-                a {
-                    color: #fff;
-                    text-decoration: none;
-                    font-size: 13px;
-
-                    &:hover {
-                        text-decoration: underline;
-                      }
-                }
-                
+            .netlogo-footer{
+                width: 250px;
+                img { width: 100%;}
             }
+
+            .social-logos{
+                margin-bottom: 30px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+
+
+                & a {
+                    width: 35%;
+                    display: flex;
+                    font-size: 26px;
+                    line-height: 26px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 12px 22px 16px;
+                    background-color: #212330;
+
+                    &.facebook:hover{background-color: $fb-hov;}
+                    &.linkedin:hover{background-color: $linked-hov;}
+                    &.twitter:hover{background-color: $twt-hov;}
+                    &.insta:hover{background-color: $insta-hov;}
+
+                    span {
+                        position: relative;
+                        top: 4px;
+                    }
+                }
+            }
+
         }
+
     }
 
+}
+//======================//
+//      LIST LINKS
+//======================//
+footer .footer-rows{
 
+    ul.footer-ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-    footer .footer-company-info .footer-social-menu {
-        width: auto;
-    }
-
-
-    footer .footer-content .row-flex-list {
-
-        @include mq(medium) {
-            width: 45%;
-            flex-direction: row;
-      }
-    
-        @include mq(large) {
-            width: 25%;
-        }
-    
-        @include mq(x-large) {
-            min-width: 800px;
+        li {
+            font-size: .8125rem;
+            line-height: 1.375rem;
         }
     }
+}
+
+
+
+
 
 //==========================================//
-//            FOOTER BOTTOM
+//              FOOTER BOTTOM
 //==========================================//
 
 .footer-bottom {
