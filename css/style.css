@@ -638,19 +638,27 @@ footer a {
   text-decoration: none;
   color: #fff;
 }
-footer .footer-all .footer-company-info .netlogo-footer {
+footer .footer-all .netlogo-footer {
   width: 250px;
 }
-footer .footer-all .footer-company-info .netlogo-footer img {
+@media (min-width: 480px) {
+  footer .footer-all .netlogo-footer {
+    width: 320px;
+  }
+}
+footer .footer-all .netlogo-footer img {
   width: 100%;
 }
-footer .footer-all .footer-company-info .social-logos {
+footer .footer-all .netlogo-footer h4 {
+  margin-top: 24px;
+}
+footer .footer-all .social-logos {
   margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
-footer .footer-all .footer-company-info .social-logos a {
+footer .footer-all .social-logos a {
   width: 35%;
   display: flex;
   font-size: 26px;
@@ -662,31 +670,85 @@ footer .footer-all .footer-company-info .social-logos a {
   padding: 12px 22px 16px;
   background-color: #212330;
 }
-footer .footer-all .footer-company-info .social-logos a.facebook:hover {
+@media (min-width: 480px) {
+  footer .footer-all .social-logos a {
+    width: 68px;
+  }
+}
+footer .footer-all .social-logos a.facebook:hover {
   background-color: #3b5998;
 }
-footer .footer-all .footer-company-info .social-logos a.linkedin:hover {
+footer .footer-all .social-logos a.linkedin:hover {
   background-color: #0077b5;
 }
-footer .footer-all .footer-company-info .social-logos a.twitter:hover {
+footer .footer-all .social-logos a.twitter:hover {
   background-color: #00aced;
 }
-footer .footer-all .footer-company-info .social-logos a.insta:hover {
+footer .footer-all .social-logos a.insta:hover {
   background-color: #d93175;
 }
-footer .footer-all .footer-company-info .social-logos a span {
+footer .footer-all .social-logos a span {
   position: relative;
   top: 4px;
 }
 
-footer .footer-rows ul.footer-ul {
+@media (min-width: 1260px) {
+  footer {
+    padding: 47px 0 0;
+  }
+}
+@media (min-width: 1260px) {
+  footer .footer-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+footer .footer-rows {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+}
+@media (min-width: 768px) {
+  footer .footer-rows {
+    width: auto;
+  }
+}
+@media (min-width: 1260px) {
+  footer .footer-rows {
+    width: 772px;
+  }
+}
+footer .footer-rows .footer-list {
+  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+footer .footer-rows .footer-list > h4 {
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  footer .footer-rows .footer-list {
+    width: 50%;
+    padding-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer-rows .footer-list {
+    width: 25%;
+  }
+}
+footer .footer-rows .footer-list ul.footer-ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-footer .footer-rows ul.footer-ul li {
+footer .footer-rows .footer-list ul.footer-ul li {
   font-size: 0.8125rem;
   line-height: 1.375rem;
+}
+footer .footer-rows .footer-list ul.footer-ul li a:hover {
+  text-decoration: underline;
 }
 
 .footer-bottom {
