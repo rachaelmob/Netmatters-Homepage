@@ -35,51 +35,55 @@
 .section  {
     padding-top: 50px;
     padding-bottom: 50px;
-  }
+}
   
   
   .row {
     margin-left: -15px;
     margin-right: -15px;
-  }
+}
 
   
   .form-group {
     margin-bottom: 15px;
+}
+
+  
+//==========================================//
+//  VIEWALL FOR SERVICES & LATEST SECTIONS
+//==========================================//
+#our-services .services-heading, //===> VIEW ALL HEADING ARROW MIN-W 768PX <===//
+#latest-section .latest-heading {
+  a.hidden-sm {display: none;}
+
+  @include mq(medium){
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      a.hidden-sm {
+          display: flex;
+          @include viewstyle;
+          &:hover {text-decoration: underline;}
+      }
   }
+}
+
+#our-services, #latest-section { //===> VIEW ALL MOBILE ARROW HIDE AFTER 768PX <===//
+  .mobile-viewall{
+    text-align: center;
+    & a {
+        @include viewstyle;
+        @include mq(medium){display: none;}
+        &:hover {text-decoration: underline;}
+    }
+  }
+}
+
+
+
+
+
+
   
 
-//==========================================//
-//                   MIXINS
-//==========================================//
-
-//=========================>>
-//    VIEW ALL STYLING 
-//=========================>>
-  @mixin viewstyle {
-    color: #333645;
-    font-size: 1.625rem;
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-
-//=========================>>
-// NAV ARROW MIXIN (::BEFORE) 
-//=========================>>
-// VARIABLES FOR BORDER WIDTH IN VARIABLES PARTIAL
-//$nav-arrow--xl: 35px 83.5px 0; //for 1260px(min-width)
-//$nav-arrow--l: 35px 68px 0; //for 1259(max-width)
-
-@mixin nav-arrow($brdwidth, $brdcol){
-  content: "";
-  position: absolute;
-  bottom: -35px;
-  transform: translateX(-50%);
-  z-index: 90;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: $brdwidth;
-  border-color: $brdcol transparent transparent;
-}

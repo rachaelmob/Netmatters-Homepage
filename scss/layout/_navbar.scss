@@ -62,7 +62,7 @@
             &.cyber:hover, &.cyber:hover > a > i {@include btn-style($nav-cyber);}
             &.developer:hover, &.developer:hover > a > i {@include btn-style($nav-developer);}
 
-            // LI HOVER NAV ARROW (REUSABLE PARTIAL FOR MIXINS)
+            // LI HOVER NAV ARROW (CHECK MIXINS PARTIAL)
             &.software:hover > a:before {
                 @media (max-width: 1259px){
                     @include nav-arrow($brdwidth:$nav-arrow--l, $brdcol:$nav-software);
@@ -170,6 +170,7 @@
                     font-size: 1.2rem;
                     line-height: 1.313rem;
                     padding: .625rem .938rem .625rem 0;
+                    &:hover{text-decoration: underline;}
         
                     & > i {
                         display: flex;

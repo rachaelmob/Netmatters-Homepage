@@ -63,6 +63,49 @@ div {
   margin-bottom: 15px;
 }
 
+#our-services .services-heading a.hidden-sm,
+#latest-section .latest-heading a.hidden-sm {
+  display: none;
+}
+@media (min-width: 768px) {
+  #our-services .services-heading,
+  #latest-section .latest-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #our-services .services-heading a.hidden-sm,
+  #latest-section .latest-heading a.hidden-sm {
+    display: flex;
+    color: #333645;
+    font-size: 1.625rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  #our-services .services-heading a.hidden-sm:hover,
+  #latest-section .latest-heading a.hidden-sm:hover {
+    text-decoration: underline;
+  }
+}
+
+#our-services .mobile-viewall, #latest-section .mobile-viewall {
+  text-align: center;
+}
+#our-services .mobile-viewall a, #latest-section .mobile-viewall a {
+  color: #333645;
+  font-size: 1.625rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  #our-services .mobile-viewall a, #latest-section .mobile-viewall a {
+    display: none;
+  }
+}
+#our-services .mobile-viewall a:hover, #latest-section .mobile-viewall a:hover {
+  text-decoration: underline;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #333645;
@@ -584,6 +627,9 @@ header .header-container .search-mobile form button {
   line-height: 1.313rem;
   padding: 0.625rem 0.938rem 0.625rem 0;
 }
+#nav-bar ul.main-nav > li > div.drop-menu > ul.container > li > a:hover {
+  text-decoration: underline;
+}
 #nav-bar ul.main-nav > li > div.drop-menu > ul.container > li > a > i {
   display: flex;
   justify-content: left;
@@ -839,19 +885,25 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 
 #our-services .services-heading {
   position: relative;
-  padding: 0 15px;
 }
 #our-services .services-heading h2 {
   color: #333645;
   font-size: 2.7rem;
-  margin: 0 0 20px;
   font-weight: 600;
+  margin-top: -13px;
+  margin-bottom: 15px;
+}
+@media (max-width: 1259px) {
+  #our-services .services-heading h2 {
+    margin-bottom: 15px;
+  }
 }
 #our-services .services-all {
   position: relative;
-  padding: 0 15px;
   display: grid;
   grid-gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 25px;
   grid-template-areas: "software" "support" "digital" "telecoms" "design" "cyber" "developer";
 }
 #our-services .services-all .service-container1 {
@@ -1138,26 +1190,6 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   font-size: 2.25rem;
   font-weight: 600;
 }
-#latest-section .latest-heading a.hidden-sm {
-  display: none;
-}
-@media (min-width: 768px) {
-  #latest-section .latest-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  #latest-section .latest-heading a.hidden-sm {
-    display: flex;
-    color: #333645;
-    font-size: 1.625rem;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  #latest-section .latest-heading a.hidden-sm:hover {
-    text-decoration: underline;
-  }
-}
 @media (min-width: 768px) and (max-width: 1260px) {
   #latest-section .latest-articles {
     display: grid;
@@ -1236,23 +1268,6 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   display: block;
   position: relative;
   border-radius: 3px 3px 0 0;
-}
-#latest-section .latestview-all {
-  text-align: center;
-}
-#latest-section .latestview-all a {
-  color: #333645;
-  font-size: 1.625rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-#latest-section .latestview-all a:hover {
-  text-decoration: underline;
-}
-@media (min-width: 768px) {
-  #latest-section .latestview-all a {
-    display: none;
-  }
 }
 
 #latest-section .article-content {

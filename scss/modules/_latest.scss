@@ -4,10 +4,10 @@
 
 #latest-section {
 
-    .latest-heading{
+    .latest-heading {
         padding-top: 50px;
 
-        h2 {
+        h2 { //use mixin for latest and service section
             margin: 0;
             color: $dark-txt;
             font-size: 2.25rem;
@@ -15,24 +15,7 @@
             font-weight: $font-bold;
         }
 
-        a.hidden-sm {
-            display: none;
-        }
-
-        @include mq(medium){
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            a.hidden-sm {
-                display: flex;
-                @include viewstyle;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
+        //===> VIEW ALL HEADING ARROW IN REUSABLE <===//
     }
 
     .latest-articles {
@@ -109,21 +92,7 @@
         }
     }
 
-    .latestview-all{
-        text-align: center;
-
-            & a {
-                @include viewstyle;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-
-            @include mq(medium){
-                display: none;
-            }
-        }
-    }
+    //===> VIEW ALL MOBILE ARROW IN REUSABLE <===//
 
 }
 

@@ -7,21 +7,27 @@
 
     .services-heading {
         position: relative;
-        padding: 0 15px;
+        // padding-left: 15px;
+        // padding-right: 15px;
+       
 
         h2 { //use mixin for latest and service section
         color: $dark-txt;
         font-size: 2.7rem;
-        margin: 0 0 20px; 
+        // margin: 0 0 20px; 
         font-weight: $font-bold;
+        margin-top: -13px;
+        margin-bottom: 15px;
+        @media (max-width: 1259px){margin-bottom: 15px;}
         }
     }
 
     .services-all  {
             position: relative;
-            padding: 0 15px;
             display: grid;
             grid-gap: 30px;
+            margin-top: 30px;
+            margin-bottom: 25px;
             grid-template-areas:"software" "support" "digital" "telecoms" "design" "cyber" "developer";
 
             .service-container { 
@@ -63,8 +69,6 @@
 
 
         .service-container {
-
-
             &1, &2, &3, &4, &5, &6, &7 {
                 border: 1px solid #ccc;
                 box-shadow: 0 3px 35px rgba(0,0,0,.1);
@@ -127,12 +131,6 @@
             }
             
         }
-
-        // &1:hover, &2:hover, &3:hover, 
-        // &4:hover,  &5:hover, &6:hover, &7:hover{
-        //     top: -10px; 
-        //     transition: .5s ease;
-        // }
 
       }
 
