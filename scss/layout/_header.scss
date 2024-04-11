@@ -75,7 +75,7 @@
                     
                 }
                 .search-bar {
-                    @include mq(small) {display: none;}
+                    @media (min-width:$break--xs) and (max-width:$break--med){display:none;}
                 
                     form {
                         margin-bottom: 0;

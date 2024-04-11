@@ -222,7 +222,7 @@ header .header-container .header-row .actions a.contact {
 header .header-container .header-row .actions a.contact:hover {
   background-color: #84858f;
 }
-@media (min-width: 460px) and (max-width: 768px) {
+@media (min-width: 1px) and (max-width: 768px) {
   header .header-container .header-row .actions .search-bar {
     display: none;
   }
