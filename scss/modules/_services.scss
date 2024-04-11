@@ -102,8 +102,28 @@
                     &:hover{border-radius: 15px;} // unique colours match radius on hover
                     &:hover h3, &:hover p {color:#fff;} //service card text white on hover
                     //icon & btn background white on hover 
-                    &:hover .icon-colr { &1, &2, &3, &4, &5, &6, &7 {background-color: white;}} 
+                    &:hover .icon-colr { &1, &2, &3, &4, &5, &6, &7 {background-color:#fff;}} 
+
+                    // Btn and Icon Text Unique Colours on Hover
+                    &:hover .icon-colr1 {color: $nav-software;}
+                    &:hover .icon-colr2 {color: $nav-it;}
+                    &:hover .icon-colr3 {color: $nav-digital;}
+                    &:hover .icon-colr4 {color: $nav-telecom;}
+                    &:hover .icon-colr5 {color: $nav-webdesign;}
+                    &:hover .icon-colr6 {color: $nav-cyber;}
+                    &:hover .icon-colr7 {color: $nav-developer;}
+
+                    // btn & icon background unique colours >>>
+                    .icon-colr1 {background-color: $nav-software;}
+                    .icon-colr2 {background-color: $nav-it;}
+                    .icon-colr3 {background-color: $nav-digital;}
+                    .icon-colr4 {background-color: $nav-telecom;}
+                    .icon-colr5 {background-color: $nav-webdesign;}
+                    .icon-colr6 {background-color: $nav-cyber;}
+                    .icon-colr7 {background-color: $nav-developer;}
             
+                    //btn "class" mixin default
+                    div.btn{@include btnclass();}
                     > div.icon {// icon circle & align icon
                         font-size: 2rem;
                         border-radius: 50%;
@@ -115,7 +135,6 @@
                         margin: 0 auto 17px;
                     }
 
-            
                     h3 {
                         font-size: 1.3rem;
                         font-weight: $font-light;
@@ -131,28 +150,6 @@
                         font-size: .8125rem;
                     }
 
-                    //btn "class" mixin default ()
-                    div.btn.icon-colr{&1, &2, &3, &4, &5, &6, &7{@include btnclass();}}
-
-                    // btn & icon background unique colours >>>
-                    .icon-colr1 {background-color: $nav-software;}
-                    .icon-colr2 {background-color: $nav-it;}
-                    .icon-colr3 {background-color: $nav-digital;}
-                    .icon-colr4 {background-color: $nav-telecom;}
-                    .icon-colr5 {background-color: $nav-webdesign;}
-                    .icon-colr6 {background-color: $nav-cyber;}
-                    .icon-colr7 {background-color: $nav-developer;}
-                    
-                    // Btn and Icon Text Unique Colours on Hover
-                    &:hover .icon-colr1 {color: $nav-software;}
-                    &:hover .icon-colr2 {color: $nav-it;}
-                    &:hover .icon-colr3 {color: $nav-digital;}
-                    &:hover .icon-colr4 {color: $nav-telecom;}
-                    &:hover .icon-colr5 {color: $nav-webdesign;}
-                    &:hover .icon-colr6 {color: $nav-cyber;}
-                    &:hover .icon-colr7 {color: $nav-developer;}
-
-                    
                 }
             
              }
