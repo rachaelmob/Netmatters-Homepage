@@ -69,70 +69,95 @@
 
 
         .service-container {
+            //TRANSITION EASE CARDS WITH UNIQUE COLOURS
+            @mixin transhov($bgc){ background-color:$bgc; top: -10px;transition: .5s ease;}
+            &1:hover {@include transhov($nav-software);} 
+            &2:hover {@include transhov($nav-it);} 
+            &3:hover {@include transhov($nav-digital);} 
+            &4:hover {@include transhov($nav-telecom);} 
+            &5:hover {@include transhov($nav-webdesign);} 
+            &6:hover {@include transhov($nav-cyber);}
+            &7:hover {@include transhov($nav-developer);} 
+
             &1, &2, &3, &4, &5, &6, &7 {
                 border: 1px solid #ccc;
                 box-shadow: 0 3px 35px rgba(0,0,0,.1);
-                padding: 30px 0;
                 position: relative; 
                 border-radius: 15px;
                 background-color: #fff;
-
                 top: 0; 
                 transition: .5s ease;
 
-                &:hover{
-                    top: -10px; 
-                    transition: .5s ease;
-                }
 
-                .icon-colr1 {background-color: $nav-software;}
-                .icon-colr2 {background-color: $nav-it;}
-                .icon-colr3 {background-color: $nav-digital;}
-                .icon-colr4 {background-color: $nav-telecom;}
-                .icon-colr5 {background-color: $nav-webdesign;}
-                .icon-colr6 {background-color: $nav-cyber;}
-                .icon-colr7 {background-color: $nav-developer;}
+
+                a {
+                    padding: 30px;
+                    color: #fff;
+                    display: grid;
+                    align-items: center;
+                    text-align: center;
+                    justify-items: center;
+                    text-decoration: none;
+
+                    &:hover{border-radius: 15px;} // unique colours match radius on hover
+                    &:hover h3, &:hover p {color:#fff;} //service card text white on hover
+                    //icon & btn background white on hover 
+                    &:hover .icon-colr { &1, &2, &3, &4, &5, &6, &7 {background-color: white;}} 
             
-
-            a {
-                display: grid;
-                justify-items: center;
-                align-items: center;
-                text-align: center;
-                text-decoration: none;
-                color: #fff;
-        
-                .icon {
-                    font-size: 1.7rem;
-                    border-radius: 50%;
-                    width: 65px;
-                    height: 65px;
-                    
-                    &, .btn {
+                    > div.icon {// icon circle & align icon
+                        font-size: 2rem;
+                        border-radius: 50%;
+                        width: 65px;
+                        height: 65px;
                         display: flex;
-                        justify-content: center;
                         align-items: center;
+                        justify-content: center;
+                        margin: 0 auto 17px;
                     }
-        
-                }
 
-        
-                h3 {
-                    font-size: 1.3rem;
-                    font-weight: $font-light;
-                    color: $dark-txt;
-                }
-        
-                p {
-                    line-height: 1.375rem;
-                    font-size: .8125rem;
-                    color: $dark-txt;
-                }
-            }
             
-        }
+                    h3 {
+                        font-size: 1.3rem;
+                        font-weight: $font-light;
+                        color: $dark-txt;
+                        padding-bottom: 10px;
+                        margin: 0 0 11px;
+                    }
+            
+                    p {
+                        margin-top: 0;
+                        color: $dark-txt;
+                        line-height: 1.375rem;
+                        font-size: .8125rem;
+                    }
 
-      }
+                    //btn "class" mixin default ()
+                    div.btn.icon-colr{&1, &2, &3, &4, &5, &6, &7{@include btnclass();}}
+
+                    // btn & icon background unique colours >>>
+                    .icon-colr1 {background-color: $nav-software;}
+                    .icon-colr2 {background-color: $nav-it;}
+                    .icon-colr3 {background-color: $nav-digital;}
+                    .icon-colr4 {background-color: $nav-telecom;}
+                    .icon-colr5 {background-color: $nav-webdesign;}
+                    .icon-colr6 {background-color: $nav-cyber;}
+                    .icon-colr7 {background-color: $nav-developer;}
+                    
+                    // Btn and Icon Text Unique Colours on Hover
+                    &:hover .icon-colr1 {color: $nav-software;}
+                    &:hover .icon-colr2 {color: $nav-it;}
+                    &:hover .icon-colr3 {color: $nav-digital;}
+                    &:hover .icon-colr4 {color: $nav-telecom;}
+                    &:hover .icon-colr5 {color: $nav-webdesign;}
+                    &:hover .icon-colr6 {color: $nav-cyber;}
+                    &:hover .icon-colr7 {color: $nav-developer;}
+
+                    
+                }
+            
+             }
+
+         }
 
     }
 

@@ -51,6 +51,30 @@
   border-width: $brdwidth;
   border-color: $brdcol transparent transparent;
   }
+
+//==============================>>
+//       BTN "CLASS" MIXIN
+//==============================>>
+// height default auto
+// line-height default 35px 
+// padding default 5px, 15px
+// font-size default 1.063rem 
+// border radius default 3px
+
+@mixin btnclass(
+    $height: auto, 
+    $line-h: 35px, 
+    $padding: 5px 15px, 
+    $font-size: 1.063rem, 
+    $radius: 3px){
+        height: $height;
+        line-height: $line-h;
+        padding: $padding;
+        font-size: $font-size;
+        border-radius: $radius;
+        white-space: normal;
+        text-transform: uppercase;
+}
   
 //==========================================//
 //              VIEW ALL STYLING

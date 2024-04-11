@@ -2,8 +2,7 @@
 //                  BUTTONS
 //==========================================//
 
-// ===== MIXINS =====//
-
+// ===== BTN COLOUR STYLING =====// (SEE MIXINS FOR BTN "CLASS")
 @mixin btn-style($bgc, $brdcol:null) {
   color: #fff;
   background-color: $bgc;
@@ -11,7 +10,10 @@
 }
 
 // ===== NAV BUTTON ===== NEED TO CHANGE TO MIXINS//
-
+/* Btns that is this class:
+  Header = hamburger
+  Newsletter = submit btn
+  Footer = social logos */
 .btn-primary {
     color: #fff;
     background-color: $dark-txt;

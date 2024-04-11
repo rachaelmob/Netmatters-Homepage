@@ -106,6 +106,10 @@ div {
   text-decoration: underline;
 }
 
+/* Btns that is this class:
+  Header = hamburger
+  Newsletter = submit btn
+  Footer = social logos */
 .btn-primary {
   color: #fff;
   background-color: #333645;
@@ -141,26 +145,32 @@ label {
 header .header-container {
   padding: 20px 0px;
 }
-@media (min-width: 768px) {
-  header .header-container {
-    padding: 20px 0px 20px 30px;
-  }
-}
 header .header-container .header-row {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 992px) {
   header .header-container .header-row {
     justify-content: space-evenly;
   }
 }
 header .header-container .header-row img {
-  max-width: 90%;
+  max-width: 100%;
+  display: block;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  header .header-container .header-row img {
+    max-width: 85%;
+  }
+}
+header .header-container .header-row .phone-burger {
+  display: flex;
+  align-items: center;
 }
 header .header-container .header-row .phone {
-  padding-right: 25px;
+  margin-left: 15px;
 }
 header .header-container .header-row .phone a {
   text-decoration: none;
@@ -184,20 +194,33 @@ header .header-container .header-row .actions {
   }
 }
 header .header-container .header-row .actions a {
-  color: #555;
-  font-size: 1.125rem;
-  line-height: 46px;
   text-decoration: none;
+  height: 56px;
+  line-height: 46px;
+  padding: 5px 15px;
+  font-size: 1.125rem;
+  border-radius: 3px;
+  white-space: normal;
+  text-transform: uppercase;
 }
 @media (max-width: 992px) {
   header .header-container .header-row .actions a {
     display: none;
   }
 }
-@media (min-width: 1px) and (max-width: 460px) {
-  header .header-container .header-row .actions .search-bar {
-    display: none;
-  }
+header .header-container .header-row .actions a.support {
+  color: #fff;
+  background-color: #4183d7;
+}
+header .header-container .header-row .actions a.support:hover {
+  background-color: #286abd;
+}
+header .header-container .header-row .actions a.contact {
+  color: #fff;
+  background-color: #999aa2;
+}
+header .header-container .header-row .actions a.contact:hover {
+  background-color: #84858f;
 }
 @media (min-width: 460px) and (max-width: 768px) {
   header .header-container .header-row .actions .search-bar {
@@ -207,20 +230,29 @@ header .header-container .header-row .actions a {
 header .header-container .header-row .actions .search-bar form {
   margin-bottom: 0;
 }
-header .header-container .header-row .actions .search-bar input {
-  width: 176px;
+header .header-container .header-row .actions .search-bar form label {
+  display: none;
+}
+header .header-container .header-row .actions .search-bar form input {
+  width: 174px;
   height: 55px;
   font-size: 13px;
-  padding: 10px 15px;
+  border-radius: 0;
+  padding: 5px 15px;
+  border-color: #ccc;
+  display: inline-block;
+  border: 2px solid #e5e5e5;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 @media (min-width: 992px) {
-  header .header-container .header-row .actions .search-bar input {
+  header .header-container .header-row .actions .search-bar form input {
     display: none;
   }
 }
 @media (min-width: 1260px) {
-  header .header-container .header-row .actions .search-bar input {
+  header .header-container .header-row .actions .search-bar form input {
     display: inline-block !important;
+    width: 240px;
   }
 }
 header .header-container .header-row .actions .search-bar button {
@@ -241,10 +273,20 @@ header .header-container .header-row .actions .search-bar button {
     border-radius: 3px;
   }
 }
+header .header-container .header-row .actions .search-bar button:hover {
+  background-color: #84858f;
+}
 header .header-container .header-row .actions .hamburger {
   width: 56px;
   height: 56px;
   border-radius: 3px;
+  margin-left: 20px;
+  color: #fff;
+  background-color: #333645;
+  border-color: #333645;
+}
+header .header-container .header-row .actions .hamburger:hover {
+  background-color: #121419;
 }
 header .header-container .header-row .actions .hamburger .burger {
   display: block;
@@ -945,69 +987,141 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
     grid-template-areas: "software software software software support support support support digital digital digital digital" "telecoms telecoms telecoms design design design cyber cyber cyber developer developer developer";
   }
 }
+#our-services .services-all .service-container1:hover {
+  background-color: #67809f;
+  top: -10px;
+  transition: 0.5s ease;
+}
+#our-services .services-all .service-container2:hover {
+  background-color: #4183d7;
+  top: -10px;
+  transition: 0.5s ease;
+}
+#our-services .services-all .service-container3:hover {
+  background-color: #2ecc71;
+  top: -10px;
+  transition: 0.5s ease;
+}
+#our-services .services-all .service-container4:hover {
+  background-color: #d64541;
+  top: -10px;
+  transition: 0.5s ease;
+}
+#our-services .services-all .service-container5:hover {
+  background-color: #926fb1;
+  top: -10px;
+  transition: 0.5s ease;
+}
+#our-services .services-all .service-container6:hover {
+  background-color: #f62459;
+  top: -10px;
+  transition: 0.5s ease;
+}
+#our-services .services-all .service-container7:hover {
+  background-color: #ce4125;
+  top: -10px;
+  transition: 0.5s ease;
+}
 #our-services .services-all .service-container1, #our-services .services-all .service-container2, #our-services .services-all .service-container3, #our-services .services-all .service-container4, #our-services .services-all .service-container5, #our-services .services-all .service-container6, #our-services .services-all .service-container7 {
   border: 1px solid #ccc;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  padding: 30px 0;
   position: relative;
   border-radius: 15px;
   background-color: #fff;
   top: 0;
   transition: 0.5s ease;
 }
-#our-services .services-all .service-container1:hover, #our-services .services-all .service-container2:hover, #our-services .services-all .service-container3:hover, #our-services .services-all .service-container4:hover, #our-services .services-all .service-container5:hover, #our-services .services-all .service-container6:hover, #our-services .services-all .service-container7:hover {
-  top: -10px;
-  transition: 0.5s ease;
-}
-#our-services .services-all .service-container1 .icon-colr1, #our-services .services-all .service-container2 .icon-colr1, #our-services .services-all .service-container3 .icon-colr1, #our-services .services-all .service-container4 .icon-colr1, #our-services .services-all .service-container5 .icon-colr1, #our-services .services-all .service-container6 .icon-colr1, #our-services .services-all .service-container7 .icon-colr1 {
-  background-color: #67809f;
-}
-#our-services .services-all .service-container1 .icon-colr2, #our-services .services-all .service-container2 .icon-colr2, #our-services .services-all .service-container3 .icon-colr2, #our-services .services-all .service-container4 .icon-colr2, #our-services .services-all .service-container5 .icon-colr2, #our-services .services-all .service-container6 .icon-colr2, #our-services .services-all .service-container7 .icon-colr2 {
-  background-color: #4183d7;
-}
-#our-services .services-all .service-container1 .icon-colr3, #our-services .services-all .service-container2 .icon-colr3, #our-services .services-all .service-container3 .icon-colr3, #our-services .services-all .service-container4 .icon-colr3, #our-services .services-all .service-container5 .icon-colr3, #our-services .services-all .service-container6 .icon-colr3, #our-services .services-all .service-container7 .icon-colr3 {
-  background-color: #2ecc71;
-}
-#our-services .services-all .service-container1 .icon-colr4, #our-services .services-all .service-container2 .icon-colr4, #our-services .services-all .service-container3 .icon-colr4, #our-services .services-all .service-container4 .icon-colr4, #our-services .services-all .service-container5 .icon-colr4, #our-services .services-all .service-container6 .icon-colr4, #our-services .services-all .service-container7 .icon-colr4 {
-  background-color: #d64541;
-}
-#our-services .services-all .service-container1 .icon-colr5, #our-services .services-all .service-container2 .icon-colr5, #our-services .services-all .service-container3 .icon-colr5, #our-services .services-all .service-container4 .icon-colr5, #our-services .services-all .service-container5 .icon-colr5, #our-services .services-all .service-container6 .icon-colr5, #our-services .services-all .service-container7 .icon-colr5 {
-  background-color: #926fb1;
-}
-#our-services .services-all .service-container1 .icon-colr6, #our-services .services-all .service-container2 .icon-colr6, #our-services .services-all .service-container3 .icon-colr6, #our-services .services-all .service-container4 .icon-colr6, #our-services .services-all .service-container5 .icon-colr6, #our-services .services-all .service-container6 .icon-colr6, #our-services .services-all .service-container7 .icon-colr6 {
-  background-color: #f62459;
-}
-#our-services .services-all .service-container1 .icon-colr7, #our-services .services-all .service-container2 .icon-colr7, #our-services .services-all .service-container3 .icon-colr7, #our-services .services-all .service-container4 .icon-colr7, #our-services .services-all .service-container5 .icon-colr7, #our-services .services-all .service-container6 .icon-colr7, #our-services .services-all .service-container7 .icon-colr7 {
-  background-color: #ce4125;
-}
 #our-services .services-all .service-container1 a, #our-services .services-all .service-container2 a, #our-services .services-all .service-container3 a, #our-services .services-all .service-container4 a, #our-services .services-all .service-container5 a, #our-services .services-all .service-container6 a, #our-services .services-all .service-container7 a {
+  padding: 30px;
+  color: #fff;
   display: grid;
-  justify-items: center;
   align-items: center;
   text-align: center;
+  justify-items: center;
   text-decoration: none;
+}
+#our-services .services-all .service-container1 a:hover, #our-services .services-all .service-container2 a:hover, #our-services .services-all .service-container3 a:hover, #our-services .services-all .service-container4 a:hover, #our-services .services-all .service-container5 a:hover, #our-services .services-all .service-container6 a:hover, #our-services .services-all .service-container7 a:hover {
+  border-radius: 15px;
+}
+#our-services .services-all .service-container1 a:hover h3, #our-services .services-all .service-container1 a:hover p, #our-services .services-all .service-container2 a:hover h3, #our-services .services-all .service-container2 a:hover p, #our-services .services-all .service-container3 a:hover h3, #our-services .services-all .service-container3 a:hover p, #our-services .services-all .service-container4 a:hover h3, #our-services .services-all .service-container4 a:hover p, #our-services .services-all .service-container5 a:hover h3, #our-services .services-all .service-container5 a:hover p, #our-services .services-all .service-container6 a:hover h3, #our-services .services-all .service-container6 a:hover p, #our-services .services-all .service-container7 a:hover h3, #our-services .services-all .service-container7 a:hover p {
   color: #fff;
 }
-#our-services .services-all .service-container1 a .icon, #our-services .services-all .service-container2 a .icon, #our-services .services-all .service-container3 a .icon, #our-services .services-all .service-container4 a .icon, #our-services .services-all .service-container5 a .icon, #our-services .services-all .service-container6 a .icon, #our-services .services-all .service-container7 a .icon {
-  font-size: 1.7rem;
+#our-services .services-all .service-container1 a:hover .icon-colr1, #our-services .services-all .service-container1 a:hover .icon-colr2, #our-services .services-all .service-container1 a:hover .icon-colr3, #our-services .services-all .service-container1 a:hover .icon-colr4, #our-services .services-all .service-container1 a:hover .icon-colr5, #our-services .services-all .service-container1 a:hover .icon-colr6, #our-services .services-all .service-container1 a:hover .icon-colr7, #our-services .services-all .service-container2 a:hover .icon-colr1, #our-services .services-all .service-container2 a:hover .icon-colr2, #our-services .services-all .service-container2 a:hover .icon-colr3, #our-services .services-all .service-container2 a:hover .icon-colr4, #our-services .services-all .service-container2 a:hover .icon-colr5, #our-services .services-all .service-container2 a:hover .icon-colr6, #our-services .services-all .service-container2 a:hover .icon-colr7, #our-services .services-all .service-container3 a:hover .icon-colr1, #our-services .services-all .service-container3 a:hover .icon-colr2, #our-services .services-all .service-container3 a:hover .icon-colr3, #our-services .services-all .service-container3 a:hover .icon-colr4, #our-services .services-all .service-container3 a:hover .icon-colr5, #our-services .services-all .service-container3 a:hover .icon-colr6, #our-services .services-all .service-container3 a:hover .icon-colr7, #our-services .services-all .service-container4 a:hover .icon-colr1, #our-services .services-all .service-container4 a:hover .icon-colr2, #our-services .services-all .service-container4 a:hover .icon-colr3, #our-services .services-all .service-container4 a:hover .icon-colr4, #our-services .services-all .service-container4 a:hover .icon-colr5, #our-services .services-all .service-container4 a:hover .icon-colr6, #our-services .services-all .service-container4 a:hover .icon-colr7, #our-services .services-all .service-container5 a:hover .icon-colr1, #our-services .services-all .service-container5 a:hover .icon-colr2, #our-services .services-all .service-container5 a:hover .icon-colr3, #our-services .services-all .service-container5 a:hover .icon-colr4, #our-services .services-all .service-container5 a:hover .icon-colr5, #our-services .services-all .service-container5 a:hover .icon-colr6, #our-services .services-all .service-container5 a:hover .icon-colr7, #our-services .services-all .service-container6 a:hover .icon-colr1, #our-services .services-all .service-container6 a:hover .icon-colr2, #our-services .services-all .service-container6 a:hover .icon-colr3, #our-services .services-all .service-container6 a:hover .icon-colr4, #our-services .services-all .service-container6 a:hover .icon-colr5, #our-services .services-all .service-container6 a:hover .icon-colr6, #our-services .services-all .service-container6 a:hover .icon-colr7, #our-services .services-all .service-container7 a:hover .icon-colr1, #our-services .services-all .service-container7 a:hover .icon-colr2, #our-services .services-all .service-container7 a:hover .icon-colr3, #our-services .services-all .service-container7 a:hover .icon-colr4, #our-services .services-all .service-container7 a:hover .icon-colr5, #our-services .services-all .service-container7 a:hover .icon-colr6, #our-services .services-all .service-container7 a:hover .icon-colr7 {
+  background-color: white;
+}
+#our-services .services-all .service-container1 a > div.icon, #our-services .services-all .service-container2 a > div.icon, #our-services .services-all .service-container3 a > div.icon, #our-services .services-all .service-container4 a > div.icon, #our-services .services-all .service-container5 a > div.icon, #our-services .services-all .service-container6 a > div.icon, #our-services .services-all .service-container7 a > div.icon {
+  font-size: 2rem;
   border-radius: 50%;
   width: 65px;
   height: 65px;
-}
-#our-services .services-all .service-container1 a .icon, #our-services .services-all .service-container1 a .icon .btn, #our-services .services-all .service-container2 a .icon, #our-services .services-all .service-container2 a .icon .btn, #our-services .services-all .service-container3 a .icon, #our-services .services-all .service-container3 a .icon .btn, #our-services .services-all .service-container4 a .icon, #our-services .services-all .service-container4 a .icon .btn, #our-services .services-all .service-container5 a .icon, #our-services .services-all .service-container5 a .icon .btn, #our-services .services-all .service-container6 a .icon, #our-services .services-all .service-container6 a .icon .btn, #our-services .services-all .service-container7 a .icon, #our-services .services-all .service-container7 a .icon .btn {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  margin: 0 auto 17px;
 }
 #our-services .services-all .service-container1 a h3, #our-services .services-all .service-container2 a h3, #our-services .services-all .service-container3 a h3, #our-services .services-all .service-container4 a h3, #our-services .services-all .service-container5 a h3, #our-services .services-all .service-container6 a h3, #our-services .services-all .service-container7 a h3 {
   font-size: 1.3rem;
   font-weight: 400;
   color: #333645;
+  padding-bottom: 10px;
+  margin: 0 0 11px;
 }
 #our-services .services-all .service-container1 a p, #our-services .services-all .service-container2 a p, #our-services .services-all .service-container3 a p, #our-services .services-all .service-container4 a p, #our-services .services-all .service-container5 a p, #our-services .services-all .service-container6 a p, #our-services .services-all .service-container7 a p {
+  margin-top: 0;
+  color: #333645;
   line-height: 1.375rem;
   font-size: 0.8125rem;
-  color: #333645;
+}
+#our-services .services-all .service-container1 a div.btn.icon-colr1, #our-services .services-all .service-container1 a div.btn.icon-colr2, #our-services .services-all .service-container1 a div.btn.icon-colr3, #our-services .services-all .service-container1 a div.btn.icon-colr4, #our-services .services-all .service-container1 a div.btn.icon-colr5, #our-services .services-all .service-container1 a div.btn.icon-colr6, #our-services .services-all .service-container1 a div.btn.icon-colr7, #our-services .services-all .service-container2 a div.btn.icon-colr1, #our-services .services-all .service-container2 a div.btn.icon-colr2, #our-services .services-all .service-container2 a div.btn.icon-colr3, #our-services .services-all .service-container2 a div.btn.icon-colr4, #our-services .services-all .service-container2 a div.btn.icon-colr5, #our-services .services-all .service-container2 a div.btn.icon-colr6, #our-services .services-all .service-container2 a div.btn.icon-colr7, #our-services .services-all .service-container3 a div.btn.icon-colr1, #our-services .services-all .service-container3 a div.btn.icon-colr2, #our-services .services-all .service-container3 a div.btn.icon-colr3, #our-services .services-all .service-container3 a div.btn.icon-colr4, #our-services .services-all .service-container3 a div.btn.icon-colr5, #our-services .services-all .service-container3 a div.btn.icon-colr6, #our-services .services-all .service-container3 a div.btn.icon-colr7, #our-services .services-all .service-container4 a div.btn.icon-colr1, #our-services .services-all .service-container4 a div.btn.icon-colr2, #our-services .services-all .service-container4 a div.btn.icon-colr3, #our-services .services-all .service-container4 a div.btn.icon-colr4, #our-services .services-all .service-container4 a div.btn.icon-colr5, #our-services .services-all .service-container4 a div.btn.icon-colr6, #our-services .services-all .service-container4 a div.btn.icon-colr7, #our-services .services-all .service-container5 a div.btn.icon-colr1, #our-services .services-all .service-container5 a div.btn.icon-colr2, #our-services .services-all .service-container5 a div.btn.icon-colr3, #our-services .services-all .service-container5 a div.btn.icon-colr4, #our-services .services-all .service-container5 a div.btn.icon-colr5, #our-services .services-all .service-container5 a div.btn.icon-colr6, #our-services .services-all .service-container5 a div.btn.icon-colr7, #our-services .services-all .service-container6 a div.btn.icon-colr1, #our-services .services-all .service-container6 a div.btn.icon-colr2, #our-services .services-all .service-container6 a div.btn.icon-colr3, #our-services .services-all .service-container6 a div.btn.icon-colr4, #our-services .services-all .service-container6 a div.btn.icon-colr5, #our-services .services-all .service-container6 a div.btn.icon-colr6, #our-services .services-all .service-container6 a div.btn.icon-colr7, #our-services .services-all .service-container7 a div.btn.icon-colr1, #our-services .services-all .service-container7 a div.btn.icon-colr2, #our-services .services-all .service-container7 a div.btn.icon-colr3, #our-services .services-all .service-container7 a div.btn.icon-colr4, #our-services .services-all .service-container7 a div.btn.icon-colr5, #our-services .services-all .service-container7 a div.btn.icon-colr6, #our-services .services-all .service-container7 a div.btn.icon-colr7 {
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+  text-transform: uppercase;
+}
+#our-services .services-all .service-container1 a .icon-colr1, #our-services .services-all .service-container2 a .icon-colr1, #our-services .services-all .service-container3 a .icon-colr1, #our-services .services-all .service-container4 a .icon-colr1, #our-services .services-all .service-container5 a .icon-colr1, #our-services .services-all .service-container6 a .icon-colr1, #our-services .services-all .service-container7 a .icon-colr1 {
+  background-color: #67809f;
+}
+#our-services .services-all .service-container1 a .icon-colr2, #our-services .services-all .service-container2 a .icon-colr2, #our-services .services-all .service-container3 a .icon-colr2, #our-services .services-all .service-container4 a .icon-colr2, #our-services .services-all .service-container5 a .icon-colr2, #our-services .services-all .service-container6 a .icon-colr2, #our-services .services-all .service-container7 a .icon-colr2 {
+  background-color: #4183d7;
+}
+#our-services .services-all .service-container1 a .icon-colr3, #our-services .services-all .service-container2 a .icon-colr3, #our-services .services-all .service-container3 a .icon-colr3, #our-services .services-all .service-container4 a .icon-colr3, #our-services .services-all .service-container5 a .icon-colr3, #our-services .services-all .service-container6 a .icon-colr3, #our-services .services-all .service-container7 a .icon-colr3 {
+  background-color: #2ecc71;
+}
+#our-services .services-all .service-container1 a .icon-colr4, #our-services .services-all .service-container2 a .icon-colr4, #our-services .services-all .service-container3 a .icon-colr4, #our-services .services-all .service-container4 a .icon-colr4, #our-services .services-all .service-container5 a .icon-colr4, #our-services .services-all .service-container6 a .icon-colr4, #our-services .services-all .service-container7 a .icon-colr4 {
+  background-color: #d64541;
+}
+#our-services .services-all .service-container1 a .icon-colr5, #our-services .services-all .service-container2 a .icon-colr5, #our-services .services-all .service-container3 a .icon-colr5, #our-services .services-all .service-container4 a .icon-colr5, #our-services .services-all .service-container5 a .icon-colr5, #our-services .services-all .service-container6 a .icon-colr5, #our-services .services-all .service-container7 a .icon-colr5 {
+  background-color: #926fb1;
+}
+#our-services .services-all .service-container1 a .icon-colr6, #our-services .services-all .service-container2 a .icon-colr6, #our-services .services-all .service-container3 a .icon-colr6, #our-services .services-all .service-container4 a .icon-colr6, #our-services .services-all .service-container5 a .icon-colr6, #our-services .services-all .service-container6 a .icon-colr6, #our-services .services-all .service-container7 a .icon-colr6 {
+  background-color: #f62459;
+}
+#our-services .services-all .service-container1 a .icon-colr7, #our-services .services-all .service-container2 a .icon-colr7, #our-services .services-all .service-container3 a .icon-colr7, #our-services .services-all .service-container4 a .icon-colr7, #our-services .services-all .service-container5 a .icon-colr7, #our-services .services-all .service-container6 a .icon-colr7, #our-services .services-all .service-container7 a .icon-colr7 {
+  background-color: #ce4125;
+}
+#our-services .services-all .service-container1 a:hover .icon-colr1, #our-services .services-all .service-container2 a:hover .icon-colr1, #our-services .services-all .service-container3 a:hover .icon-colr1, #our-services .services-all .service-container4 a:hover .icon-colr1, #our-services .services-all .service-container5 a:hover .icon-colr1, #our-services .services-all .service-container6 a:hover .icon-colr1, #our-services .services-all .service-container7 a:hover .icon-colr1 {
+  color: #67809f;
+}
+#our-services .services-all .service-container1 a:hover .icon-colr2, #our-services .services-all .service-container2 a:hover .icon-colr2, #our-services .services-all .service-container3 a:hover .icon-colr2, #our-services .services-all .service-container4 a:hover .icon-colr2, #our-services .services-all .service-container5 a:hover .icon-colr2, #our-services .services-all .service-container6 a:hover .icon-colr2, #our-services .services-all .service-container7 a:hover .icon-colr2 {
+  color: #4183d7;
+}
+#our-services .services-all .service-container1 a:hover .icon-colr3, #our-services .services-all .service-container2 a:hover .icon-colr3, #our-services .services-all .service-container3 a:hover .icon-colr3, #our-services .services-all .service-container4 a:hover .icon-colr3, #our-services .services-all .service-container5 a:hover .icon-colr3, #our-services .services-all .service-container6 a:hover .icon-colr3, #our-services .services-all .service-container7 a:hover .icon-colr3 {
+  color: #2ecc71;
+}
+#our-services .services-all .service-container1 a:hover .icon-colr4, #our-services .services-all .service-container2 a:hover .icon-colr4, #our-services .services-all .service-container3 a:hover .icon-colr4, #our-services .services-all .service-container4 a:hover .icon-colr4, #our-services .services-all .service-container5 a:hover .icon-colr4, #our-services .services-all .service-container6 a:hover .icon-colr4, #our-services .services-all .service-container7 a:hover .icon-colr4 {
+  color: #d64541;
+}
+#our-services .services-all .service-container1 a:hover .icon-colr5, #our-services .services-all .service-container2 a:hover .icon-colr5, #our-services .services-all .service-container3 a:hover .icon-colr5, #our-services .services-all .service-container4 a:hover .icon-colr5, #our-services .services-all .service-container5 a:hover .icon-colr5, #our-services .services-all .service-container6 a:hover .icon-colr5, #our-services .services-all .service-container7 a:hover .icon-colr5 {
+  color: #926fb1;
+}
+#our-services .services-all .service-container1 a:hover .icon-colr6, #our-services .services-all .service-container2 a:hover .icon-colr6, #our-services .services-all .service-container3 a:hover .icon-colr6, #our-services .services-all .service-container4 a:hover .icon-colr6, #our-services .services-all .service-container5 a:hover .icon-colr6, #our-services .services-all .service-container6 a:hover .icon-colr6, #our-services .services-all .service-container7 a:hover .icon-colr6 {
+  color: #f62459;
+}
+#our-services .services-all .service-container1 a:hover .icon-colr7, #our-services .services-all .service-container2 a:hover .icon-colr7, #our-services .services-all .service-container3 a:hover .icon-colr7, #our-services .services-all .service-container4 a:hover .icon-colr7, #our-services .services-all .service-container5 a:hover .icon-colr7, #our-services .services-all .service-container6 a:hover .icon-colr7, #our-services .services-all .service-container7 a:hover .icon-colr7 {
+  color: #ce4125;
 }
 
 .partners-section .badges-row, .clients-section .badges-row {
@@ -1388,14 +1502,17 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   color: #333645;
   text-decoration: underline;
 }
-.newsl-section .btn {
+.newsl-section button.btn {
   height: auto;
   line-height: 35px;
   padding: 5px 15px;
-  text-transform: uppercase;
   font-size: 1.063rem;
   border-radius: 3px;
   white-space: normal;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #333645;
+  border-color: #333645;
 }
 
 .sign-up {

@@ -8,25 +8,32 @@
     .header-container {
         padding: 20px 0px;
 
-        @include mq(medium) {
-            padding: 20px 0px 20px 30px;
-        }
-
         .header-row {
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
 
-            @include mq(medium) {
+            @media (min-width: $break--med) and (max-width: $break--l) {
                 justify-content: space-evenly;
             }
 
             img {
-                max-width: 90%;
+                max-width: 100%;
+                display: block;
+                @media (min-width: $break--med) and (max-width: $break--l) {
+                    max-width: 85%;
+                }
             } 
+
+            .phone-burger{
+                display: flex;
+                align-items: center;
+            }
             
             .phone {
-                padding-right: 25px;
+                margin-left: 15px;
+                // padding-right: 25px;
 
                 & a {
                     text-decoration: none;
@@ -52,48 +59,50 @@
                     }
                 }
 
+                //SUPPORT AND CONTANT BTNS
                 a {
-                    color: #555;
-                    font-size: 1.125rem;
-                    line-height: 46px;
+                    @media (max-width: 992px) {display: none;}
                     text-decoration: none;
-
-                    @media (max-width: 992px) {
-                        display: none;
-                        
-                    }
+                    @include btnclass($font-size:1.125rem, $line-h:46px, $height:56px);
+                    
+                    //BUTTON COLOURS & HOVER COLOURS
+                    &.support {
+                        @include btn-style($nav-it); 
+                        &:hover {background-color: $nav-it-drk}}
+                    &.contact {
+                        @include btn-style($btn-contact);
+                        &:hover {background-color: $btn-contact-hover;}}
+                    
                 }
                 .search-bar {
-
-                    @include mq(x-small) {
-                        display: none;
-                    }
-
-                    @include mq(small) {
-                        display: none;
-                    }
-                
+                    @include mq(small) {display: none;}
                 
                     form {
                         margin-bottom: 0;
+                        label {display: none;}
+                        input {
+                            width: 174px;
+                            height: 55px;
+                            font-size: 13px;
+                            border-radius: 0;
+                            padding: 5px 15px;
+                            border-color: #ccc;
+                            display: inline-block;
+                            border: 2px solid #e5e5e5;
+                            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+
+                            @include mq(large) {
+                                display: none;
+                            }
+                            @include mq(x-large){
+                                display: inline-block !important;
+                                width: 240px;
+                            }
+
+                        }
                     }
 
-                    input {
-                        width: 176px;
-                        height: 55px;
-                        font-size: 13px;
-                        padding: 10px 15px;
-
-                        @include mq(large) {
-                            display: none;
-                        }
-                        @include mq(x-large){
-                            display: inline-block !important;
-                        }
-
-                    }
-
-                    button {
+                    button { //check actual btn class
                         border: none;
                         height: 55px;
                         font-size: 1.3rem;
@@ -105,19 +114,18 @@
                         padding: 5px 20px 3px;
                         border-radius: 0 5% 5% 0;
                         background-color: $btn-contact;
-
-                        @media (min-width: $break--l) and (max-width: 1259px){
-                            border-radius: 3px;
-                        }
-
-
+                        @media (min-width: $break--l) and (max-width: 1259px){border-radius: 3px;}
+                        &:hover{background-color: $btn-contact-hover;}
                     }
                 }
 
-                .hamburger {
+                .hamburger { //use btnclass mixin
                     width: 56px;
                     height: 56px;
                     border-radius: 3px;
+                    margin-left: 20px;
+                    @include btn-style($dark-txt, $dark-txt);
+                    &:hover{background-color: $hover-drk;}
 
                     .burger {
                         display: block;
@@ -126,13 +134,6 @@
                         margin: 6px 0;
                         background-color: #fff;
                     }
-
-                    // span {
-                    //     font-size: 2rem;       
-                    //     display: flex;
-                    //     justify-content: center;
-                    //     align-items: center;
-                    // }
                 }
 
             }
