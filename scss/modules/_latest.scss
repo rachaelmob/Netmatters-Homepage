@@ -3,6 +3,7 @@
 //==========================================//
 
 #latest-section {
+    &:not(h2) {cursor: pointer;}
 
     .latest-heading {
         padding-top: 50px;
@@ -37,11 +38,11 @@
         }
 
 
-
         a {
-            text-decoration: none;
-            cursor: pointer;
             color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            & p {color: #666;}
         }
 
         .article-container1,
@@ -65,19 +66,21 @@
             .article-img {
                 position: relative;
 
-                a.img-tag{ 
-                    position: absolute;
+                .img-tag{ 
                     z-index: 2;
                     right: 0;
                     top: 10px;
+                    position: absolute;
                     padding: 5px 10px;
+                    font-weight: 600;
                     font-size: 0.75rem;
                     text-transform: uppercase;
+                    &:hover{text-decoration: underline;}
                 }
 
-                a.news {background-color: $nav-telecom;}
-                a.insights {background-color: $nav-software;}
-                a.careers {background-color: $nav-digital;}
+                .news {background-color: $nav-telecom;}
+                .insights {background-color: $nav-software;}
+                .careers {background-color: $nav-digital;}
 
 
                 img {
@@ -136,7 +139,7 @@
         font-size: .8125rem;
     }
 
-    & a.btn{
+    & .btn{
         padding: 5px 15px;
         line-height: 35px;
         border-radius: 3px;

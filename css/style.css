@@ -840,8 +840,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 }
 
 .footer-bottom {
-  display: flex;
-  flex-direction: row;
+  display: block;
   padding-top: 20px;
   padding-bottom: 10px;
   font-size: 0.82rem;
@@ -855,6 +854,14 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 }
 .footer-bottom .license span, .footer-bottom a span {
   display: block;
+}
+.footer-bottom .license span.hidephen, .footer-bottom a span.hidephen {
+  display: none;
+}
+@media (min-width: 768px) {
+  .footer-bottom .license span.hidephen, .footer-bottom a span.hidephen {
+    display: inline;
+  }
 }
 @media (min-width: 768px) {
   .footer-bottom .license span, .footer-bottom a span {
@@ -1124,20 +1131,20 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   font-size: 0.8125rem;
 }
 
-.partners-section .badges-row, .clients-section .badges-row {
+#acreds-section .badges-row, .clients-section .badges-row {
   display: flex;
   flex-direction: row;
   text-align: center;
   align-items: center;
 }
-.partners-section .badges-row .badge-logo, .clients-section .badges-row .badge-logo {
+#acreds-section .badges-row .badge-logo, .clients-section .badges-row .badge-logo {
   flex-grow: 1;
   padding: 0 40px;
   position: relative;
   top: 30px;
   filter: grayscale(100%);
 }
-.partners-section .badges-row .badge-logo:hover, .clients-section .badges-row .badge-logo:hover {
+#acreds-section .badges-row .badge-logo:hover, .clients-section .badges-row .badge-logo:hover {
   filter: grayscale(0);
 }
 
@@ -1166,9 +1173,73 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   max-width: 280px;
   background-color: #333645;
 }
-.clients-section .badge .tooltip .toolbox a {
+.clients-section .badge .tooltip .toolbox h3 {
+  margin: 0;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  font-size: 1.125rem;
+  padding-bottom: 17px;
+}
+.clients-section .badge .tooltip .toolbox p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+}
+.clients-section .badge .tooltip .toolbox p > a {
   color: #fff;
   text-decoration: none;
+  font-weight: 600;
+}
+.clients-section .badge .tooltip .toolbox a.btn {
+  margin-top: 11px;
+  text-decoration: none;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  white-space: normal;
+  text-transform: uppercase;
+}
+.clients-section .badge .tooltip .toolbox a.btn.webdesign {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+.clients-section .badge .tooltip .toolbox a.btn.webdesign:hover {
+  color: #fff;
+  background-color: #79539a;
+  border-color: #79539a;
+}
+.clients-section .badge .tooltip .toolbox a.btn.digital {
+  color: #fff;
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+.clients-section .badge .tooltip .toolbox a.btn.digital:hover {
+  color: #fff;
+  background-color: #25a25a;
+  border-color: #25a25a;
+}
+.clients-section .badge .tooltip .toolbox a.btn.software {
+  color: #fff;
+  background-color: #67809f;
+  border-color: #67809f;
+}
+.clients-section .badge .tooltip .toolbox a.btn.software:hover {
+  color: #fff;
+  background-color: #526781;
+  border-color: #526781;
+}
+.clients-section .badge .tooltip .toolbox a.btn.support {
+  color: #fff;
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+.clients-section .badge .tooltip .toolbox a.btn.support:hover {
+  color: #fff;
+  background-color: #286abd;
+  border-color: #286abd;
 }
 .clients-section .badge .tooltip .toolbox .toolarrow {
   position: absolute;
@@ -1273,6 +1344,9 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   line-height: 1.875rem;
   margin-bottom: 25px;
 }
+#about-section .about-grid p a:hover {
+  text-decoration: underline;
+}
 #about-section .about-grid .star-inline {
   display: inline-flex;
 }
@@ -1295,6 +1369,9 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   color: #fff;
 }
 
+#latest-section:not(h2) {
+  cursor: pointer;
+}
 #latest-section .latest-heading {
   padding-top: 50px;
 }
@@ -1322,9 +1399,12 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   }
 }
 #latest-section .latest-articles a {
-  text-decoration: none;
-  cursor: pointer;
   color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+#latest-section .latest-articles a p {
+  color: #666;
 }
 #latest-section .latest-articles .article-container1,
 #latest-section .latest-articles .article-container2,
@@ -1348,30 +1428,36 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 #latest-section .latest-articles .article-container3 .article-img {
   position: relative;
 }
-#latest-section .latest-articles .article-container1 .article-img a.img-tag,
-#latest-section .latest-articles .article-container2 .article-img a.img-tag,
-#latest-section .latest-articles .article-container3 .article-img a.img-tag {
-  position: absolute;
+#latest-section .latest-articles .article-container1 .article-img .img-tag,
+#latest-section .latest-articles .article-container2 .article-img .img-tag,
+#latest-section .latest-articles .article-container3 .article-img .img-tag {
   z-index: 2;
   right: 0;
   top: 10px;
+  position: absolute;
   padding: 5px 10px;
+  font-weight: 600;
   font-size: 0.75rem;
   text-transform: uppercase;
 }
-#latest-section .latest-articles .article-container1 .article-img a.news,
-#latest-section .latest-articles .article-container2 .article-img a.news,
-#latest-section .latest-articles .article-container3 .article-img a.news {
+#latest-section .latest-articles .article-container1 .article-img .img-tag:hover,
+#latest-section .latest-articles .article-container2 .article-img .img-tag:hover,
+#latest-section .latest-articles .article-container3 .article-img .img-tag:hover {
+  text-decoration: underline;
+}
+#latest-section .latest-articles .article-container1 .article-img .news,
+#latest-section .latest-articles .article-container2 .article-img .news,
+#latest-section .latest-articles .article-container3 .article-img .news {
   background-color: #d64541;
 }
-#latest-section .latest-articles .article-container1 .article-img a.insights,
-#latest-section .latest-articles .article-container2 .article-img a.insights,
-#latest-section .latest-articles .article-container3 .article-img a.insights {
+#latest-section .latest-articles .article-container1 .article-img .insights,
+#latest-section .latest-articles .article-container2 .article-img .insights,
+#latest-section .latest-articles .article-container3 .article-img .insights {
   background-color: #67809f;
 }
-#latest-section .latest-articles .article-container1 .article-img a.careers,
-#latest-section .latest-articles .article-container2 .article-img a.careers,
-#latest-section .latest-articles .article-container3 .article-img a.careers {
+#latest-section .latest-articles .article-container1 .article-img .careers,
+#latest-section .latest-articles .article-container2 .article-img .careers,
+#latest-section .latest-articles .article-container3 .article-img .careers {
   background-color: #2ecc71;
 }
 #latest-section .latest-articles .article-container1 .article-img img,
@@ -1418,24 +1504,24 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   line-height: 1.375rem;
   font-size: 0.8125rem;
 }
-#latest-section .article-content a.btn {
+#latest-section .article-content .btn {
   padding: 5px 15px;
   line-height: 35px;
   border-radius: 3px;
   font-size: 1.063rem;
   text-transform: uppercase;
 }
-#latest-section .article-content a.btn.btn-art1 {
+#latest-section .article-content .btn.btn-art1 {
   color: #fff;
   background-color: #d64541;
   border-color: #d64541;
 }
-#latest-section .article-content a.btn.btn-art2 {
+#latest-section .article-content .btn.btn-art2 {
   color: #fff;
   background-color: #67809f;
   border-color: #67809f;
 }
-#latest-section .article-content a.btn.btn-art3 {
+#latest-section .article-content .btn.btn-art3 {
   color: #fff;
   background-color: #2ecc71;
   border-color: #2ecc71;
@@ -1507,7 +1593,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 .newsl-section label.pretty-checkbox input.checkbox_input {
   display: none;
 }
-.newsl-section label.pretty-checkbox div.fake-checkbox {
+.newsl-section label.pretty-checkbox .fake-checkbox {
   width: 2rem;
   height: 2rem;
   flex-shrink: 0;
@@ -1518,7 +1604,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   align-items: center;
   justify-content: center;
 }
-.newsl-section label.pretty-checkbox div.fake-checkbox::after {
+.newsl-section label.pretty-checkbox .fake-checkbox::after {
   content: "✔";
   color: #fff;
   transform: scale(0);

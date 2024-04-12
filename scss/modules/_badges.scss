@@ -3,7 +3,7 @@
 //==========================================//
 
 
-.partners-section, .clients-section {    
+#acreds-section, .clients-section {    
       
             .badges-row {
                 display: flex;
@@ -61,12 +61,50 @@
                 min-width: 280px; //-> For one traverller 
                 max-width: 280px;
                 background-color: $dark-txt;
+
+                h3 {
+                    margin: 0;
+                    color: #fff;
+                    font-weight: 400;
+                    position: relative;
+                    font-size: 1.125rem;
+                    padding-bottom: 17px;     
+                }
+
+                p {
+                    // margin-bottom: 0;
+                    font-size: .8125rem;
+                    line-height: 1.375rem;
+
+                    > a { color:#fff; text-decoration:none; font-weight:600; }
+                }
             
 
 
-                a {
-                    color: #fff;
+                a.btn {
+                    // display: flex;
+                    margin-top: 11px;
+                    // align-items: center;
                     text-decoration: none;
+                    @include btnclass($font-size: 16px);
+
+                    //Unique button colours & Hover 
+                    &.webdesign {
+                        @include btn-style($nav-webdesign, $nav-webdesign);
+                        &:hover {@include btn-style($nav-webdesign-drk, $nav-webdesign-drk);}
+                    }
+                    &.digital {
+                        @include btn-style($nav-digital, $nav-digital);
+                        &:hover {@include btn-style($nav-digital-drk, $nav-digital-drk);}
+                    }
+                    &.software {
+                        @include btn-style($nav-software, $nav-software);
+                        &:hover {@include btn-style($nav-software-drk, $nav-software-drk);}
+                    }
+                    &.support {
+                        @include btn-style($nav-it, $nav-it);
+                        &:hover {@include btn-style($nav-it-drk, $nav-it-drk);}
+                    }
                 }
 
                 .toolarrow{
