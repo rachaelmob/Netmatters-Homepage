@@ -91,6 +91,13 @@
                             border: 2px solid #e5e5e5;
                             box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 
+                            &:focus{
+                                outline: 0;
+                                border-color: $border-focus;
+                                box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 
+                                0 0 8px rgba(91,192,222,.6);
+                            }
+
                             @include mq(large) {
                                 display: none;
                             }
@@ -122,17 +129,44 @@
                 .hamburger { //use btnclass mixin
                     width: 56px;
                     height: 56px;
+                    display: block;
                     border-radius: 3px;
                     margin-left: 20px;
                     @include btn-style($dark-txt, $dark-txt);
                     &:hover{background-color: $hover-drk;}
 
+
                     .burger {
                         display: block;
                         width: 33px;
                         height: 4px;
-                        margin: 6px 0;
+                        margin-top: -1.5px;
+                        position: absolute;
                         background-color: #fff;
+                        // transition-property: transform;
+                        // transition-duration: .15s;
+                        // transition-timing-function: ease;
+
+                        &::after, &::before {
+                            content: "";
+                            width: 33px;
+                            height: 4px;
+                            display: block;
+                            border-radius: 0;
+                            position: absolute;
+                            background-color: #fff;
+                        }
+                        
+                        &::before {
+                            top: -10px;
+                            // transition: top .1s ease-in .25s, opacity .1s ease-in;
+                        }
+                        &::after {
+                            bottom: -10px;
+                            // transition: bottom .1s ease-in .25s, 
+                            // transform .22s cubic-bezier(.55,.055,.675,.19);
+                        }
+    
                     }
                 }
 

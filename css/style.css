@@ -241,6 +241,11 @@ header .header-container .header-row .actions .search-bar form input {
   border: 2px solid #e5e5e5;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
+header .header-container .header-row .actions .search-bar form input:focus {
+  outline: 0;
+  border-color: #5bc0de;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
+}
 @media (min-width: 992px) {
   header .header-container .header-row .actions .search-bar form input {
     display: none;
@@ -276,6 +281,7 @@ header .header-container .header-row .actions .search-bar button:hover {
 header .header-container .header-row .actions .hamburger {
   width: 56px;
   height: 56px;
+  display: block;
   border-radius: 3px;
   margin-left: 20px;
   color: #fff;
@@ -289,8 +295,24 @@ header .header-container .header-row .actions .hamburger .burger {
   display: block;
   width: 33px;
   height: 4px;
-  margin: 6px 0;
+  margin-top: -1.5px;
+  position: absolute;
   background-color: #fff;
+}
+header .header-container .header-row .actions .hamburger .burger::after, header .header-container .header-row .actions .hamburger .burger::before {
+  content: "";
+  width: 33px;
+  height: 4px;
+  display: block;
+  border-radius: 0;
+  position: absolute;
+  background-color: #fff;
+}
+header .header-container .header-row .actions .hamburger .burger::before {
+  top: -10px;
+}
+header .header-container .header-row .actions .hamburger .burger::after {
+  bottom: -10px;
 }
 @media (min-width: 768px) {
   header .header-container .search-mobile {
@@ -873,14 +895,31 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   position: relative;
 }
 .slide-banner .banner {
+  display: flex;
   height: 550px;
   background-color: #000;
+}
+@media (min-width: 992px) {
+  .slide-banner .banner .img-banner::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, transparent 25%, #000);
+  }
 }
 .slide-banner .banner img {
   opacity: 0.5;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (min-width: 992px) {
+  .slide-banner .banner img {
+    opacity: 1;
+  }
 }
 .slide-banner .banner .banner-content {
   color: #fff;
@@ -1170,10 +1209,13 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 }
 .clients-section .badge .tooltip {
   display: none;
+  bottom: 125%;
+  left: -200px;
+  right: -200px;
   position: absolute;
-  bottom: 100%;
 }
 .clients-section .badge .tooltip .toolbox {
+  margin: auto;
   color: #fff;
   padding: 20px;
   min-width: 280px;
