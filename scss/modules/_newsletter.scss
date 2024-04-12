@@ -6,29 +6,30 @@
     background-color: $light-bg;
     color: $dark-txt;
 
-    form {
+    form.sign-up {
         margin: 0;
+        padding: 50px 0;
     }
-
 
     h2 {
         font-weight: $font-light;
         margin: 0 0 15px;
         font-size: 2rem;
-        // line-height: 1.1; -> Not needed yet
     }
+
+    .form-group { margin-bottom: 15px ;}
 
     .signup-inputs-wrapper {
         display: flex;
         flex-wrap: wrap;
         margin-left: -15px;
         margin-right: -15px;
-    }
 
-    .signup-input {
-        flex: 1 1 450px;
-        padding-left: 15px;
-        padding-right: 15px;
+        .signup-input {
+            flex: 1 1 450px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 
     label {
@@ -38,39 +39,79 @@
             color: #d24d57;
         }
     
+        //CHECK BOX STYLING
         &.pretty-checkbox {
+            display: flex;
             line-height: 32px;
             cursor: pointer;
+            align-items: flex-start;
+
+            input.checkbox_input {
+                display: none;
+            }
+
+            div.fake-checkbox{
+                width: 2rem;
+                height: 2rem;
+                flex-shrink: 0;
+                border-radius: 3px;
+                margin-right: 20px;
+                border: 3px solid $dark-txt;
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+
+                &::after {
+                    content: "\2714";
+                    color: #fff;
+                    transform: scale(0);
+                }
+            }
+
+            .checkbox_input:checked + .fake-checkbox {
+                background: $dark-txt;
+                border-color: $dark-txt;
+              }
+              
+              .checkbox_input:checked + .fake-checkbox::after {
+                transform: scale(1);
+              }
+
+
         }
 
-        &a {
+        & a {
             color: $dark-txt;
             text-decoration: underline;
         }
     }
 
+    input.form-control {
+        width: 100%;
+        height: 47px;
+        padding: 5px 15px;
+        border-radius: 2px;
+        border: 1px solid #e5e5e5;
+        background-image: none;
+        @include btn-style(#fff, $border-grey, #555);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 
+        &:focus{
+            outline: 0;
+            border-color: $border-focus;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91,192,222,.6);
+        }
+    }
+
+    //== Submit Button ==//
     button.btn {
+        margin-top: 10px; //Makes extra space between checkbox section
         @include btnclass(); //btn "class" mixin
         @include btn-style($dark-txt, $dark-txt);
     }
 }
 
 
-// NOT NESTED
-.sign-up {
-    // margin: 30px auto 15px; -> crossed out
-    padding: 50px 0;
-}
 
-.form-control {
-    width: 100%;
-    height: 45px; //Incorrect but works for now
-    padding: 6px 12px;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #e5e5e5;
-    border-radius: 2px;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
+

@@ -17,6 +17,7 @@
         & > li {
             list-style: none;
             text-align: center;
+            &:hover{cursor: pointer;}
 
            & > a {
                 display: block;
@@ -170,7 +171,7 @@
                     font-size: 1.2rem;
                     line-height: 1.313rem;
                     padding: .625rem .938rem .625rem 0;
-                    &:hover{text-decoration: underline;}
+                    & > span:hover {text-decoration: underline;}
         
                     & > i {
                         display: flex;

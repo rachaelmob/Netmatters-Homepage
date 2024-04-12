@@ -3,8 +3,8 @@
 //==========================================//
 
 // ===== BTN COLOUR STYLING =====// (SEE MIXINS FOR BTN "CLASS")
-@mixin btn-style($bgc, $brdcol:null) {
-  color: #fff;
+@mixin btn-style($bgc, $brdcol:null, $clr: #fff) {
+  color: $clr;
   background-color: $bgc;
   border-color: $brdcol;
 }
