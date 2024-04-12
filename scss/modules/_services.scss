@@ -70,7 +70,11 @@
 
         .service-container {
             //TRANSITION EASE CARDS WITH UNIQUE COLOURS
-            @mixin transhov($bgc){ background-color:$bgc; top: -10px;transition: .5s ease;}
+            @mixin transhov($clr) { 
+                background-color:$clr; 
+                border-color:$clr;
+                top: -10px;transition: .5s ease;
+            }
             &1:hover {@include transhov($nav-software);} 
             &2:hover {@include transhov($nav-it);} 
             &3:hover {@include transhov($nav-digital);} 

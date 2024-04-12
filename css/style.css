@@ -996,36 +996,43 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 }
 #our-services .services-all .service-container1:hover {
   background-color: #67809f;
+  border-color: #67809f;
   top: -10px;
   transition: 0.5s ease;
 }
 #our-services .services-all .service-container2:hover {
   background-color: #4183d7;
+  border-color: #4183d7;
   top: -10px;
   transition: 0.5s ease;
 }
 #our-services .services-all .service-container3:hover {
   background-color: #2ecc71;
+  border-color: #2ecc71;
   top: -10px;
   transition: 0.5s ease;
 }
 #our-services .services-all .service-container4:hover {
   background-color: #d64541;
+  border-color: #d64541;
   top: -10px;
   transition: 0.5s ease;
 }
 #our-services .services-all .service-container5:hover {
   background-color: #926fb1;
+  border-color: #926fb1;
   top: -10px;
   transition: 0.5s ease;
 }
 #our-services .services-all .service-container6:hover {
   background-color: #f62459;
+  border-color: #f62459;
   top: -10px;
   transition: 0.5s ease;
 }
 #our-services .services-all .service-container7:hover {
   background-color: #ce4125;
+  border-color: #ce4125;
   top: -10px;
   transition: 0.5s ease;
 }
