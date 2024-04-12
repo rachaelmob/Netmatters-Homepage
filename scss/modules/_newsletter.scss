@@ -71,6 +71,7 @@
             .checkbox_input:checked + .fake-checkbox {
                 background: $dark-txt;
                 border-color: $dark-txt;
+                &:hover{@include btn-style($vdark-bg,$vdark-bg);}
               }
               
               .checkbox_input:checked + .fake-checkbox::after {
@@ -109,6 +110,7 @@
         margin-top: 10px; //Makes extra space between checkbox section
         @include btnclass(); //btn "class" mixin
         @include btn-style($dark-txt, $dark-txt);
+        &:hover{@include btn-style($vdark-bg, $vdark-bg)}
     }
 }
 

@@ -1680,6 +1680,11 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   background: #333645;
   border-color: #333645;
 }
+.newsl-section label.pretty-checkbox .checkbox_input:checked + .fake-checkbox:hover {
+  color: #fff;
+  background-color: #22242e;
+  border-color: #22242e;
+}
 .newsl-section label.pretty-checkbox .checkbox_input:checked + .fake-checkbox::after {
   transform: scale(1);
 }
@@ -1718,6 +1723,11 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   color: #fff;
   background-color: #333645;
   border-color: #333645;
+}
+.newsl-section button.btn:hover {
+  color: #fff;
+  background-color: #22242e;
+  border-color: #22242e;
 }
 
 /*# sourceMappingURL=style.css.map */
