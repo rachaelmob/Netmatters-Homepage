@@ -879,6 +879,9 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   color: #fff;
   text-decoration: none;
 }
+.footer-bottom .license a:hover, .footer-bottom a a:hover {
+  text-decoration: underline;
+}
 .footer-bottom .license span, .footer-bottom a span {
   display: block;
 }
@@ -1255,6 +1258,9 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+}
+.clients-section .badge .tooltip .toolbox p > a:hover {
+  text-decoration: underline;
 }
 .clients-section .badge .tooltip .toolbox a.btn {
   margin-top: 11px;
@@ -1691,6 +1697,9 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 .newsl-section label a {
   color: #333645;
   text-decoration: underline;
+}
+.newsl-section label a:hover {
+  color: #22242e;
 }
 .newsl-section input.form-control {
   width: 100%;

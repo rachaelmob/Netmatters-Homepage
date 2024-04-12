@@ -84,6 +84,7 @@
         & a {
             color: $dark-txt;
             text-decoration: underline;
+            &:hover { color: $vdark-bg ;}
         }
     }
 
