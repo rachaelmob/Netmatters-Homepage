@@ -198,12 +198,17 @@ header .header-container .header-row .actions a {
   font-size: 1.125rem;
   border-radius: 3px;
   white-space: normal;
+  text-decoration: none;
   text-transform: uppercase;
 }
 @media (max-width: 992px) {
   header .header-container .header-row .actions a {
     display: none;
   }
+}
+header .header-container .header-row .actions a span {
+  margin-right: 5px;
+  font-size: 1.438rem;
 }
 header .header-container .header-row .actions a.support {
   color: #fff;
@@ -954,19 +959,30 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
     line-height: 2.5rem;
   }
 }
-.slide-banner .banner .banner-content a {
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.25rem;
-  padding: 5px 20px;
-  line-height: 50px;
-  border-radius: 3px;
+.slide-banner .banner .banner-content a.btn {
   margin: 1.2rem 0 1.9rem 0;
   border-color: #926fb1;
   background-color: #926fb1;
+  height: auto;
+  line-height: 50px;
+  padding: 5px 20px;
+  font-size: 1.25rem;
+  border-radius: 3px;
+  white-space: normal;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-.slide-banner .banner .banner-content a i {
+.slide-banner .banner .banner-content a.btn.webdesign {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+.slide-banner .banner .banner-content a.btn.webdesign:hover {
+  color: #fff;
+  background-color: #79539a;
+  border-color: #79539a;
+}
+.slide-banner .banner .banner-content a.btn i {
   margin-right: -4px;
   margin-left: 12px;
 }
@@ -1151,6 +1167,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   font-size: 1.063rem;
   border-radius: 3px;
   white-space: normal;
+  text-decoration: none;
   text-transform: uppercase;
 }
 #our-services .services-all .service-container1 a > div.icon, #our-services .services-all .service-container2 a > div.icon, #our-services .services-all .service-container3 a > div.icon, #our-services .services-all .service-container4 a > div.icon, #our-services .services-all .service-container5 a > div.icon, #our-services .services-all .service-container6 a > div.icon, #our-services .services-all .service-container7 a > div.icon {
@@ -1248,6 +1265,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   font-size: 16px;
   border-radius: 3px;
   white-space: normal;
+  text-decoration: none;
   text-transform: uppercase;
 }
 .clients-section .badge .tooltip .toolbox a.btn.webdesign {
@@ -1695,6 +1713,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   font-size: 1.063rem;
   border-radius: 3px;
   white-space: normal;
+  text-decoration: none;
   text-transform: uppercase;
   color: #fff;
   background-color: #333645;

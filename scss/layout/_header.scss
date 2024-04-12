@@ -64,6 +64,11 @@
                     @media (max-width: 992px) {display: none;}
                     text-decoration: none;
                     @include btnclass($font-size:1.125rem, $line-h:46px, $height:56px);
+                    & span {
+                        margin-right: 5px;
+                        font-size: 1.438rem; 
+                        // line-height: 45px;
+                    } //Icons only (support/contract)
                     
                     //BUTTON COLOURS & HOVER COLOURS
                     &.support {
