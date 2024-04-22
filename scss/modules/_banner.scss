@@ -2,24 +2,26 @@
 //              BANNER SECTION
 //==========================================//
 
-.slide-banner{
+#slide-banner{
     position: relative;
 
     .banner {
         display: flex;
-        height: 550px;
+        min-height: 550px;
         background-color: #000;
 
-        .img-banner::before{
-            @include mq(large){
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                background: linear-gradient(270deg,transparent 25%,#000);
-                // z-index: 3;
+        .img-banner {
+            &::before {
+                @include mq(large){
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: linear-gradient(270deg,transparent 25%,#000);
+                    z-index: 3;
+                }
             }
         }
 
@@ -66,8 +68,6 @@
 
             a.btn {
                 margin: 1.2rem 0 1.9rem 0;
-                border-color: $nav-webdesign;
-                background-color: $nav-webdesign;
                 @include btnclass($line-h: 50px, $padding: 5px 20px, $font-size: 1.25rem);
 
                 //Btn Unique Colours & Hover
