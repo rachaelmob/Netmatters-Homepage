@@ -914,6 +914,12 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   position: absolute;
   top: 0;
   bottom: 0;
+  opacity: 0.5;
+}
+@media (min-width: 992px) {
+  #slide-banner .banner .img-banner {
+    opacity: 1;
+  }
 }
 @media (min-width: 992px) {
   #slide-banner .banner .img-banner::before {
@@ -928,15 +934,9 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   }
 }
 #slide-banner .banner img {
-  opacity: 0.5;
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-@media (min-width: 992px) {
-  #slide-banner .banner img {
-    opacity: 1;
-  }
 }
 #slide-banner .banner .banner-content {
   z-index: 4;
@@ -993,6 +993,56 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   color: #fff;
   background-color: #79539a;
   border-color: #79539a;
+}
+#slide-banner .banner .banner-content a.btn.software {
+  color: #fff;
+  background-color: #67809f;
+  border-color: #67809f;
+}
+#slide-banner .banner .banner-content a.btn.software:hover {
+  color: #fff;
+  background-color: #526781;
+  border-color: #526781;
+}
+#slide-banner .banner .banner-content a.btn.support {
+  color: #fff;
+  background-color: #4183d7;
+  border-color: #4183d7;
+}
+#slide-banner .banner .banner-content a.btn.support:hover {
+  color: #fff;
+  background-color: #286abd;
+  border-color: #286abd;
+}
+#slide-banner .banner .banner-content a.btn.digital {
+  color: #fff;
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+#slide-banner .banner .banner-content a.btn.digital:hover {
+  color: #fff;
+  background-color: #25a25a;
+  border-color: #25a25a;
+}
+#slide-banner .banner .banner-content a.btn.telecoms {
+  color: #fff;
+  background-color: #d64541;
+  border-color: #d64541;
+}
+#slide-banner .banner .banner-content a.btn.telecoms:hover {
+  color: #fff;
+  background-color: #bc2c28;
+  border-color: #bc2c28;
+}
+#slide-banner .banner .banner-content a.btn.cyber {
+  color: #fff;
+  background-color: #f62459;
+  border-color: #f62459;
+}
+#slide-banner .banner .banner-content a.btn.cyber:hover {
+  color: #fff;
+  background-color: #de093f;
+  border-color: #de093f;
 }
 #slide-banner .banner .banner-content a.btn i {
   margin-right: -4px;

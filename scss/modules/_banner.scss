@@ -17,6 +17,8 @@
             position: absolute;
             top: 0;
             bottom: 0;
+            opacity: 0.5;
+            @include mq(large){opacity: 1;}
 
             &::before {
                 @include mq(large){
@@ -33,11 +35,11 @@
         }
 
         img {
-            opacity: 0.5;
+            // opacity: 0.5;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            @include mq(large){opacity: 1;}
+            // @include mq(large){opacity: 1;}
         }
 
         .banner-content {
@@ -84,6 +86,21 @@
                 //Btn Unique Colours & Hover
                 &.webdesign{ @include btn-style($nav-webdesign, $nav-webdesign);
                     &:hover{ @include btn-style($nav-webdesign-drk, $nav-webdesign-drk);}
+                }
+                &.software{ @include btn-style($nav-software, $nav-software);
+                    &:hover{ @include btn-style($nav-software-drk, $nav-software-drk);}
+                }
+                &.support{ @include btn-style($nav-it, $nav-it);
+                    &:hover{ @include btn-style($nav-it-drk, $nav-it-drk);}
+                }
+                &.digital{ @include btn-style($nav-digital, $nav-digital);
+                    &:hover{ @include btn-style($nav-digital-drk, $nav-digital-drk);}
+                }
+                &.telecoms{ @include btn-style($nav-telecom, $nav-telecom);
+                    &:hover{ @include btn-style($nav-telecom-drk, $nav-telecom-drk);}
+                }
+                &.cyber{ @include btn-style($nav-cyber, $nav-cyber);
+                    &:hover{ @include btn-style($nav-cyber-drk, $nav-cyber-drk);}
                 }
 
 
