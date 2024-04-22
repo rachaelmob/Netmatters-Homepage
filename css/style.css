@@ -904,8 +904,16 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 }
 #slide-banner .banner {
   display: flex;
+  overflow: hidden;
   min-height: 550px;
+  align-items: center;
+  justify-content: center;
   background-color: #000;
+}
+#slide-banner .banner .img-banner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 @media (min-width: 992px) {
   #slide-banner .banner .img-banner::before {
@@ -931,11 +939,11 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   }
 }
 #slide-banner .banner .banner-content {
+  z-index: 4;
   color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
 }
 @media (max-width: 992px) {
   #slide-banner .banner .banner-content {
@@ -946,6 +954,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 #slide-banner .banner .banner-content h1 {
   font-size: 2.5rem;
   font-weight: 600;
+  margin: 0 0 1.25rem;
 }
 @media (min-width: 992px) {
   #slide-banner .banner .banner-content h1 {
@@ -956,6 +965,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 #slide-banner .banner .banner-content p {
   font-size: 1.2rem;
   font-weight: 600;
+  margin: 0 0 10px;
 }
 @media (min-width: 992px) {
   #slide-banner .banner .banner-content p {
@@ -964,7 +974,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   }
 }
 #slide-banner .banner .banner-content a.btn {
-  margin: 1.2rem 0 1.9rem 0;
+  margin: 1.125rem 0 1.938rem 0;
   height: auto;
   line-height: 50px;
   padding: 5px 20px;
