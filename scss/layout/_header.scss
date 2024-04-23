@@ -131,48 +131,86 @@
                     }
                 }
 
-                .hamburger { //use btnclass mixin
-                    width: 56px;
-                    height: 56px;
+                //HAMBURGER
+                .hamburger { 
                     display: block;
-                    border-radius: 3px;
+                    cursor: pointer;
                     margin-left: 20px;
+                    @include btnclass(
+                        $height:56px,
+                        $line-h: 46px,
+                        $font-size: 1.125rem
+                    );
                     @include btn-style($dark-txt, $dark-txt);
                     &:hover{background-color: $hover-drk;}
+                    transition-property: opacity, filter;
+                    transition-duration: .15s;
+                    transition-timing-function: linear;
 
-
-                    .burger {
-                        display: block;
+                    .ham-box {
                         width: 33px;
-                        height: 4px;
-                        margin-top: -1.5px;
-                        position: absolute;
-                        background-color: #fff;
-                        // transition-property: transform;
-                        // transition-duration: .15s;
-                        // transition-timing-function: ease;
+                        height: 19px;
+                        display: inline-block;
+                        position: relative;
+                    }
 
-                        &::after, &::before {
+                    .ham-bar {
+                        top: 50%;
+                        // margin-top: -1.5px;
+                        transition-duration: .22s;
+                        transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+
+                        &, &::before, &::after {
                             content: "";
-                            width: 33px;
                             height: 4px;
+                            width: 33px;
                             display: block;
-                            border-radius: 0;
                             position: absolute;
                             background-color: #fff;
+                            transition-property: transform;
+                            transition-duration: .15s;
+                            transition-timing-function: ease;
                         }
-                        
+
                         &::before {
                             top: -10px;
-                            // transition: top .1s ease-in .25s, opacity .1s ease-in;
+                            
                         }
                         &::after {
                             bottom: -10px;
-                            // transition: bottom .1s ease-in .25s, 
-                            // transform .22s cubic-bezier(.55,.055,.675,.19);
                         }
-    
                     }
+
+                    & .ham-bar::before { 
+                        transition: top .1s ease-in .25s,opacity .1s ease-in; 
+                    }
+                    & .ham-bar::after { 
+                        transition: bottom .1s ease-in .25s, transform .22s 
+                        cubic-bezier(.55,.055,.675,.19); 
+                    }
+
+
+                    // SPIN BAR ON CLICK 
+                    &.is-active .ham-bar {
+                        transform: rotate(225deg);
+                        transition-delay: .12s;
+                        transition-timing-function: cubic-bezier(.215,.61,.355,1);
+                    } 
+
+                    &.is-active .ham-bar::after {
+                        bottom: 0;
+                        transform: rotate(-90deg);
+                        transition: bottom .1s ease-out, transform .22s 
+                        cubic-bezier(.215,.61,.355,1) .12s;
+                    }
+
+                    &.is-active .ham-bar::before { //hide on spin
+                        top: 0;
+                        opacity: 0;
+                        transition: top .1s ease-out, opacity .1s ease-out .12s;
+                    }
+
+                    
                 }
 
             }
