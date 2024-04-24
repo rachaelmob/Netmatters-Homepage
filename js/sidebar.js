@@ -1,22 +1,47 @@
 window.onload = function () {
 	// window.addEventListener('scroll', function (e) {
 	// 	if (window.scrollY > 100) {
-	// 		document.querySelector("#sidenav").classList.add('is-scrolling');
+	// 		document.querySelector("#sidebar").classList.add('is-scrolling');
 	// 	} else {
-	// 		document.querySelector("#sidenav").classList.remove('is-scrolling');
+	// 		document.querySelector("#sidebar").classList.remove('is-scrolling');
 	// 	}
 	// });
 
 	// Variables For Toggle .is-active
 	const hamburger = document.querySelector('.hamburger');
 	const sideBar = document.querySelector('#sidebar');
+	const pageContent = document.querySelector('#container');
+	let openMenu = false;
 
-	// Activate class 'is-active' on click
-	hamburger.addEventListener('click', function () {
+	// Activate sidebar on click
+	hamburger.addEventListener('click', function openSidebar() {
 		setTimeout(() => {
 			hamburger.classList.toggle('is-active');
 		  }, 50);
-		// hamburger.classList.toggle('is-active');
-		sideBar.classList.toggle('is-active');
+
+		//Set OpenMenu to True
+		setTimeout(() => {
+			openMenu = true;
+		}, 50);
+
+		//push content side bar
+		sideBar.classList.toggle('sidebar-visible');
+		pageContent.classList.toggle('sidebar-visible');
+	});
+
+	//CLOSE that sidebar!
+	pageContent.addEventListener('click', function () {
+		if(openMenu === true) {
+			setTimeout(() => {
+				hamburger.classList.remove('is-active');
+			}, 50);
+
+			// push content side bar
+			sideBar.classList.remove('sidebar-visible');
+			pageContent.classList.remove('sidebar-visible');
+
+			//Menu is now Closed
+			openMenu = false;
+		}
 	});
 }

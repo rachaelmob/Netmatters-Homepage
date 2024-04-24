@@ -174,19 +174,13 @@
 
                         &::before {
                             top: -10px;
-                            
+                            transition: top .1s ease-in .25s,opacity .1s ease-in; 
                         }
                         &::after {
                             bottom: -10px;
-                        }
-                    }
-
-                    & .ham-bar::before { 
-                        transition: top .1s ease-in .25s,opacity .1s ease-in; 
-                    }
-                    & .ham-bar::after { 
-                        transition: bottom .1s ease-in .25s, transform .22s 
+                            transition: bottom .1s ease-in .25s, transform .22s 
                         cubic-bezier(.55,.055,.675,.19); 
+                        }
                     }
 
 

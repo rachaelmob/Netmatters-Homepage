@@ -22,6 +22,36 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
+  transition: all 0.5s;
+  z-index: 10;
+  left: 0;
+}
+#container.sidebar-visible {
+  left: -275px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+@media (min-width: 992px) {
+  #container.sidebar-visible {
+    left: -350px;
+  }
+}
+#container.sidebar-visible::after {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+}
+#container::after {
+  content: "";
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
 }
 
 div {
@@ -329,14 +359,10 @@ header .header-container .header-row .actions .hamburger .ham-bar, header .heade
 }
 header .header-container .header-row .actions .hamburger .ham-bar::before {
   top: -10px;
-}
-header .header-container .header-row .actions .hamburger .ham-bar::after {
-  bottom: -10px;
-}
-header .header-container .header-row .actions .hamburger .ham-bar::before {
   transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
 }
 header .header-container .header-row .actions .hamburger .ham-bar::after {
+  bottom: -10px;
   transition: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 header .header-container .header-row .actions .hamburger.is-active .ham-bar {
@@ -943,7 +969,16 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   width: 275px;
   height: 100vh;
   overflow: auto;
+  display: none;
   background-color: #333645;
+}
+@media (min-width: 992px) {
+  #sidebar {
+    width: 350px;
+  }
+}
+#sidebar.sidebar-visible {
+  display: block !important;
 }
 #sidebar ul {
   list-style: none;
@@ -960,9 +995,9 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   padding: 21px;
   margin: -20px 0 0;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   #sidebar ul.sidenav {
-    display: block !important;
+    display: none !important;
   }
 }
 #sidebar ul.sidenav > li.siv-tab {
@@ -1558,7 +1593,6 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 
 #about-section {
   color: #fff;
-  margin-top: 30px;
   background-color: #333645;
 }
 #about-section .about-grid {

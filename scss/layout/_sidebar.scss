@@ -11,7 +11,13 @@
     width: 275px;
     height: 100vh;
     overflow: auto;
+    display: none;
     background-color: $dark-txt;
+    @include mq(large){width: 350px;}
+
+    &.sidebar-visible {
+        display: block !important;
+    }
 
     // ALL UNORDERED LISTS 
     ul {
@@ -32,8 +38,7 @@
     ul.sidenav {
         padding: 21px;
         margin: -20px 0 0;
-        // display: none !important;
-        @media (max-width: $break--med){display: block !important;}
+        @include mq(medium){display: none !important;}
 
         & > li.siv-tab {
             padding: 20px 0 0;
@@ -141,7 +146,6 @@
         }
 
         & li.mobile-support {
-            // display: block !important;
             @include mq(medium){display: none !important;}
         }
 

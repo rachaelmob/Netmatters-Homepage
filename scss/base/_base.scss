@@ -20,10 +20,41 @@ body {
   background-color: #fff;
 }
 
-#container{
+#container {
   height: 100%;
   position: relative;
   overflow: hidden;
+  transition: all .5s;
+  z-index: 10;
+  left: 0;
+
+
+  //WHEN SIDE BAR IS OPEN
+  &.sidebar-visible {
+    left: -275px;
+    cursor: pointer;
+    transition: all .5s;
+    @media (min-width: 992px){left: -350px;}
+
+    &::after {
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+      transition: opacity .5s;
+    }
+  }
+
+  &::after {
+    content: "";
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, .4);
+    transition: opacity .5s, width .1s .5s, height .1s .5s;
+  }
 }
 
 div {
