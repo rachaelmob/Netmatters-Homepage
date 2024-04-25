@@ -7,7 +7,7 @@ window.onload = function () {
 	// 	}
 	// });
 
-	// Variables For Toggle .is-active
+	// Variables 
 	const hamburger = document.querySelector('.hamburger');
 	const sideBar = document.querySelector('#sidebar');
 	const pageContent = document.querySelector('#container');
@@ -36,12 +36,14 @@ window.onload = function () {
 				hamburger.classList.remove('is-active');
 			}, 50);
 
-			// push content side bar
-			sideBar.classList.remove('sidebar-visible');
+			// push content over side bar
 			pageContent.classList.remove('sidebar-visible');
+			sideBar.classList.remove('sidebar-visible');
 
-			//Menu is now Closed
+			// //Menu is now Closed
 			openMenu = false;
-		}
+		} 
 	});
+
+
 }

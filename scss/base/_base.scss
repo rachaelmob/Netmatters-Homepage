@@ -28,8 +28,9 @@ body {
   z-index: 10;
   left: 0;
 
-
-  //WHEN SIDE BAR IS OPEN
+    //====================//
+    //      SIDEBAR 
+    //====================//
   &.sidebar-visible {
     left: -275px;
     cursor: pointer;
@@ -60,10 +61,6 @@ body {
 div {
   display: block;
 }
-
-
-
-
 
 
 

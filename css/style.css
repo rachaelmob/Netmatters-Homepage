@@ -169,6 +169,15 @@ label {
   margin-bottom: 5px;
 }
 
+#header {
+  background-color: #fff;
+}
+#header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100vh;
+}
+
 header .header-container {
   padding: 20px 0px;
 }
@@ -969,7 +978,6 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   width: 275px;
   height: 100vh;
   overflow: auto;
-  display: none;
   background-color: #333645;
 }
 @media (min-width: 992px) {
@@ -1067,6 +1075,14 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   border-top: 1px solid rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 }
+#sidebar ul.side-menu > li.service-hidden {
+  display: none;
+}
+@media (min-width: 992px) {
+  #sidebar ul.side-menu > li.service-hidden {
+    display: block;
+  }
+}
 #sidebar ul.side-menu > li {
   border-top: 1px solid hsla(0, 0%, 100%, 0.1);
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
@@ -1101,6 +1117,149 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   #sidebar ul.side-menu li.mobile-support {
     display: none !important;
   }
+}
+
+#container div.cookies button.manage-consent.btn {
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  position: fixed;
+  font-weight: 600;
+  border-width: 1px 1px 0 0;
+  border-top-right-radius: 10px;
+  height: auto;
+  line-height: 22px;
+  padding: 0 10px;
+  font-size: 0.8rem;
+  white-space: normal;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #75788a;
+  border-color: #75788a;
+}
+#container div.cookies #cookies-consent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  outline: 0;
+  z-index: 100;
+  padding: 30px;
+  display: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#container div.cookies #cookies-consent.cookie-popup {
+  display: flex;
+}
+#container div.cookies #cookies-consent .cookie-container {
+  width: auto;
+  margin: auto;
+  outline: none;
+  border-radius: 5px;
+  position: relative;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 768px) {
+  #container div.cookies #cookies-consent .cookie-container {
+    width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-title {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-title h3 {
+  margin: 0;
+  color: #333645;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 1.42857143;
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-text {
+  padding: 20px;
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-text p {
+  margin-bottom: 25px;
+  line-height: 1.875rem;
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn {
+    width: 50%;
+  }
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn a.btn {
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn a.btn.contact {
+  color: #fff;
+  background-color: #999aa2;
+  border-color: #999aa2;
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn a.btn.contact:hover {
+  color: #fff;
+  background-color: #84858f;
+  border-color: #84858f;
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn a.btn.webdesign {
+  color: #fff;
+  background-color: #926fb1;
+  border-color: #926fb1;
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn a.btn.webdesign:hover {
+  color: #fff;
+  background-color: #79539a;
+  border-color: #79539a;
+}
+
+#container div.chat button.chat-btn {
+  z-index: 99;
+  position: fixed;
+  width: 60px;
+  right: 30px;
+  bottom: 20px;
+  height: 60px;
+  line-height: 35px;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+  border-radius: 50%;
+  white-space: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #333645;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container div.chat button.chat-btn:hover {
+  background-color: #121318;
+}
+#container div.chat button.chat-btn i {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 #slide-banner {
@@ -1252,7 +1411,16 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   margin-right: -4px;
   margin-left: 12px;
 }
+#slide-banner ul.slick-dots {
+  bottom: 25px;
+}
+#slide-banner .sliding.slick-initialized.slick-slider.slick-dotted {
+  margin-bottom: 0;
+}
 
+#our-services {
+  background-color: #fff;
+}
 #our-services .services-heading {
   position: relative;
 }
@@ -1460,6 +1628,9 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   font-size: 0.8125rem;
 }
 
+#acreds-section, .clients-section {
+  background-color: #fff;
+}
 #acreds-section .badges-row, .clients-section .badges-row {
   display: flex;
   flex-direction: row;
@@ -1703,6 +1874,9 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   color: #fff;
 }
 
+#latest-section {
+  background-color: #fff;
+}
 #latest-section:not(h2) {
   cursor: pointer;
 }
@@ -1748,6 +1922,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   margin: 40px 0;
   position: relative;
   border-radius: 3px;
+  background-color: #fff;
   top: 0;
   transition: 0.5s ease;
 }

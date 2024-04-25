@@ -18,67 +18,102 @@
 <body> 
 
 <div id="container">
-    <!-- ================================ HEADER ================================  -->
-<header>
-    <div class="header-container">
-        <div class="container">
-            <div class="header-row">
 
-                <div class="logo-head">
-                    <a href="#">
-                        <img src="./img/netmatters-logo-header.png" alt="netmatterslogo navy blue">
-                    </a>
+    <div class="cookies">
+        <button class="manage-consent btn" type="button"> Manage Consent </button>
+        <div id="cookies-consent">
+            <div class="cookie-container">
+                <div class="cookie-title">
+                    <h3>Cookies Policy</h3>
                 </div>
-
-                <div class="phone-burger">
-                    <div class="phone">
-                        <a href="#">
-                            <span><i class="fa-solid fa-phone-volume"></i></span>
-                        </a>
+                <div class="cookie-text">
+                    <p>
+                        Our website uses cookies. This helps us provide you with a good experience 
+                        on our website. To see what cookies we use and what they do, and to opt-in 
+                        on non-essential cookies click "change settings". For a detailed explanation, 
+                        click on "<a class="link" href="#">Privacy Policy</a>"otherwise click "Accept 
+                        cookies" to enter.
+                    </p>
+                </div>
+                <div class="cookie-btns">
+                    <div class="c-btn">
+                        <a href="#" class="btn contact">Change settings</a>
                     </div>
-                    <div class="actions">
-                            <a href="#" class="btn support">
-                                <span><i class="fa-solid fa-computer-mouse"></i></span>
-                                Support
-                            </a>
-                            <a href="#" class="btn contact">
-                                <span><i class="fa-regular fa-paper-plane"></i></span>
-                                Contact
-                            </a>
-                            <div class="search-bar">
-                                <form method="GET" action="#" accept-charset="UTF-8">
-                                    <label for="search-bar"></label>
-                                    <input type="text" id="search-bar" placeholder="Search...">
-                                    <button type="submit">
-                                        <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                </form>
-                            </div>
-
-                            <button type="button" class="hamburger btn">
-                                <span class="ham-box">
-                                    <span class="ham-bar"></span>
-                                </span>
-                            </button>
-                    </div> 
+                    <div class="c-btn">
+                        <a href="" class="btn webdesign">Accept Cookies</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="search-mobile">
-                <form method="GET" action="#" accept-charset="UTF-8">
-                    <label for="search-mobile"></label>
-                    <input type="text" id="search-mobile" placeholder="Search...">
-                    <button type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-                </div>
         </div>
+    </div>
+    <div class="chat">
+        <button class="chat-btn btn" type="button">
+            <i class="fa-solid fa-message"></i>
+        </button>
+    </div>
+
+<div id="header">
+    <!-- ================================ HEADER ================================  -->
+    <header>
+        <div class="header-container">
+            <div class="container">
+                <div class="header-row">
+
+                    <div class="logo-head">
+                        <a href="#">
+                            <img src="./img/netmatters-logo-header.png" alt="netmatterslogo navy blue">
+                        </a>
+                    </div>
+
+                    <div class="phone-burger">
+                        <div class="phone">
+                            <a href="#">
+                                <span><i class="fa-solid fa-phone-volume"></i></span>
+                            </a>
+                        </div>
+                        <div class="actions">
+                                <a href="#" class="btn support">
+                                    <span><i class="fa-solid fa-computer-mouse"></i></span>
+                                    Support
+                                </a>
+                                <a href="#" class="btn contact">
+                                    <span><i class="fa-regular fa-paper-plane"></i></span>
+                                    Contact
+                                </a>
+                                <div class="search-bar">
+                                    <form method="GET" action="#" accept-charset="UTF-8">
+                                        <label for="search-bar"></label>
+                                        <input type="text" id="search-bar" placeholder="Search...">
+                                        <button type="submit">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </form>
+                                </div>
+
+                                <button type="button" class="hamburger btn">
+                                    <span class="ham-box">
+                                        <span class="ham-bar"></span>
+                                    </span>
+                                </button>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="search-mobile">
+                    <form method="GET" action="#" accept-charset="UTF-8">
+                        <label for="search-mobile"></label>
+                        <input type="text" id="search-mobile" placeholder="Search...">
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                    </div>
+            </div>
 
 
-    </div>  
+        </div>  
 
-</header>
+    </header>
 
     <!-- ================================ NAVIGATION BAR ================================  -->
     <div id="nav-bar">
@@ -410,6 +445,7 @@
             <!-- </nav> -->
         </div>
     </div>
+</div>
 
 
 
@@ -419,130 +455,129 @@
 
 
     <!-- ================================ BANNERS ================================  -->
-<section id="slide-banner">
-    <div class="sliding">
+    <section id="slide-banner">
+        <div class="sliding">
 
-        <div class="banner"> 
-            <div class="img-banner">
-                <img src="./img/banner/banner-lead-tech.png" alt="Netmatters building" >
+            <div class="banner"> 
+                <div class="img-banner">
+                    <img src="./img/banner/banner-lead-tech.png" alt="Netmatters building" >
+                </div>
+                <div class="banner-content container">
+                    <h1> The East Of England's Leading Technology Company </h1>
+                    <p>
+                        Performance-driven digital and technology services <br>
+                        with complete transparency.
+                    </p>
+                    <a href="#" class="btn webdesign"> <!--btn-web bnt-lg-->
+                        Why Choose Us?
+                        <i class="fa-solid fa-arrow-right"></i>                      
+                    </a> 
+                </div>
             </div>
-            <div class="banner-content container">
-                <h1> The East Of England's Leading Technology Company </h1>
-                <p>
-                    Performance-driven digital and technology services <br>
-                    with complete transparency.
-                </p>
-                <a href="#" class="btn webdesign"> <!--btn-web bnt-lg-->
-                    Why Choose Us?
-                    <i class="fa-solid fa-arrow-right"></i>                      
-                </a> 
+
+            <div class="banner"> 
+                <div class="img-banner">
+                    <img src="./img/banner/banner-bespoke-software.png" alt="Netmatters building" >
+                </div>
+                <div class="banner-content container">
+                    <h1> Bespoke Software </h1>
+                    <p>
+                        Delivering expert bespoke software <br>
+                        solutions across a range of industries.
+                    </p>
+                    <a href="#" class="btn software"> 
+                        Find Out More
+                        <i class="fa-solid fa-arrow-right"></i>                      
+                    </a> 
+                </div>
             </div>
+
+            <div class="banner"> 
+                <div class="img-banner">
+                    <img src="./img/banner/banner-IT-support.png" alt="Netmatters building" >
+                </div>
+                <div class="banner-content container">
+                    <h1> IT Support </h1>
+                    <p>
+                        Fast and cost-effective IT support <br>
+                        services for your business.
+                    </p>
+                    <a href="#" class="btn support"> 
+                        Find Out More
+                        <i class="fa-solid fa-arrow-right"></i>                      
+                    </a> 
+                </div>
+            </div>
+
+            <div class="banner"> 
+                <div class="img-banner">
+                    <img src="./img/banner/banner-digital-marketing.png" alt="Netmatters building" >
+                </div>
+                <div class="banner-content container">
+                    <h1> Digital Marketing </h1>
+                    <p>
+                        Generating your new business through <br>
+                        results-driven marketing activities.
+                    </p>
+                    <a href="#" class="btn digital"> 
+                        Find Out More
+                        <i class="fa-solid fa-arrow-right"></i>                      
+                    </a> 
+                </div>
+            </div>
+
+            <div class="banner"> 
+                <div class="img-banner">
+                    <img src="./img/banner/banner-telecoms-service.png" alt="Netmatters building" >
+                </div>
+                <div class="banner-content container">
+                    <h1> Telecoms Services </h1>
+                    <p>
+                        A new approach to connectivity, see <br>
+                        how we can help your business.
+                    </p>
+                    <a href="#" class="btn telecoms"> 
+                        Find Out More
+                        <i class="fa-solid fa-arrow-right"></i>                      
+                    </a> 
+                </div>
+            </div>
+
+            <div class="banner"> 
+                <div class="img-banner">
+                    <img src="./img/banner/banner-web-design.png" alt="Netmatters building" >
+                </div>
+                <div class="banner-content container">
+                    <h1> Web Design </h1>
+                    <p>
+                        For businesses looking to make a strong <br>
+                        and effective first impression. 
+                    </p>
+                    <a href="#" class="btn webdesign"> 
+                        Find Out More
+                        <i class="fa-solid fa-arrow-right"></i>                      
+                    </a> 
+                </div>
+            </div>
+
+            <div class="banner"> 
+                <div class="img-banner">
+                    <img src="./img/banner/banner-cyber-security.png" alt="Netmatters building" >
+                </div>
+                <div class="banner-content container">
+                    <h1> Cyber Security </h1>
+                    <p>
+                        Keeping businesses and their customers <br>
+                        sensitive information protected. 
+                    </p>
+                    <a href="#" class="btn cyber"> 
+                        Find Out More
+                        <i class="fa-solid fa-arrow-right"></i>                      
+                    </a> 
+                </div>
+            </div>   
         </div>
-
-        <div class="banner"> 
-            <div class="img-banner">
-                <img src="./img/banner/banner-bespoke-software.png" alt="Netmatters building" >
-            </div>
-            <div class="banner-content container">
-                <h1> Bespoke Software </h1>
-                <p>
-                    Delivering expert bespoke software <br>
-                    solutions across a range of industries.
-                </p>
-                <a href="#" class="btn software"> 
-                    Find Out More
-                    <i class="fa-solid fa-arrow-right"></i>                      
-                </a> 
-            </div>
-        </div>
-
-        <div class="banner"> 
-            <div class="img-banner">
-                <img src="./img/banner/banner-IT-support.png" alt="Netmatters building" >
-            </div>
-            <div class="banner-content container">
-                <h1> IT Support </h1>
-                <p>
-                    Fast and cost-effective IT support <br>
-                    services for your business.
-                </p>
-                <a href="#" class="btn support"> 
-                    Find Out More
-                    <i class="fa-solid fa-arrow-right"></i>                      
-                </a> 
-            </div>
-        </div>
-
-        <div class="banner"> 
-            <div class="img-banner">
-                <img src="./img/banner/banner-digital-marketing.png" alt="Netmatters building" >
-            </div>
-            <div class="banner-content container">
-                <h1> Digital Marketing </h1>
-                <p>
-                    Generating your new business through <br>
-                    results-driven marketing activities.
-                </p>
-                <a href="#" class="btn digital"> 
-                    Find Out More
-                    <i class="fa-solid fa-arrow-right"></i>                      
-                </a> 
-            </div>
-        </div>
-
-        <div class="banner"> 
-            <div class="img-banner">
-                <img src="./img/banner/banner-telecoms-service.png" alt="Netmatters building" >
-            </div>
-            <div class="banner-content container">
-                <h1> Telecoms Services </h1>
-                <p>
-                    A new approach to connectivity, see <br>
-                    how we can help your business.
-                </p>
-                <a href="#" class="btn telecoms"> 
-                    Find Out More
-                    <i class="fa-solid fa-arrow-right"></i>                      
-                </a> 
-            </div>
-        </div>
-
-        <div class="banner"> 
-            <div class="img-banner">
-                <img src="./img/banner/banner-web-design.png" alt="Netmatters building" >
-            </div>
-            <div class="banner-content container">
-                <h1> Web Design </h1>
-                <p>
-                    For businesses looking to make a strong <br>
-                    and effective first impression. 
-                </p>
-                <a href="#" class="btn webdesign"> 
-                    Find Out More
-                    <i class="fa-solid fa-arrow-right"></i>                      
-                </a> 
-            </div>
-        </div>
-
-        <div class="banner"> 
-            <div class="img-banner">
-                <img src="./img/banner/banner-cyber-security.png" alt="Netmatters building" >
-            </div>
-            <div class="banner-content container">
-                <h1> Cyber Security </h1>
-                <p>
-                    Keeping businesses and their customers <br>
-                    sensitive information protected. 
-                </p>
-                <a href="#" class="btn cyber"> 
-                    Find Out More
-                    <i class="fa-solid fa-arrow-right"></i>                      
-                </a> 
-            </div>
-        </div>   
-    </div>
-    <div class="slick-dots slick-controls"></div>
-</section>
+    </section>
 
 
 
@@ -1303,8 +1338,10 @@
     </div>
 </div>
 
-</div> <!-- #Container -->
+<!-- #Container DIV -->
+</div> 
 
+<!-- ================================ SIDE NAVIGATION ================================  -->
 <div id="sidebar">
     <ul class="sidenav">
         <li class="siv-tab">
@@ -1543,6 +1580,50 @@
     </ul>
 
     <ul class="side-menu">
+        <li class="service-hidden">
+            <a href="#">Services</a>
+            <div class="menu-list">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right" aria-hidden="true"></i></span>
+                            <span>Bespoke Software</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right" aria-hidden="true"></i></span>
+                            <span>IT Support</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right" aria-hidden="true"></i></span>
+                            <span>Digital Marketing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right" aria-hidden="true"></i></span>
+                            <span>Telecoms Service</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right" aria-hidden="true"></i></span>
+                            <span>Web Design</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right" aria-hidden="true"></i></span>
+                            <span>Cyber Security</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
         <li>
             <a href="#">Our Work</a>
             <div class="menu-list">
@@ -1734,6 +1815,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="./js/slick/slick.min.js"></script>
+<script src="./js/cookies.js"></script>
 <script src="./js/slick/slick.js"></script>
 <script src="./js/slides.js"></script>
 <script src="./js/sidebar.js"></script>

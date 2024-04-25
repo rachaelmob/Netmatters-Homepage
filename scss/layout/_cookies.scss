@@ -1,0 +1,154 @@
+//==========================================//
+//                  COOKIES  
+//==========================================//
+
+#container div.cookies {
+
+    button.manage-consent.btn {
+      left: 0;
+      bottom: 0;
+      z-index: 99;
+      position: fixed;
+      font-weight: 600;
+      border-width: 1px 1px 0 0;
+      border-top-right-radius: 10px;
+      @include btnclass(
+        $line-h: 22px,
+        $padding: 0 10px,
+        $font-size: 0.8rem, 
+        $radius: null,
+        $text-trans: capitalize
+      );
+      @include btn-style(
+        $bgc: $consent-btn,
+        $brdcol: $consent-btn
+      );
+    }
+
+    //==========================================//
+    //                COOKIES POP UP
+    //==========================================//
+
+    & #cookies-consent {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        outline: 0;
+        z-index: 100;
+        padding: 30px;
+        // display: flex;
+        display: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, .7);
+
+        &.cookie-popup{
+            display: flex;
+        }
+
+        .cookie-container {
+            width:auto;
+            margin: auto;
+            outline: none;
+            border-radius: 5px;
+            position: relative;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, .2);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+            @include mq(medium){
+                width: 600px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+            }
+
+            .cookie-title {
+                padding: 15px 20px;
+                border-bottom: 1px solid #e5e5e5;
+
+                h3 {
+                    margin: 0;
+                    color: $dark-txt;
+                    font-weight: 400;
+                    font-size: 1.625rem;
+                    line-height: 1.42857143;
+                }
+            }
+
+            .cookie-text {
+                padding: 20px;
+
+                p {
+                    margin-bottom: 25px;
+                    line-height: 1.875rem
+                }
+            }
+
+            .cookie-btns {
+                // padding: 20px 0;
+                // margin: auto;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // @include mq(medium){ flex-wrap: nowrap; }
+
+                .c-btn {
+                    width: 100%;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    @include mq(medium){width: 50%;}
+
+                    a.btn {
+                        @include btnclass();
+
+                        &.contact {
+                            @include btn-style($bgc: $btn-contact, $brdcol: $btn-contact);
+                            &:hover { @include btn-style($bgc: $btn-contact-hover, $brdcol: $btn-contact-hover);}
+                        }
+                        &.webdesign {
+                            @include btn-style($bgc: $nav-webdesign, $brdcol: $nav-webdesign);
+                            &:hover {@include btn-style($bgc: $nav-webdesign-drk, $brdcol: $nav-webdesign-drk);}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//==========================================//
+//                 CHAT BOX  
+//==========================================//
+
+#container div.chat {
+
+    button.chat-btn {
+        z-index: 99;
+        position: fixed;
+        width: 60px;
+        right: 30px;
+        bottom: 20px;
+        @include btnclass(
+            $radius: 50%,
+            $height: 60px
+        );
+        background-color: $dark-txt;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        &:hover {background-color: $btn-drk-hover;}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+    }
+
+
+}
+  

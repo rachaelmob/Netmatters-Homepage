@@ -3,6 +3,7 @@
 //==========================================//
 
 #latest-section {
+    background-color: #fff;
     &:not(h2) {cursor: pointer;}
 
     .latest-heading {
@@ -53,6 +54,8 @@
             margin: 40px 0;
             position: relative; 
             border-radius: 3px;
+            background-color: #fff;
+
 
             top: 0; 
             transition: .5s ease;

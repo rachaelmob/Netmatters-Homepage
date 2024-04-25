@@ -112,4 +112,14 @@
         }
 
     }
+
+    //====================//
+    //        SLICK 
+    //====================//
+    ul.slick-dots {
+        bottom: 25px;
+    }
+    .sliding.slick-initialized.slick-slider.slick-dotted {
+        margin-bottom: 0;
+    }
 }

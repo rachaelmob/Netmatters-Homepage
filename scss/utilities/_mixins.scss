@@ -66,7 +66,8 @@
     $line-h: 35px, 
     $padding: 5px 15px, 
     $font-size: 1.063rem, 
-    $radius: 3px){
+    $radius: 3px,
+    $text-trans: uppercase){
         height: $height;
         line-height: $line-h;
         padding: $padding;
@@ -74,7 +75,7 @@
         border-radius: $radius;
         white-space: normal;
         text-decoration: none;
-        text-transform: uppercase;
+        text-transform: $text-trans;
 }
   
 //==========================================//
