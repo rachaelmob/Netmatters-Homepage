@@ -3,12 +3,12 @@
 //==========================================//
 
 #header {
-    z-index: 999;
-    width: 100vh;
     background-color: #fff;
     transition: transform 200ms linear;
 
     .sticky-show {
+        // z-index: 999;
+        // width: 100vh;
         position: fixed;
         transform: translateY(0%);
     }
