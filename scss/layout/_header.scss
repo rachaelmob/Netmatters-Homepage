@@ -3,14 +3,22 @@
 //==========================================//
 
 #header {
+    z-index: 999;
+    width: 100vh;
     background-color: #fff;
+    transition: transform 200ms linear;
 
-    &.sticky {
-        position: fixed; //or sticky 
-        top: 0;
-        width: 100vh;
+    .sticky-show {
+        position: fixed;
+        transform: translateY(0%);
+    }
+
+
+    .sticky-hide {
+        transform: translateY(-100%);
     }
 }
+
 
 
 //==========================================//

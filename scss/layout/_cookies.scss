@@ -84,17 +84,24 @@
 
                 p {
                     margin-bottom: 25px;
-                    line-height: 1.875rem
+                    line-height: 1.875rem;
+
+                    & > a {
+                        color: $dark-txt;
+                        text-decoration: none;
+                    }
                 }
             }
 
             .cookie-btns {
-                // padding: 20px 0;
-                // margin: auto;
-                // display: flex;
-                // flex-direction: column;
-                // justify-content: center;
-                // @include mq(medium){ flex-wrap: nowrap; }
+                margin: 0;
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                // margin-left: -15px;
+                // margin-right: -15px;
+                padding: 19px 20px 20px;
+                border-top: 1px solid #e5e5e5;
 
                 .c-btn {
                     width: 100%;
@@ -103,9 +110,11 @@
                     @include mq(medium){width: 50%;}
 
                     a.btn {
+                        display: block;
                         @include btnclass();
 
                         &.contact {
+                            @media (max-width: $break--med){margin-bottom: 30px;}
                             @include btn-style($bgc: $btn-contact, $brdcol: $btn-contact);
                             &:hover { @include btn-style($bgc: $btn-contact-hover, $brdcol: $btn-contact-hover);}
                         }

@@ -18,6 +18,10 @@ body {
   font-family: Poppins, sans-serif;
   letter-spacing: 0.4px;
   background-color: #fff;
+
+  &.no-scrolling {
+    overflow-y: hidden;
+  }
 }
 
 #container {

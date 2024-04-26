@@ -1,35 +1,31 @@
 window.onload = function () {
-	// window.addEventListener('scroll', function (e) {
-	// 	if (window.scrollY > 100) {
-	// 		document.querySelector("#sidebar").classList.add('is-scrolling');
-	// 	} else {
-	// 		document.querySelector("#sidebar").classList.remove('is-scrolling');
-	// 	}
-	// });
-
 	// Variables 
+	const bodyHTML = document.querySelector('body')
 	const hamburger = document.querySelector('.hamburger');
 	const sideBar = document.querySelector('#sidebar');
 	const pageContent = document.querySelector('#container');
 	let openMenu = false;
 
-	// Activate sidebar on click
+	//=== BURGER ANIMATION & SIDE BAR ON BURGER CLICK ===//
 	hamburger.addEventListener('click', function openSidebar() {
 		setTimeout(() => {
 			hamburger.classList.toggle('is-active');
 		  }, 50);
 
-		//Set OpenMenu to True
+		//Menu is Open
 		setTimeout(() => {
 			openMenu = true;
 		}, 50);
 
-		//push content side bar
+		//push content and show menu
 		sideBar.classList.toggle('sidebar-visible');
 		pageContent.classList.toggle('sidebar-visible');
+
+		//stop page from scrolling when menu is open
+		bodyHTML.classList.toggle('no-scrolling');
 	});
 
-	//CLOSE that sidebar!
+	//=== CLOSE THE SIDE BAR ==//
 	pageContent.addEventListener('click', function () {
 		if(openMenu === true) {
 			setTimeout(() => {
@@ -40,8 +36,12 @@ window.onload = function () {
 			pageContent.classList.remove('sidebar-visible');
 			sideBar.classList.remove('sidebar-visible');
 
-			// //Menu is now Closed
+			//allow page scroll
+			bodyHTML.classList.remove('no-scrolling');
+
+			// Menu is now Closed
 			openMenu = false;
+
 		} 
 	});
 

@@ -17,6 +17,9 @@ body {
   letter-spacing: 0.4px;
   background-color: #fff;
 }
+body.no-scrolling {
+  overflow-y: hidden;
+}
 
 #container {
   height: 100%;
@@ -170,12 +173,17 @@ label {
 }
 
 #header {
-  background-color: #fff;
-}
-#header.sticky {
-  position: fixed;
-  top: 0;
+  z-index: 999;
   width: 100vh;
+  background-color: #fff;
+  transition: transform 200ms linear;
+}
+#header .sticky-show {
+  position: fixed;
+  transform: translateY(0%);
+}
+#header .sticky-hide {
+  transform: translateY(-100%);
 }
 
 header .header-container {
@@ -1193,6 +1201,18 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   margin-bottom: 25px;
   line-height: 1.875rem;
 }
+#container div.cookies #cookies-consent .cookie-container .cookie-text p > a {
+  color: #333645;
+  text-decoration: none;
+}
+#container div.cookies #cookies-consent .cookie-container .cookie-btns {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 19px 20px 20px;
+  border-top: 1px solid #e5e5e5;
+}
 #container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn {
   width: 100%;
   padding-left: 15px;
@@ -1204,6 +1224,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   }
 }
 #container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn a.btn {
+  display: block;
   height: auto;
   line-height: 35px;
   padding: 5px 15px;
@@ -1217,6 +1238,11 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   color: #fff;
   background-color: #999aa2;
   border-color: #999aa2;
+}
+@media (max-width: 768px) {
+  #container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn a.btn.contact {
+    margin-bottom: 30px;
+  }
 }
 #container div.cookies #cookies-consent .cookie-container .cookie-btns .c-btn a.btn.contact:hover {
   color: #fff;
