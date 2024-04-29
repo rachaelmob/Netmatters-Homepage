@@ -3,7 +3,7 @@
 //==========================================//
 
 
-#nav-bar {
+.nav-bar {
     position: relative;
     background-color: $dark-txt;
     @media (max-width: $break--l){ display: none; }
@@ -125,7 +125,7 @@
     //==========================================//
 
 
-#nav-bar ul.main-nav > li {
+.nav-bar ul.main-nav > li {
 
     //Hidden dropmenu & Styling 
     & > div.drop-menu{

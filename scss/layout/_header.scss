@@ -2,22 +2,21 @@
 //         STICKY HEADER + NAVBAR
 //==========================================//
 
-#header {
-    background-color: #fff;
-    transition: transform 200ms linear;
-
-    .sticky-show {
-        // z-index: 999;
-        // width: 100vh;
-        position: fixed;
-        transform: translateY(0%);
-    }
-
-
-    .sticky-hide {
-        transform: translateY(-100%);
-    }
+.sticky-head {
+    // top: 0;
+    // z-index: 999;
+    // width: 100vw;
+    /* position: absolute; */
+    /* position: fixed; */
 }
+
+    // .sticky-show {
+    //     transform: translateY(0%);
+    // }
+
+    // .sticky-hide {
+    //     transform: translateY(-100%);
+    // }
 
 
 
@@ -25,215 +24,214 @@
 //                 HEADER 
 //==========================================//
 
- header {
+.header-container {
+    background-color: #fff;
+    padding: 20px 0px;
 
-    .header-container {
-        padding: 20px 0px;
+    .header-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
-        .header-row {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-
-            @media (min-width: $break--med) and (max-width: $break--l) {
-                justify-content: space-evenly;
-            }
-
-            img {
-                max-width: 100%;
-                display: block;
-                @media (min-width: $break--med) and (max-width: $break--l) {
-                    max-width: 85%;
-                }
-            } 
-
-            .phone-burger{
-                display: flex;
-                align-items: center;
-            }
-            
-            .phone {
-                margin-left: 15px;
-                // padding-right: 25px;
-
-                & a {
-                    text-decoration: none;
-                    color: $dark-txt;
-                    font-size: 1rem;
-
-                    span {
-                        font-size: 25px;
-                    }
-                }
-
-                @include mq(medium) {
-                    display: none;
-                }
-            }
-        
-            .actions{
-                display: flex;
-                
-                &>*+* {
-                @include mq(large){
-                        margin-left: 20px;
-                    }
-                }
-
-                //SUPPORT AND CONTANT BTNS
-                a {
-                    @media (max-width: 992px) {display: none;}
-                    text-decoration: none;
-                    @include btnclass($font-size:1.125rem, $line-h:46px, $height:56px);
-                    & span {
-                        margin-right: 5px;
-                        font-size: 1.438rem; 
-                        // line-height: 45px;
-                    } //Icons only (support/contract)
-                    
-                    //BUTTON COLOURS & HOVER COLOURS
-                    &.support {
-                        @include btn-style($nav-it); 
-                        &:hover {background-color: $nav-it-drk}}
-                    &.contact {
-                        @include btn-style($btn-contact);
-                        &:hover {background-color: $btn-contact-hover;}}
-                    
-                }
-                .search-bar {
-                    @media (min-width:$break--xs) and (max-width:$break--med){display:none;}
-                
-                    form {
-                        margin-bottom: 0;
-                        label {display: none;}
-                        input {
-                            width: 174px;
-                            height: 55px;
-                            font-size: 13px;
-                            border-radius: 0;
-                            padding: 5px 15px;
-                            border-color: #ccc;
-                            display: inline-block;
-                            border: 2px solid #e5e5e5;
-                            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-
-                            &:focus{
-                                outline: 0;
-                                border-color: $border-focus;
-                                box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 
-                                0 0 8px rgba(91,192,222,.6);
-                            }
-
-                            @include mq(large) {
-                                display: none;
-                            }
-                            @include mq(x-large){
-                                display: inline-block !important;
-                                width: 240px;
-                            }
-
-                        }
-                    }
-
-                    button { //check actual btn class
-                        border: none;
-                        height: 55px;
-                        font-size: 1.3rem;
-                        color: white;
-                        cursor: pointer;
-                        position: relative;
-                        left: -7px;
-                        vertical-align: bottom;
-                        padding: 5px 20px 3px;
-                        border-radius: 0 5% 5% 0;
-                        background-color: $btn-contact;
-                        @media (min-width: $break--l) and (max-width: 1259px){border-radius: 3px;}
-                        &:hover{background-color: $btn-contact-hover;}
-                    }
-                }
-
-                //HAMBURGER
-                .hamburger { 
-                    display: block;
-                    cursor: pointer;
-                    margin-left: 20px;
-                    @include btnclass(
-                        $height:56px,
-                        $line-h: 46px,
-                        $font-size: 1.125rem
-                    );
-                    @include btn-style($dark-txt, $dark-txt);
-                    &:hover{background-color: $hover-drk;}
-                    transition-property: opacity, filter;
-                    transition-duration: .15s;
-                    transition-timing-function: linear;
-
-                    .ham-box {
-                        width: 33px;
-                        height: 19px;
-                        display: inline-block;
-                        position: relative;
-                    }
-
-                    .ham-bar {
-                        top: 50%;
-                        // margin-top: -1.5px;
-                        transition-duration: .22s;
-                        transition-timing-function: cubic-bezier(.55,.055,.675,.19);
-
-                        &, &::before, &::after {
-                            content: "";
-                            height: 4px;
-                            width: 33px;
-                            display: block;
-                            position: absolute;
-                            background-color: #fff;
-                            transition-property: transform;
-                            transition-duration: .15s;
-                            transition-timing-function: ease;
-                        }
-
-                        &::before {
-                            top: -10px;
-                            transition: top .1s ease-in .25s,opacity .1s ease-in; 
-                        }
-                        &::after {
-                            bottom: -10px;
-                            transition: bottom .1s ease-in .25s, transform .22s 
-                        cubic-bezier(.55,.055,.675,.19); 
-                        }
-                    }
-
-
-                    // SPIN BAR ON CLICK 
-                    &.is-active .ham-bar {
-                        transform: rotate(225deg);
-                        transition-delay: .12s;
-                        transition-timing-function: cubic-bezier(.215,.61,.355,1);
-                    } 
-
-                    &.is-active .ham-bar::after {
-                        bottom: 0;
-                        transform: rotate(-90deg);
-                        transition: bottom .1s ease-out, transform .22s 
-                        cubic-bezier(.215,.61,.355,1) .12s;
-                    }
-
-                    &.is-active .ham-bar::before { //hide on spin
-                        top: 0;
-                        opacity: 0;
-                        transition: top .1s ease-out, opacity .1s ease-out .12s;
-                    }
-
-                    
-                }
-
-            }
-        
+        @media (min-width: $break--med) and (max-width: $break--l) {
+            justify-content: space-evenly;
         }
 
-      .search-mobile {
+        img {
+            max-width: 100%;
+            display: block;
+            @media (min-width: $break--med) and (max-width: $break--l) {
+                max-width: 85%;
+            }
+        } 
+
+        .phone-burger{
+            display: flex;
+            align-items: center;
+        }
+        
+        .phone {
+            margin-left: 15px;
+            // padding-right: 25px;
+
+            & a {
+                text-decoration: none;
+                color: $dark-txt;
+                font-size: 1rem;
+
+                span {
+                    font-size: 25px;
+                }
+            }
+
+            @include mq(medium) {
+                display: none;
+            }
+        }
+    
+        .actions{
+            display: flex;
+            
+            &>*+* {
+            @include mq(large){
+                    margin-left: 20px;
+                }
+            }
+
+            //SUPPORT AND CONTANT BTNS
+            a {
+                @media (max-width: 992px) {display: none;}
+                text-decoration: none;
+                @include btnclass($font-size:1.125rem, $line-h:46px, $height:56px);
+                & span {
+                    margin-right: 5px;
+                    font-size: 1.438rem; 
+                    // line-height: 45px;
+                } //Icons only (support/contract)
+                
+                //BUTTON COLOURS & HOVER COLOURS
+                &.support {
+                    @include btn-style($nav-it); 
+                    &:hover {background-color: $nav-it-drk}}
+                &.contact {
+                    @include btn-style($btn-contact);
+                    &:hover {background-color: $btn-contact-hover;}}
+                
+            }
+            .search-bar {
+                @media (min-width:$break--xs) and (max-width:$break--med){display:none;}
+            
+                form {
+                    margin-bottom: 0;
+                    label {display: none;}
+                    input {
+                        width: 174px;
+                        height: 55px;
+                        font-size: 13px;
+                        border-radius: 0;
+                        padding: 5px 15px;
+                        border-color: #ccc;
+                        display: inline-block;
+                        border: 2px solid #e5e5e5;
+                        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+
+                        &:focus{
+                            outline: 0;
+                            border-color: $border-focus;
+                            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 
+                            0 0 8px rgba(91,192,222,.6);
+                        }
+
+                        @include mq(large) {
+                            display: none;
+                        }
+                        @include mq(x-large){
+                            display: inline-block !important;
+                            width: 240px;
+                        }
+
+                    }
+                }
+
+                button { //check actual btn class
+                    border: none;
+                    height: 55px;
+                    font-size: 1.3rem;
+                    color: white;
+                    cursor: pointer;
+                    position: relative;
+                    left: -7px;
+                    vertical-align: bottom;
+                    padding: 5px 20px 3px;
+                    border-radius: 0 5% 5% 0;
+                    background-color: $btn-contact;
+                    @media (min-width: $break--l) and (max-width: 1259px){border-radius: 3px;}
+                    &:hover{background-color: $btn-contact-hover;}
+                }
+            }
+
+            //HAMBURGER
+            .hamburger { 
+                display: block;
+                cursor: pointer;
+                margin-left: 20px;
+                @include btnclass(
+                    $height:56px,
+                    $line-h: 46px,
+                    $font-size: 1.125rem
+                );
+                @include btn-style($dark-txt, $dark-txt);
+                &:hover{background-color: $hover-drk;}
+                transition-property: opacity, filter;
+                transition-duration: .15s;
+                transition-timing-function: linear;
+
+                .ham-box {
+                    width: 33px;
+                    height: 19px;
+                    display: inline-block;
+                    position: relative;
+                }
+
+                .ham-bar {
+                    top: 50%;
+                    // margin-top: -1.5px;
+                    transition-duration: .22s;
+                    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+
+                    &, &::before, &::after {
+                        content: "";
+                        height: 4px;
+                        width: 33px;
+                        display: block;
+                        position: absolute;
+                        background-color: #fff;
+                        transition-property: transform;
+                        transition-duration: .15s;
+                        transition-timing-function: ease;
+                    }
+
+                    &::before {
+                        top: -10px;
+                        transition: top .1s ease-in .25s,opacity .1s ease-in; 
+                    }
+                    &::after {
+                        bottom: -10px;
+                        transition: bottom .1s ease-in .25s, transform .22s 
+                    cubic-bezier(.55,.055,.675,.19); 
+                    }
+                }
+
+
+                // SPIN BAR ON CLICK 
+                &.is-active .ham-bar {
+                    transform: rotate(225deg);
+                    transition-delay: .12s;
+                    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+                } 
+
+                &.is-active .ham-bar::after {
+                    bottom: 0;
+                    transform: rotate(-90deg);
+                    transition: bottom .1s ease-out, transform .22s 
+                    cubic-bezier(.215,.61,.355,1) .12s;
+                }
+
+                &.is-active .ham-bar::before { //hide on spin
+                    top: 0;
+                    opacity: 0;
+                    transition: top .1s ease-out, opacity .1s ease-out .12s;
+                }
+
+                
+            }
+
+        }
+    
+    }
+
+    .search-mobile {
 
         @include mq(medium) {
             display: none;
@@ -282,9 +280,6 @@
 
         }
 
+    }
 
-      }
-
-     }
-    
 }
