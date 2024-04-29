@@ -38,7 +38,7 @@
     ul.sidenav {
         padding: 21px;
         margin: -20px 0 0;
-        @include mq(medium){display: none !important;}
+        @include mq(large){display: none !important;}
 
         & > li.siv-tab {
             padding: 20px 0 0;

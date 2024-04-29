@@ -6,9 +6,10 @@
     position: relative;
 
     .banner {
-        display: flex;
+        display: flex !important;
         overflow: hidden;
         min-height: 550px;
+        position: relative;
         align-items: center;
         justify-content: center;
         background-color: #000;
@@ -113,13 +114,37 @@
 
     }
 
-    //====================//
-    //        SLICK 
-    //====================//
+    //============================//
+    //          SLICK CSS
+    //============================//
     ul.slick-dots {
-        bottom: 25px;
+        bottom: 44px;
     }
     .sliding.slick-initialized.slick-slider.slick-dotted {
         margin-bottom: 0;
+    }
+    
+    .slick-dots li button:before {
+        width: 11px;
+        height: 11px;
+        opacity: 0.5;
+        font-size: 12px;
+        color: #fff
+    }
+
+    .slick-dots li.slick-active button:before {
+        opacity: 1;
+        color: #fff;
+    }
+
+    .slick-dots li.slick-active button:after {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -27%;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        border: 2px solid #fff;
     }
 }
