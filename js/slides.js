@@ -8,12 +8,12 @@ $('.sliding').slick({
 });
 
 //=== BADGES ===/
-$('.badges-row').slick({
-    arrows: false,
-    swipe: false,
-    autoplay: true,
-    draggable: false,
-    autoplaySpeed: 3000,
-    variableWidth: true,
-});
+// $('.badges-row').slick({
+//     arrows: false,
+//     swipe: false,
+//     autoplay: true,
+//     draggable: false,
+//     autoplaySpeed: 3000,
+//     variableWidth: true,
+// });
 
