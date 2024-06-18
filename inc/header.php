@@ -62,7 +62,7 @@
                 <div class="header-row">
 
                     <div class="logo-head">
-                        <a href="#">
+                        <a href="index.php">
                             <img src="./img/netmatters-logo-header.png" alt="netmatterslogo navy blue">
                         </a>
                     </div>
