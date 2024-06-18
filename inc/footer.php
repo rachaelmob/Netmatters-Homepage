@@ -102,7 +102,7 @@
 <div id="sidebar">
     <ul class="sidenav">
         <li class="siv-tab">
-            <a href="#" class="linkTxt">Contact Us</a>
+            <a href="contact-us.php" class="linkTxt">Contact Us</a>
         </li>
 
         <li class="siv-tab software">

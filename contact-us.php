@@ -1,7 +1,8 @@
 <?php include("inc/header.php"); ?>
 
 
-<div id="middle">
+<div id="contact-us">
+
 
 
     <div class="directory"> 
@@ -207,9 +208,6 @@
         </div>
 
     </div>
-
-
-
 
 
 
