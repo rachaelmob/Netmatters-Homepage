@@ -9,7 +9,7 @@
         <div class="container"> 
             <ul class="crumb">
                 <li>
-                    <a href="index.php">Home</a>
+                    <a href="./index.php">Home</a>
                 </li>
                 <li>
                     Our Offices
