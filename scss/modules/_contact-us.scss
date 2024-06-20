@@ -3,7 +3,264 @@
 //==========================================//
 
 #contact-us {
-background-color:  #fff;
+    background-color:  #fff;
+    & a { text-decoration: none;
+        &.text-web { color: $nav-webdesign !important }
+    }
 
+
+    .breadcrumbs {
+        padding: 14px 0 13px;
+        box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+
+        @media (max-width: $break--l) {
+            border-top: 1px solid #333645;
+        }
+
+        ul.crumbs {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+            color: #333645;
+            font-size: .8125rem;
+
+            li a {
+                color: #333645;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            &>li+li:before {
+                content: "/\A0";
+                padding: 0 5px;
+                color: #333645;
+            }
+            
+            
+        }
+        
+    }
+
+    .section.top {
+        padding-bottom: 0;
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 400;
+            margin: 0 0 28px;
+            color: $dark-txt;
+        }
+    }
+
+    #offices {
+        margin-bottom: 40px;
+
+        .container.list {
+            margin-top: 20px;
+        }
+
+        .row.officies-row {
+            display: flex;
+            flex-direction: column;
+
+            @include mq(large){
+                flex-direction: row;
+            }
+            
+        }
+
+        .address-box {
+            margin-top: 30px;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+            // position: relative;
+            // top: 0;
+            // transition: .5s ease;
+
+            @include mq(large){
+                width: 33.33333333%;
+            }
+
+            .image a img {
+                height: auto;
+                max-width: 100%;
+            }
+
+            .content {
+                height: 100%;
+                padding: 30px;
+                display: flex;
+                text-align: left;
+                flex-direction: column;
+
+                h2{
+                    margin: 0 0 15px;
+                    font-size: 1.25rem;
+                    position: relative;
+
+                    a {
+                        color: $dark-txt;
+                        font-weight: 400;
+                    }
+                }
+
+                p {
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                    font-size: .8125rem;
+                    line-height: 1.375rem;
+                }
+
+                .tel a.text-web {
+                    font-weight: 700;
+                    font-size: 1.625rem;
+                }
+
+                .view-more {
+                    margin-top: 15px;
+
+                    .btn {
+                        @include btnclass($padding: 5px 30px, $font-size:.9em);
+                        @include btn-style($nav-webdesign, $nav-webdesign);
+                    }
+                }
+            }
+
+        }
+    }
+
+
+
+
+//==========================================//
+//             FORM SECTION
+//==========================================//
+
+    .form-container{
+        background-color: $light-bg;
+        color: $dark-txt;
+    
+        form.contact-form {
+            margin: 0;
+            padding: 50px 0;
+        }
+        .form-group { margin-bottom: 15px ;}
+
+        // .signup-inputs-wrapper {
+        //     display: flex;
+        //     flex-wrap: wrap;
+        //     margin-left: -15px;
+        //     margin-right: -15px;
+
+        //     .signup-input {
+        //         flex: 1 1 450px;
+        //         padding-left: 15px;
+        //         padding-right: 15px;
+        //     }
+        // }
+
+
+        .form-control{
+            width: 100%;
+            height: 47px;
+            padding: 5px 15px;
+            border-radius: 2px;
+            border: 1px solid #e5e5e5;
+            background-image: none;
+            @include btn-style(#fff, $border-grey, #555);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+
+            &:focus{
+                outline: 0;
+                border-color: $border-focus;
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91,192,222,.6);
+            }
+        }
+        textarea#message {
+            min-height: 100px;
+            height: 100px;
+        }
+
+        label {
+            font-weight: 600;
+            color: $dark-txt;
+
+            &.required::after {
+                content: " *";
+                color: #d24d57;
+            }
+        
+            //CHECK BOX STYLING
+            &.pretty-checkbox {
+                display: flex;
+                line-height: 32px;
+                cursor: pointer;
+                align-items: flex-start;
+
+                input.checkbox_input {
+                    display: none;
+                }
+
+                .fake-checkbox{
+                    width: 2rem;
+                    height: 2rem;
+                    flex-shrink: 0;
+                    border-radius: 3px;
+                    margin-right: 20px;
+                    border: 3px solid $dark-txt;
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: center; 
+
+                    &::after {
+                        content: "\2714";
+                        color: #fff;
+                        transform: scale(0);
+                    }
+                }
+
+                .checkbox_input:checked + .fake-checkbox {
+                    background: $dark-txt;
+                    border-color: $dark-txt;
+                    &:hover{@include btn-style($vdark-bg, $vdark-bg);}
+                }
+                
+                .checkbox_input:checked + .fake-checkbox::after {
+                    transform: scale(1);
+                }
+
+
+            }
+
+            & a {
+                color: $dark-txt;
+                text-decoration: underline;
+                &:hover { color: $vdark-bg ;}
+            }
+        }
+
+        //== Submit Button ==//
+        button.btn {
+            margin-top: 10px; //Makes extra space between checkbox section
+            @include btnclass(); //btn "class" mixin
+            @include btn-style($dark-txt, $dark-txt);
+            &:hover{@include btn-style($vdark-bg, $vdark-bg)}
+        }
+
+
+
+    }
 
 }

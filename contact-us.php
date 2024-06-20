@@ -5,9 +5,9 @@
 
 
 
-    <div class="directory"> 
+    <div class="breadcrumbs"> 
         <div class="container"> 
-            <ul class="crumb">
+            <ul class="crumbs">
                 <li>
                     <a href="./index.php">Home</a>
                 </li>
@@ -28,30 +28,30 @@
 
     </div>
 
-    <div class="offices">
+    <div id="offices">
 
         <div class="container list">
             <div class="row officies-row">
-                <div class="address-con cambridge">
+                <div class="address-box cambridge">
                     <div class="image">
                         <a href="#">
                             <img src=".\img\contact-addresses\cambridge.jpg" alt="">
                         </a>
                     </div>
                     <div class="content">
-                        <p class="h2">
+                        <h2>
                             <a href="#">
                                 Cambridge Office
                             </a>
-                        </p>
-                        <p class="p">
+                        </h2>
+                        <p>
                             Unit 1.31, <br>
                             St John's Innovation Centre,<br>
                             Cowley Road, Milton,<br>
                             Cambridge,<br> CB4 0WS
                         </p>
                         <div class="tel">
-                            <a href="tel:01223375772" class="h3 text-web">
+                            <a href="" class="text-web">
                                 01223 37 57 72
                             </a>
                         </div>
@@ -61,26 +61,26 @@
                     </div>
                 </div>
 
-                <div class="address-con wymondham">
+                <div class="address-box wymondham">
                     <div class="image">
                         <a href="#">
                             <img src=".\img\contact-addresses\wymondham.jpg" alt="">
                         </a>
                     </div>
                     <div class="content">
-                        <p class="h2">
+                        <h2>
                             <a href="#">
                                 Wymondham Office
                             </a>
-                        </p>
-                        <p class="p">
+                        </h2>
+                        <p>
                             Unit 15,  <br>
                             Penfold Drive,<br>
                             Gateway 11 Business Park,<br>
                             Wymondham, Norfolk, <br>NR18 0WZ
                         </p>
                         <div class="tel">
-                            <a href="tel:01603704020" class="h3 text-web">
+                            <a href="" class="text-web">
                                 01603 70 40 20
                             </a>
                         </div>
@@ -90,31 +90,26 @@
                         </div>
                 </div>
 
-                <div class="address-con yarmouth">
+                <div class="address-box yarmouth">
                     <div class="image">
                         <a href="#">
                             <img src=".\img\contact-addresses\yarmouth.jpg" alt="">
                         </a>
                     </div>
                     <div class="content">
-                        <p class="h2">
+                        <h2>
                             <a href="#">
                                 Great Yarmouth Office
                             </a>
-                        </p>
-                        <p class="p">
-                            Suite F23,
-                            <br>
-                            Beacon Innovation Centre,
-                            <br>
-                            Beacon Park, Gorleston,
-                            <br>
-                            Great Yarmouth, Norfolk,
-                            <br>
-                            NR31 7RA
+                        </h2>
+                        <p>
+                            Suite F23,<br>
+                            Beacon Innovation Centre,<br>
+                            Beacon Park, Gorleston,<br>
+                            Great Yarmouth, Norfolk,<br> 7RA
                         </p>
                         <div class="tel">
-                            <a href="tel:01493603204" class="h3 text-web">
+                            <a href="" class="text-web">
                                 01493 60 32 04
                             </a>
                         </div>
@@ -176,28 +171,55 @@
                                 <input class="form-control" type="email" name="email" value="" id="email">
                             </div>
                             <div class="form-group">
-                                <label for="telephone" class="required"></label>
+                                <label for="telephone" class="required">Your Telephone Number</label>
                                 <input class="form-control" type="text" name="telephone" value="" id="telephone">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="" class="required"></label>
+                            <label for="message" class="required">Message</label>
+                            <textarea class="form-control" name="message" cols="50" rows="10" id="message">
+                                Hi, I am interested in discussing a Our Offices solution, could you please 
+                                give me a call or send an email?
+                            </textarea>
                         </div>
-                        <!-- COPY & PASTE CHECK BOX IN HOME PAGE-->
+
+                        <!-- copy checkbox from index-->
                         <div class="form-group">
-                            <label for="" class="checkbox"></label>
+                            <label class="pretty-checkbox" for="input_checkbox"> <!-- CHECK BOX LABEL -->
+                                <input type="checkbox" class="checkbox_input" id="input_checkbox"
+                                name="marketing-preference" required>
+                                <span class="fake-checkbox"></span>
+                                <span class="check-text"> <!-- NEWS-CHECKBOX TEXT-->
+                                    Please tick this box if you wish to receive marketing information from us. 
+                                    Please see our
+                                    <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                                    for more information on how we keep your data safe.
+                                </span> 
+                            </label>
                         </div>
+
                         <div class="form-group">
                             <span>
                                 This site is protected by reCAPTCHA and the Google 
-                                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
                                     <u>Privacy Policy</u>
                                 </a> and 
-                                <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">
+                                <a href="#" target="_blank" rel="noopener noreferrer">
                                     <u>Terms of Service</u>
                                 </a> apply.
                             </span>
+                        </div>
+
+                        <div class="action-block">
+                            <button class="btn btn-primary">
+                                Send Enquiry
+                            </button>
+
+                            <small class="helper-text">
+                                <span class="text-danger">*</span> 
+                                Fields Required
+                            </small>
                         </div>
 
                     </form>
