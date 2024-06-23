@@ -388,7 +388,8 @@
                 </a>
             </div>
             <div class="latest-articles">
-                <div class="article-container1">
+                <?php include("inc/latest-news.php"); ?>
+                <!-- <div class="article-container">
                     <a href="#">
                         <div class="article-img">
                             <div class="img-tag news">news</div>
@@ -421,7 +422,7 @@
                     </a>
                 </div>
 
-                <div class="article-container2">
+                <div class="article-container">
                     <a href="#">
                         <div class="article-img">
                             <div class="img-tag insights">Insights</div>
@@ -454,40 +455,39 @@
                     </a>
                 </div>
 
-
-             <div class="article-container3">
-                    <a href="#">
-                        <div class="article-img">
-                            <div class="img-tag careers">Careers</div>
-                            <img src="./img/latest-news/Latest-news-bizzdev.jpg" 
-                            alt="Hiring Business Development Executive poster">
-                        </div>
-                        <div class="article-content">
-                            <h3 class="article-header3" >
-                            Business Development Executive
-                            </h3>
-                            <p class="article-desc">
-                                Salary Range £26k-£36k per annum + Bonus Hours 40 hours
-                                per week, Monday – Friday  Location Wymondha...
-                            </p>
-                            <div class="button-wrap">
-                                <div class="btn btn-art3">READ MORE</div>
+                <div class="article-container">
+                        <a href="#">
+                            <div class="article-img">
+                                <div class="img-tag careers">Careers</div>
+                                <img src="./img/latest-news/Latest-news-bizzdev.jpg" 
+                                alt="Hiring Business Development Executive poster">
                             </div>
-                            <div class="author">
-                                <div class="author-pic">
-                                    <img src="./img/latest-news/Latest-news-Rebecca-Moore.png"
-                                    alt="Netmatters Staff Rebecca Moore Profile Picture">
+                            <div class="article-content">
+                                <h3 class="article-header3" >
+                                Business Development Executive
+                                </h3>
+                                <p class="article-desc">
+                                    Salary Range £26k-£36k per annum + Bonus Hours 40 hours
+                                    per week, Monday – Friday  Location Wymondha...
+                                </p>
+                                <div class="button-wrap">
+                                    <div class="btn btn-art3">READ MORE</div>
                                 </div>
-                                <div class="posted-info">
-                                    <span class="posted-by">Posted by Rebecca <br> Moore</span> <br>
-                                    <span class="posted-date"> 20th February 2024 </span>
-                                    
+                                <div class="author">
+                                    <div class="author-pic">
+                                        <img src="./img/latest-news/Latest-news-Rebecca-Moore.png"
+                                        alt="Netmatters Staff Rebecca Moore Profile Picture">
+                                    </div>
+                                    <div class="posted-info">
+                                        <span class="posted-by">Posted by Rebecca <br> Moore</span> <br>
+                                        <span class="posted-date"> 20th February 2024 </span>
+                                        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+                        </a>
+                    </div>
+                </div> -->
 
             <div class="mobile-viewall">
                 <a href="#"> 

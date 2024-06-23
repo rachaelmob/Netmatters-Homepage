@@ -140,34 +140,45 @@
     }
 
 
+    .section.bottom {
+        padding-top: 0px;
 
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
 
 //==========================================//
 //             FORM SECTION
 //==========================================//
 
     .form-container{
-        background-color: $light-bg;
         color: $dark-txt;
-    
-        form.contact-form {
-            margin: 0;
-            padding: 50px 0;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        @include mq(x-large){ 
+            width: 66.66666667%;
         }
-        .form-group { margin-bottom: 15px ;}
+    
+        form#contact-form {
+            background-color: $contact;
+            border-radius: 10px;
+            padding: 30px;
+        }
 
-        // .signup-inputs-wrapper {
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     margin-left: -15px;
-        //     margin-right: -15px;
+        .form-group { 
+            margin-bottom: 15px ;
+        }
 
-        //     .signup-input {
-        //         flex: 1 1 450px;
-        //         padding-left: 15px;
-        //         padding-right: 15px;
-        //     }
-        // }
+        .row > .form-group { //add class or mixing for padding left and right 15px only
+            padding-left: 15px;
+            padding-right: 15px;
+            @include mq(large){
+                width: 50%;
+            }
+        }
 
 
         .form-control{
@@ -188,6 +199,7 @@
                 box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(91,192,222,.6);
             }
         }
+
         textarea#message {
             min-height: 100px;
             height: 100px;
@@ -249,6 +261,20 @@
                 text-decoration: underline;
                 &:hover { color: $vdark-bg ;}
             }
+        }
+
+        .captcha {
+            color: #333645;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            /* margin-top: 15px; */
+        }
+
+        .action-block {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         //== Submit Button ==//

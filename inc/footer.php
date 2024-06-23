@@ -15,7 +15,7 @@
                             <span><i class="fa-brands fa-linkedin-in"></i></span>
                         </a >
                         <a class="twitter btn-primary" href="#">
-                            <span><i class="fa-brands fa-twitter"></i></span>
+                            <span><i class="fa-brands fa-x-twitter"></i></span>
                         </a> 
                         <a class="insta btn-primary" href="#">
                             <span><i class="fa-brands fa-instagram"></i></span>

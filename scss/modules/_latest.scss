@@ -27,7 +27,8 @@
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 30px;
 
-            & .article-container3 {
+
+            .article-container:last-child {
                 display: none;
             }
         }
@@ -46,9 +47,8 @@
             & p {color: #666;}
         }
 
-        .article-container1,
-        .article-container2, 
-        .article-container3 {
+
+            .article-container {
             border: 1px solid #ccc; 
             box-shadow: 0 3px 35px rgba(0,0,0,.1); 
             margin: 40px 0;
@@ -189,6 +189,7 @@
         
         }
     }
+
 }   
 
 

@@ -1,12 +1,3 @@
-//==========================================//
-//         STICKY HEADER + NAVBAR
-//==========================================//
-
-// .sticky-head {
-
-// }
-
-
 
 //==========================================//
 //                 HEADER 
@@ -140,7 +131,7 @@
             }
 
             //HAMBURGER
-            .hamburger { 
+            .hamburger, .hamburgerTwo{ 
                 display: block;
                 cursor: pointer;
                 margin-left: 20px;
@@ -155,20 +146,20 @@
                 transition-duration: .15s;
                 transition-timing-function: linear;
 
-                .ham-box {
+                .ham-box, .ham-boxTwo {
                     width: 33px;
                     height: 19px;
                     display: inline-block;
                     position: relative;
                 }
 
-                .ham-bar {
+                .ham-bar, .ham-barTwo {
                     top: 50%;
                     // margin-top: -1.5px;
                     transition-duration: .22s;
                     transition-timing-function: cubic-bezier(.55,.055,.675,.19);
 
-                    &, &::before, &::after {
+                    &, &::before, &::after, .ham-barTwo::before, .ham-barTwo:after {
                         content: "";
                         height: 4px;
                         width: 33px;
@@ -269,5 +260,20 @@
         }
 
     }
+
+//==========================================//
+//               STICKY NAVBAR
+//==========================================//
+#shy-nav {
+    top: 0;
+    z-index: 20;
+    width: 100vw;
+    position: fixed;
+    background-color: #fff;
+    transition: all 500ms ease;
+}
+
+
+
 
 }

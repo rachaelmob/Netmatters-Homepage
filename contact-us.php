@@ -126,13 +126,13 @@
     <div class="section bottom container">
 
         <div class="row">
+
             <div class="contact-net">
                 <p><strong>Email us on:</strong><br></p>
                 <p><a href="mailto:sales@netmatters.com" class="h3 text-web">sales@netmatters.com</a></p>
                 <p><strong>Business hours:</strong></p>
                 <p><strong>Monday - Friday 07:00 - 18:00&nbsp;</strong></p>
             </div>
-
             <div class="out-of-hours">
                 <div class="question out-of-hours">
                     <h4>
@@ -154,80 +154,84 @@
                     </div> -->
                 </div>
 
-                <div class="form-container">
 
-                    <form method="POST" class="contact-form">
-                        <div class="row">
-                            <div class="form-group">
-                                <label for="users_name" class="required">Your Name</label>
-                                <input class="form-control" type="text" name="name" id="users_name">
-                            </div>
-                            <div class="form-group">
-                                <label for="company_name">Company Name</label>
-                                <input class="form-control" type="text" name="name" id="company_name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="required">Your Email</label>
-                                <input class="form-control" type="email" name="email" value="" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="telephone" class="required">Your Telephone Number</label>
-                                <input class="form-control" type="text" name="telephone" value="" id="telephone">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message" class="required">Message</label>
-                            <textarea class="form-control" name="message" cols="50" rows="10" id="message">
-                                Hi, I am interested in discussing a Our Offices solution, could you please 
-                                give me a call or send an email?
-                            </textarea>
-                        </div>
-
-                        <!-- copy checkbox from index-->
-                        <div class="form-group">
-                            <label class="pretty-checkbox" for="input_checkbox"> <!-- CHECK BOX LABEL -->
-                                <input type="checkbox" class="checkbox_input" id="input_checkbox"
-                                name="marketing-preference" required>
-                                <span class="fake-checkbox"></span>
-                                <span class="check-text"> <!-- NEWS-CHECKBOX TEXT-->
-                                    Please tick this box if you wish to receive marketing information from us. 
-                                    Please see our
-                                    <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                                    for more information on how we keep your data safe.
-                                </span> 
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <span>
-                                This site is protected by reCAPTCHA and the Google 
-                                <a href="#" target="_blank" rel="noopener noreferrer">
-                                    <u>Privacy Policy</u>
-                                </a> and 
-                                <a href="#" target="_blank" rel="noopener noreferrer">
-                                    <u>Terms of Service</u>
-                                </a> apply.
-                            </span>
-                        </div>
-
-                        <div class="action-block">
-                            <button class="btn btn-primary">
-                                Send Enquiry
-                            </button>
-
-                            <small class="helper-text">
-                                <span class="text-danger">*</span> 
-                                Fields Required
-                            </small>
-                        </div>
-
-                    </form>
-
-                </div>
 
             </div>
+
+            <div class="form-container">
+
+                <form method="POST" id="contact-form">
+                    <div class="row">
+                        <div class="form-group col">
+                            <label for="users_name" class="required">Your Name</label>
+                            <input class="form-control" type="text" name="name" id="users_name">
+                        </div>
+                        <div class="form-group col">
+                            <label for="company_name">Company Name</label>
+                            <input class="form-control" type="text" name="name" id="company_name">
+                        </div>
+                        <div class="form-group col">
+                            <label for="email" class="required">Your Email</label>
+                            <input class="form-control" type="email" name="email" value="" id="email">
+                        </div>
+                        <div class="form-group col">
+                            <label for="telephone" class="required">Your Telephone Number</label>
+                            <input class="form-control" type="text" name="telephone" value="" id="telephone">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="required">Message</label>
+                        <textarea class="form-control" name="message" cols="50" rows="10" id="message">
+                            Hi, I am interested in discussing a Our Offices solution, could you please 
+                            give me a call or send an email?
+                        </textarea>
+                    </div>
+
+                    <!-- copy checkbox from index-->
+                    <div class="form-group">
+                        <label class="pretty-checkbox" for="input_checkbox"> <!-- CHECK BOX LABEL -->
+                            <input type="checkbox" class="checkbox_input" id="input_checkbox"
+                            name="marketing-preference" required>
+                            <span class="fake-checkbox"></span>
+                            <span class="check-text"> <!-- NEWS-CHECKBOX TEXT-->
+                                Please tick this box if you wish to receive marketing information from us. 
+                                Please see our
+                                <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                                for more information on how we keep your data safe.
+                            </span> 
+                        </label>
+                    </div>
+
+                    <div class="captcha">
+                        <span>
+                            This site is protected by reCAPTCHA and the Google 
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <u>Privacy Policy</u>
+                            </a> and 
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <u>Terms of Service</u>
+                            </a> apply.
+                        </span>
+                    </div>
+
+                    <div class="action-block">
+                        <button class="btn btn-primary">
+                            Send Enquiry
+                        </button>
+
+                        <small class="helper-text">
+                            <span class="text-danger">*</span> 
+                            Fields Required
+                        </small>
+                    </div>
+
+                </form>
+
+            </div>
+
         </div>
+
 
     </div>
 

@@ -1,6 +1,6 @@
 <?php 
 
-$dbconfig = parse_ini_file("..\dbconfig.env");
+$dbconfig = parse_ini_file(".\dbconfig.env");
 
 $host = $dbconfig["DB_HOST"];
 $dbname = $dbconfig["DB_NAME"];
@@ -10,8 +10,7 @@ $password = $dbconfig["DB_PASSWORD"];
 try {
 
     $dpdo = new PDO("mysql:host=$host;dbname=$dbname", $dbuser, $password);
-    echo "Connected";
-    // $dpdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXEPTION);
+    // echo "Connected"
 
 } catch(PDOException $e) {
     // Change error code ---
@@ -19,6 +18,8 @@ try {
     echo $e->getMessage();
     exit;
 }
+
+?>
 
 
 
