@@ -1,2 +1,5 @@
 
 scss/modules/_newsletter.scss
+*.env
+*.env
+dbconfig.env

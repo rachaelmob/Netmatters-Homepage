@@ -19,13 +19,19 @@
 
 
 // - FUNCTION for HTML markup for articles
-    function articleHTML($imgTag, $img, $imgAlt, $header, $readTime, 
+    function articleHTML($tagClr, $imgTag, $img, $imgAlt, $header, $readTime, 
     $desc, $authorImg, $authorAlt, $postedBy, $date)
     {
+
+        // --- TO DO -------//
+        /*  
+        * Fix something for no read times min-height: 3rem;
+        * Change tag colour to colour overall to change tag, titles and buttons to unique colors
+        */
         $article = ' <div class="article-container">
             <a href="#">
                 <div class="article-img">
-                    <div class="img-tag news">' . $imgTag . '</div>
+                    <div class="img-tag ' . $tagClr . '">' . $imgTag . '</div>
                     <img src="'. $img . '" 
                     alt="' . $imgAlt . '">
                 </div>
@@ -65,15 +71,16 @@
     foreach(getLatestNews() as $col) {
         //Display article HTML for each row using data from each column
         echo articleHTML(
-        $col["image_tag"],
-        $col["image"],
-        $col["image_alt"],
-        $col["header"],
-        $col["reading_time"],
-        $col["description"],
-        $col["author_img"],
-        $col["author_alt"],
-        $col["posted_by"],
-        $col["date"],
+            $col["tag_colour"],
+            $col["image_tag"],
+            $col["image"],
+            $col["image_alt"],
+            $col["header"],
+            $col["reading_time"],
+            $col["description"],
+            $col["author_img"],
+            $col["author_alt"],
+            $col["posted_by"],
+            $col["date"],
         );               
     }

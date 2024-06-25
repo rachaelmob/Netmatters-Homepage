@@ -77,13 +77,22 @@
                     padding: 5px 10px;
                     font-weight: 600;
                     font-size: 0.75rem;
-                    text-transform: uppercase;
+                    text-transform: uppercase;                   
                     &:hover{text-decoration: underline;}
+
+    
                 }
 
-                .news {background-color: $nav-telecom;}
-                .insights {background-color: $nav-software;}
-                .careers {background-color: $nav-digital;}
+                // .news {background-color: $nav-telecom;}
+                // .insights {background-color: $nav-software;}
+                // .careers {background-color: $nav-digital;}
+                .software { background-color: $nav-software-drk;}
+                .support { background-color: $nav-it-drk;}
+                .digital { background-color: $nav-digital-drk;}
+                .telecom { background-color: $nav-telecom-drk;}
+                .webdesign { background-color: $nav-webdesign-drk;}
+                .cyber { background-color: $nav-cyber-drk;}
+                .developer { background-color: $nav-developer-drk;}
 
 
                 img {
@@ -120,7 +129,7 @@
 
         &3{
             @include mq(medium){
-                min-height: 3rem;
+                min-height: 3rem; //for no read times
             }
         }
 

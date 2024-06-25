@@ -160,29 +160,29 @@
 
             <div class="form-container">
 
-                <form method="POST" id="contact-form">
+                <form action="inc/contact-form.php" method="POST" id="contact-form">
                     <div class="row">
                         <div class="form-group col">
                             <label for="users_name" class="required">Your Name</label>
-                            <input class="form-control" type="text" name="name" id="users_name">
+                            <input class="form-control" type="text" name="user-name" id="users_name">
                         </div>
                         <div class="form-group col">
                             <label for="company_name">Company Name</label>
-                            <input class="form-control" type="text" name="name" id="company_name">
+                            <input class="form-control" type="text" name="company" id="company_name">
                         </div>
                         <div class="form-group col">
                             <label for="email" class="required">Your Email</label>
-                            <input class="form-control" type="email" name="email" value="" id="email">
+                            <input class="form-control" type="email" name="user-email" value="" id="email">
                         </div>
                         <div class="form-group col">
                             <label for="telephone" class="required">Your Telephone Number</label>
-                            <input class="form-control" type="text" name="telephone" value="" id="telephone">
+                            <input class="form-control" type="text" name="user-tel" value="" id="telephone">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="message" class="required">Message</label>
-                        <textarea class="form-control" name="message" cols="50" rows="10" id="message">
+                        <textarea class="form-control" name="user-message" cols="50" rows="10" id="message">
                             Hi, I am interested in discussing a Our Offices solution, could you please 
                             give me a call or send an email?
                         </textarea>
@@ -192,7 +192,7 @@
                     <div class="form-group">
                         <label class="pretty-checkbox" for="input_checkbox"> <!-- CHECK BOX LABEL -->
                             <input type="checkbox" class="checkbox_input" id="input_checkbox"
-                            name="marketing-preference" required>
+                            name="marketing-pref" required>
                             <span class="fake-checkbox"></span>
                             <span class="check-text"> <!-- NEWS-CHECKBOX TEXT-->
                                 Please tick this box if you wish to receive marketing information from us. 

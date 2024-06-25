@@ -1,6 +1,7 @@
 <?php 
 
-$dbconfig = parse_ini_file(".\dbconfig.env");
+// $dbconfig = parse_ini_file(".\dbconfig.env");
+$dbconfig = parse_ini_file(__DIR__ . "/../dbconfig.env");
 
 $host = $dbconfig["DB_HOST"];
 $dbname = $dbconfig["DB_NAME"];
