@@ -81,6 +81,6 @@
             $col["author_img"],
             $col["author_alt"],
             $col["posted_by"],
-            $col["date"],
+            $col["date"]
         );               
     }

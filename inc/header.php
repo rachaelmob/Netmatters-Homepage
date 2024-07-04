@@ -506,7 +506,6 @@
         <!-- ================================ NAVIGATION BAR ================================  -->
         <div class="nav-bar">
             <div class="container">
-                <!-- <nav> -->
                 <ul class="main-nav">
                     <li class="software">
                         <a>
@@ -830,7 +829,6 @@
                         </div>
                     </li>
                 </ul>
-                <!-- </nav> -->
             </div>
         </div>
     </div>

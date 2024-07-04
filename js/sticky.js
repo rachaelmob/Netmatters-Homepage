@@ -1,9 +1,8 @@
-
 const shyNav = document.querySelector('#shy-nav');
+let lastScrollTop = 0;
 
 //When user is scrolling 
 window.addEventListener('scroll', function() {
-let lastScrollTop = 0;
 const isScrolling = window.scrollY;
 let scrollingUp = isScrolling;
 
