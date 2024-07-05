@@ -120,22 +120,29 @@
     padding: 30px; 
 
     h3.article-header {
-        &1, &2, &3 {
+        // &1, &2, &3 {
         font-size: 1rem;
         margin: 0 0 15px;
         line-height: 1.5rem;
         font-weight: $font-bold;
-        }
+        // }
 
-        &3{
+        &.no-readtime{
             @include mq(medium){
                 min-height: 3rem; //for no read times
             }
         }
 
-        &1:not(span){color: $nav-telecom;}
-        &2:not(span){color: $nav-software;}
-        &3:not(span){color: $nav-digital;}
+        // &1:not(span){color: $nav-telecom;}
+        // &2:not(span){color: $nav-software;}
+        // &3:not(span){color: $nav-digital;}
+        &.software {color: $nav-software;}
+        &.support {color: $nav-it;}
+        &.digital {color: $nav-digital;}
+        &.telecom {color: $nav-telecom;}
+        &.webdesign {color: $nav-webdesign;}
+        &.cyber {color: $nav-cyber;}
+        &.developer {color: $nav-developer;}
     }
 
     span.read-time {
@@ -158,9 +165,16 @@
         font-size: 1.063rem;
         text-transform: uppercase;
 
-        &.btn-art1{@include btn-style($nav-telecom, $nav-telecom)}
-        &.btn-art2{@include btn-style($nav-software, $nav-software)}
-        &.btn-art3{@include btn-style($nav-digital, $nav-digital)}
+        // &.btn-art1{@include btn-style($nav-telecom, $nav-telecom)}
+        // &.btn-art2{@include btn-style($nav-software, $nav-software)}
+        // &.btn-art3{@include btn-style($nav-digital, $nav-digital)}
+        &.software { @include btn-style( $nav-software, $nav-software);}
+        &.support { @include btn-style( $nav-it, $nav-it);}
+        &.digital { @include btn-style( $nav-digital, $nav-digital);}
+        &.telecom { @include btn-style( $nav-telecom, $nav-telecom);}
+        &.webdesign { @include btn-style( $nav-webdesign, $nav-webdesign);}
+        &.cyber { @include btn-style( $nav-cyber, $nav-cyber);}
+        &.developer { @include btn-style( $nav-developer, $nav-developer);}
     }
     
 

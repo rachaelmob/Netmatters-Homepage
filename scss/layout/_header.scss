@@ -73,7 +73,7 @@
 
             //SUPPORT AND CONTANT BTNS
             a {
-                @media (max-width: 992px) {display: none;}
+                @media (max-width: 991px) {display: none;}
                 text-decoration: none;
                 @include btnclass($font-size:1.125rem, $line-h:46px, $height:56px);
                 & span {
@@ -92,21 +92,27 @@
                 
             }
             .search-bar {
-                @media (min-width:$break--xs) and (max-width:$break--med){display:none;}
+                @media (min-width:$break--xs) and (max-width:767px){display:none;}
             
                 form {
                     margin-bottom: 0;
                     label {display: none;}
                     input {
-                        width: 174px;
+                        // width: 174px;
                         height: 55px;
                         font-size: 13px;
-                        border-radius: 0;
+                        // border-radius: 0;
                         padding: 5px 15px;
                         border-color: #ccc;
-                        display: inline-block;
+                        // display: inline-block;
                         border: 2px solid #e5e5e5;
                         box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+
+                        @media (max-width: 991px){
+                            width: 167px;
+                            border-radius: 0;
+                            display: inline-block !important;
+                        }
 
                         &:focus{
                             outline: 0;
@@ -115,7 +121,7 @@
                             0 0 8px rgba(91,192,222,.6);
                         }
 
-                        @include mq(large) {
+                        @media (min-width: $break--l) {
                             display: none;
                         }
                         @include mq(x-large){

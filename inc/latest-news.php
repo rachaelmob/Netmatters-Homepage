@@ -36,7 +36,7 @@
                     alt="' . $imgAlt . '">
                 </div>
                 <div class="article-content">
-                    <h3 class="article-header1">'
+                    <h3 class="article-header ' . $tagClr . '">'
                     . $header . 
                     '<span class="read-time">' . $readTime . '</span>
                     </h3>
@@ -44,7 +44,7 @@
                         . $desc .
                     '</p>
                     <div class="button-wrap">
-                        <div class="btn btn-art1">READ MORE</div>
+                        <div class="btn ' . $tagClr . '">READ MORE</div>
                     </div>
                     <div class="author">
                         <div class="author-pic">
