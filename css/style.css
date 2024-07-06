@@ -1165,7 +1165,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 #container div.cookies #cookies-consent.cookie-popup {
-  display: flex;
+  display: flex !important;
 }
 #container div.cookies #cookies-consent .cookie-container {
   width: auto;
@@ -2268,6 +2268,20 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 #contact-us a.text-web {
   color: #926fb1 !important;
 }
+#contact-us p {
+  margin: 0 0 10px;
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+#contact-us p a:not(.btn), #contact-us p strong:not(.btn) {
+  font-weight: 600;
+}
+#contact-us p strong {
+  color: #333645;
+}
+#contact-us .tel a.text-web, #contact-us a.h3.text-web {
+  font-size: 1.625rem;
+}
 #contact-us .breadcrumbs {
   padding: 14px 0 13px;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
@@ -2366,7 +2380,6 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 }
 #contact-us #offices .address-box .content .tel a.text-web {
   font-weight: 700;
-  font-size: 1.625rem;
 }
 #contact-us #offices .address-box .content .view-more {
   margin-top: 15px;
@@ -2400,6 +2413,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
 @media (min-width: 1260px) {
   #contact-us .form-container {
     width: 66.66666667%;
+    right: 33.33333333%;
   }
 }
 #contact-us .form-container form#contact-form {
@@ -2418,6 +2432,12 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   #contact-us .form-container .row > .form-group {
     width: 50%;
   }
+}
+#contact-us .form-container .form-control, #contact-us .form-container output {
+  display: block;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
 }
 #contact-us .form-container .form-control {
   width: 100%;
@@ -2523,6 +2543,17 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   color: #fff;
   background-color: #22242e;
   border-color: #22242e;
+}
+#contact-us .contact-hours {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 1260px) {
+  #contact-us .contact-hours {
+    width: 33.33333333%;
+    left: 66.66666667%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

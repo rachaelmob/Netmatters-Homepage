@@ -48,7 +48,7 @@
         background-color: rgba(0, 0, 0, .7);
 
         &.cookie-popup{
-            display: flex;
+            display: flex !important;
         }
 
         .cookie-container {

@@ -572,11 +572,12 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="./js/slick/slick.min.js"></script>
-<script src="./js/sticky.js"></script>
+<script src="./js/shynav.js"></script>
 <script src="./js/cookies.js"></script>
 <script src="./js/slick/slick.js"></script>
 <script src="./js/slides.js"></script>
 <script src="./js/sidebar.js"></script>
+<script src="./js/contact.js"></script>
 
 </body>
 

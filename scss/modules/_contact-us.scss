@@ -8,6 +8,24 @@
         &.text-web { color: $nav-webdesign !important }
     }
 
+    p { 
+        margin: 0 0 10px;
+        line-height: 1.875rem;
+        margin-bottom: 25px;
+
+        & a:not(.btn), & strong:not(.btn) {
+            font-weight: 600;
+        }
+
+        & strong {
+            color: #333645;
+        }
+    }
+
+    .tel a.text-web, a.h3.text-web {
+        font-size: 1.625rem;
+    }
+
 
     .breadcrumbs {
         padding: 14px 0 13px;
@@ -123,7 +141,7 @@
 
                 .tel a.text-web {
                     font-weight: 700;
-                    font-size: 1.625rem;
+                    // font-size: 1.625rem;
                 }
 
                 .view-more {
@@ -160,6 +178,7 @@
         padding-right: 15px;
         @include mq(x-large){ 
             width: 66.66666667%;
+            right: 33.33333333%;
         }
     
         form#contact-form {
@@ -180,6 +199,13 @@
             }
         }
 
+        .form-control, output {
+            display: block;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+        }
+
 
         .form-control{
             width: 100%;
@@ -191,6 +217,7 @@
             @include btn-style(#fff, $border-grey, #555);
             box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
             transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
 
 
             &:focus{
@@ -287,6 +314,22 @@
 
 
 
+    }
+
+
+//==========================================//
+//             CONTACT HOURS
+//==========================================//
+    .contact-hours{
+        position: relative; //TODO -- CREATE MIXIN FOR THIS
+        padding-left: 15px;
+        padding-right: 15px;
+        @include mq(x-large){ 
+            width: 33.33333333%;
+            left: 66.66666667%;
+        }
+        
+        
     }
 
 }
