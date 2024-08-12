@@ -19,8 +19,8 @@
 
 
 // - FUNCTION for HTML markup for articles
-    function articleHTML($tagClr, $imgTag, $img, $imgAlt, $header, $readTime, 
-    $desc, $authorImg, $authorAlt, $postedBy, $date)
+    function articleHTML($tagClr, $imgTag, $img, $imgAlt, $header, $headspace, $readTime, 
+    $desc, $authorImg, $authorAlt, $postedBy, $date_txt)
     {
 
         // --- TO DO -------//
@@ -31,12 +31,12 @@
         $article = ' <div class="article-container">
             <a href="#">
                 <div class="article-img">
-                    <div class="img-tag ' . $tagClr . '">' . $imgTag . '</div>
+                    <div class="img-tag '. $tagClr . '">' . $imgTag . '</div>
                     <img src="'. $img . '" 
                     alt="' . $imgAlt . '">
                 </div>
                 <div class="article-content">
-                    <h3 class="article-header ' . $tagClr . '">'
+                    <h3 class="article-header ' . $headspace . ' ' . $tagClr . '">'
                     . $header . 
                     '<span class="read-time">' . $readTime . '</span>
                     </h3>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="posted-info">
                             <span class="posted-by">' . $postedBy . '</span> <br>
-                            <span class="posted-date">' . $date . '</span>
+                            <span class="posted-date">' . $date_txt . '</span>
                         </div>
                     </div>
                 </div>
@@ -76,11 +76,12 @@
             $col["image"],
             $col["image_alt"],
             $col["header"],
+            $col["headspace"],
             $col["reading_time"],
             $col["description"],
             $col["author_img"],
             $col["author_alt"],
             $col["posted_by"],
-            $col["date"]
+            $col["date_txt"]
         );               
     }

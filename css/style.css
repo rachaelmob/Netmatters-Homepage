@@ -2041,7 +2041,7 @@ footer .footer-rows .footer-list ul.footer-ul li a:hover {
   font-weight: 600;
 }
 @media (min-width: 768px) {
-  #latest-section .article-content h3.article-header.no-readtime {
+  #latest-section .article-content h3.article-header.xtrspace {
     min-height: 3rem;
   }
 }

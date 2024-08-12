@@ -127,7 +127,7 @@
         font-weight: $font-bold;
         // }
 
-        &.no-readtime{
+        &.xtrspace{
             @include mq(medium){
                 min-height: 3rem; //for no read times
             }
