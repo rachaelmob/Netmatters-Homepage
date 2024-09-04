@@ -134,14 +134,14 @@
                     <p><strong>Business hours:</strong></p>
                     <p><strong>Monday - Friday 07:00 - 18:00&nbsp;</strong></p>
                 </div>
-                <div class="out-of-hours">
-                    <div class="question out-of-hours">
+                <div class="accordion out-of-hours">
+                    <!-- <div class="question out-of-hours"> -->
                         <h4>
                             Out of Hours IT Support 
                             <i class="fa-solid fa-angle-down"></i>
                         </h4>
 
-                        <!-- <div class="answer-hours">
+                        <div class="accordion-info">
                             <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
                             <p>
                                 <strong>Monday - Friday 18:00 - 22:00</strong>
@@ -152,12 +152,10 @@
                                 to leave an Out of Hours&nbsp; voicemail. A technician will contact you on the number 
                                 provided within 45 minutes of your call.&nbsp;
                             </p>
-                        </div> -->
-                    </div>
-
-
-
+                        </div>
+                    <!-- </div> -->
                 </div>
+
             </div>
             <div class="form-container">
 
@@ -219,7 +217,7 @@
                         </button>
 
                         <small class="helper-text">
-                            <span class="text-danger">*</span> 
+                            <!-- <span class="text-danger">*</span>  -->
                             Fields Required
                         </small>
                     </div>

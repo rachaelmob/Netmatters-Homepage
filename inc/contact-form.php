@@ -2,6 +2,7 @@
 
 // Only let user eneter database through form submission (prevent injection)
 if($_SERVER["REQUEST_METHOD"] == "POST") {
+    
     $name = $_POST['user-name'];
     $company =  $_POST['company'];
     $email =  $_POST['user-email'];
@@ -31,4 +32,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 } else { // Send them to home page if form not submited
     header("Location: ../index.php");
 }
+
+
 

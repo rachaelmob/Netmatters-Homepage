@@ -8,7 +8,7 @@
         &.text-web { color: $nav-webdesign !important }
     }
 
-    p { 
+    p, .contact-hours h4 { 
         margin: 0 0 10px;
         line-height: 1.875rem;
         margin-bottom: 25px;
@@ -16,10 +16,11 @@
         & a:not(.btn), & strong:not(.btn) {
             font-weight: 600;
         }
+    }
 
-        & strong {
-            color: #333645;
-        }
+    p strong, .contact-hours h4 {
+        color: #333645;
+        font-weight: 600;
     }
 
     .tel a.text-web, a.h3.text-web {
@@ -34,6 +35,11 @@
         @media (max-width: $break--l) {
             border-top: 1px solid #333645;
         }
+        
+        @media (max-width: 767px){
+            display: none !important;
+        }
+        
 
         ul.crumbs {
             margin: 0;
@@ -63,11 +69,26 @@
     .section.top {
         padding-bottom: 0;
 
+        .page-title {
+            @media (max-width: 991px) {
+                margin-top: -50px;
+                padding: 24px 0;
+                margin-bottom: 50px;
+                background-color: #333645;
+            }
+        }
+
+
         h1 {
             font-size: 2.25rem;
             font-weight: 400;
             margin: 0 0 28px;
             color: $dark-txt;
+
+            @media (max-width: 991px) {
+                margin: 0;
+                color: #fff;
+            }
         }
     }
 
@@ -101,9 +122,10 @@
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
-            // position: relative;
-            // top: 0;
-            // transition: .5s ease;
+
+            @media (max-width: 991px) {
+                margin-bottom: 30px;
+            }
 
             @include mq(large){
                 width: 33.33333333%;
@@ -192,6 +214,7 @@
         }
 
         .row > .form-group { //add class or mixing for padding left and right 15px only
+            width: 100%;
             padding-left: 15px;
             padding-right: 15px;
             @include mq(large){
@@ -291,17 +314,30 @@
         }
 
         .captcha {
-            color: #333645;
+            color: $dark-txt;
             font-size: 11px;
             font-weight: 600;
             margin-bottom: 30px;
             /* margin-top: 15px; */
+
+            a{
+                color: $dark-txt;
+            }
         }
 
         .action-block {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            small {
+                font-size: 85%;
+            }
+            
+            .helper-text::before {
+                content: '*';
+                color: #a94442;
+            }
         }
 
         //== Submit Button ==//
@@ -324,11 +360,27 @@
         position: relative; //TODO -- CREATE MIXIN FOR THIS
         padding-left: 15px;
         padding-right: 15px;
+
         @include mq(x-large){ 
             width: 33.33333333%;
             left: 66.66666667%;
         }
-        
+
+        .accordion {
+            &:hover {
+                text-decoration: underline;
+            }
+
+            .accordion-info {
+                display: none;
+
+            }
+
+            .active {
+                display: block;
+            }
+
+        }
         
     }
 
